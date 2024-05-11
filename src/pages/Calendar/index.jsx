@@ -1,6 +1,6 @@
 import { useState } from "react"
 import BigCalendar from "../../components/Calendar/BigCalendar"
-import ShortTask from "../../components/Task/ShortTask"
+import ShortTask from "../../components/Task/ShortTask";
 function Calendar() {
   
   const [clickedDate, setClickedDate] = useState( new Date().toDateString())
