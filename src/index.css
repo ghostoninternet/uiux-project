@@ -36,12 +36,14 @@
 }
 
 .fc-header-toolbar {
+    background-color: white;
     padding: 5px 3rem;
     border-radius: 16px;
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
 
 .fc-view {
+    background-color: white;
     padding: 10px;
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
