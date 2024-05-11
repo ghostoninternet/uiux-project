@@ -13,8 +13,8 @@ function Calendar() {
         </div>
         <div className="flex justify-between">
             <BigCalendar setClickedDate={setClickedDate} setEvents={setEvents}/>
-            <div className="w-3/12">
-              <div className="w-full h-80 shadow-lg p-5">
+            <div className="w-3/12 mr-10 mt-2">
+              <div className="w-full h-80 shadow-2xl p-5 bg-white rounded-2xl">
                   <div className="">
                       <div className="flex justify-between">
                         <h2 className="font-semibold">Date&apos;s task</h2>
@@ -30,7 +30,7 @@ function Calendar() {
                   }
               </div>
 
-              <div className="w-full h-80 shadow-lg p-5 mt-6">
+              <div className="w-full h-80 shadow-2xl p-5 mt-6 bg-white rounded-2xl">
                       <div className="flex justify-between">
                         <h2 className="font-semibold">Note</h2>
                         <button className="bg-[#FABB18] rounded-lg px-3 py-1">New note</button>
