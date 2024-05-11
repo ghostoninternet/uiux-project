@@ -1,6 +1,10 @@
+import { useState } from "react"
 import BigCalendar from "../../components/Calendar/BigCalendar"
 
 function Calendar() {
+  
+  const [clickedDate, setClickedDate] = useState( new Date().toDateString())
+  const [events, setEvents] = useState([]);
   return (
     <div>
         <div className="flex p-5">
@@ -8,13 +12,20 @@ function Calendar() {
             <img width="30" height="24" src="https://img.icons8.com/material/24/calendar--v1.png" alt="calendar--v1"/>
         </div>
         <div className="flex justify-between">
-            <BigCalendar />
-            <div className="w-3/12 h-1/2 shadow-lg">
-                    <h2>Date&apos;s event</h2>
+            <BigCalendar setClickedDate={setClickedDate} setEvents={setEvents}/>
+            <div className="w-3/12 h-1/2 shadow-lg p-5">
+                    <div className="flex justify-between">
+                      <h2 className="font-semibold">Date&apos;s event</h2>
+                      <button className="bg-[#FABB18] rounded-lg px-3 py-1">New task</button>
+                    </div>
+                    <h3>{clickedDate}</h3>
+                    <ul>
+                        {events.map((event,index)=> <li key={index}>{event._def.title}</li>)}
+                    </ul>
             </div>
         </div>
     </div>
   )
 }
 
-export default Calendar
+export default Calendar 
