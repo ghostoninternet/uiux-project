@@ -4,19 +4,15 @@ import Bell from "../../assets/notification-bell-svgrepo-com.svg"
 import Logo from "../Svg/Logo"
 import UserIcon from "../Svg/UserIcon"
 import MenuBar from "./components/MenuBar"
-import { Dashboard, Profile, Setting, KPI } from "../Svg/MenuBarIcon"
+import { Dashboard, Profile, Setting, KPI, DarkProfile, DarkSetting, DarkKPI } from "../Svg/MenuBarIcon"
 import { Facebook, Twitter, WhatsApp } from "../Svg/SocialMedia"
 import HelpIcon from "../Svg/HelpIcon"
 
 function DefaultLayouts({ children }) {
 
   const [search, setSearch] = useState('')
+  const [currentActive, setCurrentActive] = useState('Dashboard')
   const labelRef = useRef()
-  
-  const dashboardRef = useRef()
-  const kpiRef = useRef()
-  const profileRef = useRef()
-  const settingRef = useRef()
 
   const handleOnFocusInput = (event) => {
     if (!labelRef.current.classList.contains('hidden')) {
@@ -81,10 +77,18 @@ function DefaultLayouts({ children }) {
         <div className="w-[14.2857%] flex flex-col justify-between">
           <div className="w-full flex flex-col gap-10">
             <div className="w-full px-6 pt-12 space-y-8">
-              <MenuBar ref={dashboardRef} sgvIcon={<Dashboard />} menuTitle={"Dashboard"} />
-              <MenuBar ref={kpiRef} sgvIcon={<KPI />} menuTitle={"KPI"} />
-              <MenuBar ref={profileRef} sgvIcon={<Profile />} menuTitle={"Profile"} />
-              <MenuBar ref={settingRef} sgvIcon={<Setting />} menuTitle={"Setting"} />
+              <div className="w-full">
+                <MenuBar svgIcon={<Dashboard />} darkSvgIcon={<Dashboard />} menuTitle={"Dashboard"} currentActive={currentActive} setCurrentActive={setCurrentActive}/>
+              </div>
+              <div className="w-full">
+                <MenuBar svgIcon={<KPI />} darkSvgIcon={<DarkKPI />} menuTitle={"View KPI"} currentActive={currentActive} setCurrentActive={setCurrentActive}/>
+              </div>
+              <div className="w-full">
+                <MenuBar svgIcon={<Profile />} darkSvgIcon={<DarkProfile />} menuTitle={"Profile"} currentActive={currentActive} setCurrentActive={setCurrentActive}/>
+              </div>
+              <div className="w-full">
+                <MenuBar svgIcon={<Setting />} darkSvgIcon={<DarkSetting />} menuTitle={"Setting"} currentActive={currentActive} setCurrentActive={setCurrentActive}/>
+              </div>
             </div>
 
             <div className="w-full px-[48px] flex justify-between gap-10"> 

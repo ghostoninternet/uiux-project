@@ -1,19 +1,44 @@
 /* eslint-disable react/display-name */
-import { forwardRef } from "react"
+import { useEffect, useRef } from "react"
+import { Link } from "react-router-dom"
 
-const MenuBar = forwardRef(( props, ref ) => {
+const MenuBar = (props) => {
+  const ref = useRef()
+
+  useEffect(() => {
+    if (props.currentActive === props.menuTitle) {
+      ref.current.classList.remove('bg-[#FFF8E8]')
+      ref.current.classList.add('bg-black', 'text-white')
+    } else {
+      ref.current.classList.remove('bg-black', 'text-white')
+      ref.current.classList.add('bg-[#FFF8E8]')
+    }
+  }, [props.currentActive, props.menuTitle])
+
+  const handleOnClick = (event) => {
+    const clickedButton = event
+    let target = clickedButton.target
+    if (target.classList.contains('menu-title')) {
+      target = target.parentNode
+    }
+    const targetTitle = target.children[1].textContent.toString()
+    props.setCurrentActive(targetTitle)
+  }
+
   return (
-    <button ref={ref} className="w-full">
-      <div className="flex px-9 py-4 w-full rounded-3xl bg-yellow-100 gap-4">
-        <div>
-          {props.sgvIcon}
+    <Link to="/calendar" className="w-full">
+      <div ref={ref} onClick={handleOnClick} className="wrapper flex px-9 py-5 w-full rounded-3xl bg-[#FFF8E8] gap-4">
+        <div className="svg-icon">
+          {
+            props.currentActive === props.menuTitle ? props.darkSvgIcon : props.svgIcon
+          }
         </div>
-        <div className="my-auto">
+        <div className="my-auto menu-title">
           {props.menuTitle}
         </div>
       </div>
-    </button>
+    </Link>
   )
-})
+}
 
 export default MenuBar

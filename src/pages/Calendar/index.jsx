@@ -13,7 +13,7 @@ function Calendar() {
         </div>
         <div className="flex justify-between">
             <BigCalendar setClickedDate={setClickedDate} setEvents={setEvents}/>
-            <div className="w-3/12 h-1/2 shadow-lg p-5">
+            <div className="w-3/12 h-1/2 shadow-lg p-5 mr-7 bg-white rounded-lg">
                     <div className="flex justify-between">
                       <h2 className="font-semibold">Date&apos;s event</h2>
                       <button className="bg-[#FABB18] rounded-lg px-3 py-1">New task</button>

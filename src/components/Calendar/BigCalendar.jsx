@@ -32,7 +32,7 @@ export default function BigCalendar({setClickedDate, setEvents}) {
     }
 
   return (
-    <div className='w-8/12 h-1/2 p-10'>
+    <div className='w-8/12 h-1/2 pl-5 pt-2'>
         <FullCalendar
         plugins={[dayGridPlugin, timeGridPlugin, listPlugin,interactionPlugin]}
         initialView={"dayGridMonth"}
@@ -42,7 +42,7 @@ export default function BigCalendar({setClickedDate, setEvents}) {
         }}
         events={events}
         dateClick={handleDateClick}
-        height={'70vh'}
+        height={'75vh'}
         ref={calendarRef}
       />
     </div>
