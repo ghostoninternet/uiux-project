@@ -8,30 +8,34 @@ function SignIn() {
   return (
     <>
       <div className="flex flex-row h-screen w-screen">
-        <div className='w-1/4 flex justify-center align-middle'>
+        <div className='w-1/4 flex justify-center align-middle min-w-[300px]'>
           <div className="h-full flex flex-col justify-center">
-            <div className="mb-8">
+            <div className="mb-8 flex justify-center">
               <Logo />
             </div>
             <div className='flex justify-center mb-8 text-3xl font-bold'>Sign in</div>
-            <div>
-              <form className=''>
-                <Input label={"username"} type={"text"} id={'1'}/>
-                <Input label={"password"} type={"password"} id={'2'} />
+            <div className='flex justify-center'>
+              <form>
+                <div className='mb-7'>
+                  <Input label={"username"} type={"text"} id={'1'}/>
+                </div>
+                <div className='mb-7'>
+                  <Input label={"password"} type={"password"} id={'2'} />
+                </div>
                 <div className='flex justify-between'>
-                  <div className=' bg-blue-500 w-20 py-1 rounded-md flex justify-center'>
+                  <div className=' bg-blue-500 w-20 py-1 rounded-md flex justify-center hover:cursor-pointer'>
                     <Facebook />
                   </div>
-                  <div className=' bg-black w-20 py-1 rounded-md flex justify-center'>
+                  <div className=' bg-black w-20 py-1 rounded-md flex justify-center hover:cursor-pointer'>
                     <Apple />
                   </div>
-                  <div className='border-black border-[1px] w-20 py-1 rounded-md flex justify-center'>
+                  <div className='border-black border-[1px] w-20 py-1 rounded-md flex justify-center hover:cursor-pointer'>
                     <Google />
                   </div>
                 </div>
                 <div className='mt-4 align-middle'>
                   <label className='flex items-center select-none text-sm'>
-                   <input type="checkbox" className='w-4 h-4 mr-3 mt-0.5'/>
+                   <input type="checkbox" className='w-4 h-4 mr-3 mt-0.5 hover:cursor-pointer'/>
                    stay signed in
                   </label>
                   
