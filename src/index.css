@@ -24,7 +24,8 @@
     font-weight: 700;
     font-size: 1rem;
     line-height: 1.5;
-    vertical-align: middle;
+    margin-top: auto;
+    margin-bottom: auto;
     
 }
 .fc-daygrid-day-frame:hover {
@@ -36,12 +37,14 @@
 }
 
 .fc-header-toolbar {
+    background-color: #FFF;
     padding: 5px 3rem;
     border-radius: 16px;
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
 
 .fc-view {
+    background-color: #FFF;
     padding: 10px;
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
@@ -52,4 +55,9 @@
 
 .fc .fc-button-primary:not(:disabled).fc-button-active:focus, .fc .fc-button-primary:not(:disabled):active:focus {
     border: 0;
+    box-shadow: none;
+}
+
+.fc .fc-button-primary:focus {
+    box-shadow: none;
 }

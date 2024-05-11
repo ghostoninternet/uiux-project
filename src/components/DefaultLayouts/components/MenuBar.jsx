@@ -1,17 +1,19 @@
+/* eslint-disable react/display-name */
+import { forwardRef } from "react"
 
-function MenuBar({ menuTitle, sgvIcon }) {
+const MenuBar = forwardRef(( props, ref ) => {
   return (
-    <button>
-      <div className="flex px-9 py-4 rounded-3xl bg-yellow-100 gap-3">
+    <button ref={ref} className="w-full">
+      <div className="flex px-9 py-4 w-full rounded-3xl bg-yellow-100 gap-4">
         <div>
-          {sgvIcon}
+          {props.sgvIcon}
         </div>
-        <div className="">
-          {menuTitle}
+        <div className="my-auto">
+          {props.menuTitle}
         </div>
       </div>
     </button>
   )
-}
+})
 
 export default MenuBar

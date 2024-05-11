@@ -4,7 +4,7 @@ import Bell from "../../assets/notification-bell-svgrepo-com.svg"
 import Logo from "../Svg/Logo"
 import UserIcon from "../Svg/UserIcon"
 import MenuBar from "./components/MenuBar"
-import Dashboard from "../Svg/Dashboard"
+import { Dashboard, Profile, Setting, KPI } from "../Svg/MenuBarIcon"
 import { Facebook, Twitter, WhatsApp } from "../Svg/SocialMedia"
 import HelpIcon from "../Svg/HelpIcon"
 
@@ -12,6 +12,11 @@ function DefaultLayouts({ children }) {
 
   const [search, setSearch] = useState('')
   const labelRef = useRef()
+  
+  const dashboardRef = useRef()
+  const kpiRef = useRef()
+  const profileRef = useRef()
+  const settingRef = useRef()
 
   const handleOnFocusInput = (event) => {
     if (!labelRef.current.classList.contains('hidden')) {
@@ -76,10 +81,10 @@ function DefaultLayouts({ children }) {
         <div className="w-[14.2857%] flex flex-col justify-between">
           <div className="w-full flex flex-col gap-10">
             <div className="w-full px-6 pt-12 space-y-8">
-              <MenuBar sgvIcon={<Dashboard />} menuTitle={"Dashboard"} />
-              <MenuBar sgvIcon={<Dashboard />} menuTitle={"Dashboard"} />
-              <MenuBar sgvIcon={<Dashboard />} menuTitle={"Dashboard"} />
-              <MenuBar sgvIcon={<Dashboard />} menuTitle={"Dashboard"} />
+              <MenuBar ref={dashboardRef} sgvIcon={<Dashboard />} menuTitle={"Dashboard"} />
+              <MenuBar ref={kpiRef} sgvIcon={<KPI />} menuTitle={"KPI"} />
+              <MenuBar ref={profileRef} sgvIcon={<Profile />} menuTitle={"Profile"} />
+              <MenuBar ref={settingRef} sgvIcon={<Setting />} menuTitle={"Setting"} />
             </div>
 
             <div className="w-full px-[48px] flex justify-between gap-10"> 
@@ -102,7 +107,7 @@ function DefaultLayouts({ children }) {
         </div>
 
         <div className="w-[85.7143%] bg-gray-100 rounded-tl-3xl">
-            
+            {children}
         </div>
       </div>
     </div>
