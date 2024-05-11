@@ -4,6 +4,8 @@ import Input from '../../components/Input'
 import SubmitButton from '../../components/SubmitButton/SubmitButton'
 import Logo from '../../components/Svg/Logo'
 import {Facebook, Apple, Google} from '../../components/Svg/SignLogo'
+
+
 function SignIn() {
   return (
     <>
@@ -14,6 +16,7 @@ function SignIn() {
               <Logo />
             </div>
             <div className='flex justify-center mb-8 text-3xl font-bold'>Sign in</div>
+
             <div className='flex justify-center'>
               <form>
                 <div className='mb-7'>

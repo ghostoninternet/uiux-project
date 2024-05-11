@@ -1,3 +1,55 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.fc .fc-button {
+  background-color:  #FFF;
+  border: 0;
+  color: black;
+}
+
+.fc .fc-button:hover {
+    color: #FABB18;
+    background-color:  #FFF;
+}
+
+
+.fc .fc-button-primary:not(:disabled).fc-button-active, .fc .fc-button-primary:not(:disabled):active {
+    color: #FABB18;
+    background-color: #FFF;
+    border: 0;
+}
+
+.fc .fc-toolbar-title {
+    font-weight: 700;
+    font-size: 1rem;
+    line-height: 1.5;
+    vertical-align: middle;
+    
+}
+.fc-daygrid-day-frame:hover {
+    background-color: #FFF8E8;
+}
+
+.fc-toolbar-chunk {
+    display: flex;
+}
+
+.fc-header-toolbar {
+    padding: 5px 3rem;
+    border-radius: 16px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+.fc-view {
+    padding: 10px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+.fc-day-today {
+    background-color: #FABB18 !important;
+}
+
+.fc .fc-button-primary:not(:disabled).fc-button-active:focus, .fc .fc-button-primary:not(:disabled):active:focus {
+    border: 0;
+}
