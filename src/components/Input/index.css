@@ -1,0 +1,39 @@
+.input-box {
+  position: relative;
+  max-width: 300px;
+  min-width: 170px;
+  background-color: #F5F5F5;
+  margin-bottom: 28px;
+}
+
+.input {
+  position: relative;
+  width: 100%;
+  padding: 1.5rem;
+  background: none;
+  border-radius: .2rem;
+  font-size: 15px;
+  height: 55px;
+}
+
+.label {
+  position: absolute;
+  pointer-events: none;
+  left: 1rem;
+  top: 50%;
+  transform: translateY(-50%);
+  white-space: nowrap;
+  overflow: hidden;
+  line-height: 2rem;
+  padding-left: 1rem;
+  font-size: 1rem;
+  color: #898989;
+  transition: 500ms cubic-bezier(0.4,0,0.2,1);
+}
+
+.input:focus~.label, input:valid ~ label {
+  top: 10px;
+  left: -5px;
+  font-size: .875rem;
+  color: #898989;
+}
