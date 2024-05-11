@@ -4,7 +4,6 @@ import Input from '../../components/Input'
 import SubmitButton from '../../components/SubmitButton/SubmitButton'
 import Logo from '../../components/Svg/Logo'
 import {Facebook, Apple, Google} from '../../components/Svg/SignLogo'
-import { Link } from 'react-router-dom'
 function SignIn() {
   return (
     <>
