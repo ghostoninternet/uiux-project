@@ -1,10 +1,20 @@
-import { useState } from "react"
+import {  useRef, useState } from "react"
 import BigCalendar from "../../components/Calendar/BigCalendar"
 import ShortTask from "../../components/Task/ShortTask";
+import NewTaskPopUp from "../../components/Popup/NewTaskPopUp";
 function Calendar() {
   
   const [clickedDate, setClickedDate] = useState( new Date().toDateString())
   const [events, setEvents] = useState([]);
+
+  // const PopupRef = useRef(null)
+  const handleOnCLick = () => {
+    console.log(PURef.current.classList.remove("hidden"))
+  }
+  
+  
+  const PURef = useRef(null)
+
   return (
     <div>
         <div className="flex p-5">
@@ -18,7 +28,7 @@ function Calendar() {
                   <div className="">
                       <div className="flex justify-between">
                         <h2 className="font-semibold">Date&apos;s task</h2>
-                        <button className="bg-[#FABB18] rounded-lg px-3 py-1">New task</button>
+                        <button className="bg-[#FABB18] rounded-lg px-3 py-1" onClick={() => handleOnCLick()}>New task</button>
                       </div>
                       <h3 className="mb-3 italic">{clickedDate}</h3>
                   </div>
@@ -38,6 +48,7 @@ function Calendar() {
               </div>
             </div>
         </div>
+        <NewTaskPopUp ref={PURef}/>
     </div>
   )
 }
