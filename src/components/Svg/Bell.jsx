@@ -1,12 +1,12 @@
 function Bell() {
   return (
-    <svg width="85" height="56" viewBox="0 0 85 56" fill="none" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink">
-      <rect width="85" height="56" fill="url(#pattern0_410_1666)"/>
-      <defs>
-        <pattern id="pattern0_410_1666" patternContentUnits="objectBoundingBox" width="1" height="1">
-          <image xlinkHref="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAGAAAABgCAYAAADimHc4AAAACXBIWXMAAAsTAAALEwEAmpwYAAACpElEQVR4nO2dzWoUQRSFz0LNShRUFFy5EEF9kSx07cKdIgY0ENCNK5cK/hIfRogbQfEXFYIL8RkEdRRRokcKKiBinKnqae6tW+eDA4HMkO7v9K3umQw9gBBCCCGEEEL4ZwHAMoCnAL7kpJ8v5t+JETkI4A0AbpHX+TFiBBamyP+zBE3CCCzPIH8zF8bYgN55VlDAE+uNjcikoID0WDFnWBihAuKwt2IC9lhvdOvsArAE4BGAjYoC0nMeAjgHYKf1zrTEfgA38itczimfAVwHsM965zyzHcClwqud0nwCsAJgm/XOeuMQgMcjiv87zwEctt5pL5wY+aj/3zQsonPOV55g55X0t8+gU5YA/DKUv5m0DWfRGYvGRz7/MQkn0QlHjNZ8znCpGv7EvAPAKweyuUVe5MvhsFxxIJlTchlBSf8q/OpAMKckLY8HEJBVB3I5Y24iGOmdyW8OxHLGpEndjUCsOJDKwqSPuYThpQOhLEz6rFGYk6+HV7wszM8oJ+PTDmSyMqcQgLsORLIytxGANQciWZn7CMB7ByJZmXcIwEcHIlmZDwjADwciWZnvCAAbT/NYC6QKsJdITYC9SGoJajPNYy2QKsBeIjUB9iKpJajNNI+1QKoAe4nUBNiLpJagNtM81gKpAuwlUhNgL5JagtpM81gLpAqwl0hNgL1IaglqM81jLZAqwF4iNQH2ItnjEnTVgUAOzDU0SgT5bLWESPLZWgkR5bOVEiLLp/cSepBPryX0JJ/eSuhRPj2VwM5jDjuPOew85rDzCCGEEGGZDLw9sRjI2wEFrMv+cO4MKCDczfcsOD7gGzSOWm98FO5VFJBuFCXmeMvjBwXy16LfgtiqhNUpy9FGPvIlf0SOAbiVr3AmOev5hKs1XwghhBBCCAHv/Abx03QbWvtv7wAAAABJRU5ErkJggg==" width="96" height="96"/>
-        </pattern>
-      </defs>
+    <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="50" height="50" viewBox="0 0 172 172" style={{ fill: '#26e07f' }}>
+      <g fill="none" fillRule="nonzero">
+        <path d="M0,172v-172h172v172z" fill="none" />
+        <g fill="#1fb141">
+          <path d="M21.5,21.5v129h64.5v-32.25v-64.5v-32.25zM86,53.75c0,17.7805 14.4695,32.25 32.25,32.25c17.7805,0 32.25,-14.4695 32.25,-32.25c0,-17.7805 -14.4695,-32.25 -32.25,-32.25c-17.7805,0 -32.25,14.4695 -32.25,32.25zM118.25,86c-17.7805,0 -32.25,14.4695 -32.25,32.25c0,17.7805 14.4695,32.25 32.25,32.25c17.7805,0 32.25,-14.4695 32.25,-32.25c0,-17.7805 -14.4695,-32.25 -32.25,-32.25z" />
+        </g>
+      </g>
     </svg>
   )
 }

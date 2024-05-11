@@ -1,0 +1,14 @@
+function HelpIcon() {
+  return (
+    <svg width="67" height="58" viewBox="0 0 67 58" fill="none" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink">
+      <rect width="67" height="58" fill="url(#pattern0_410_1673)" />
+      <defs>
+        <pattern id="pattern0_410_1673" patternContentUnits="objectBoundingBox" width="1" height="1">
+          <image xlinkHref="data:image/png;base64,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" transform="matrix(0.00901741 0 0 0.0104167 0.0671642 0)" />
+        </pattern>
+      </defs>
+    </svg>
+  )
+}
+
+export default HelpIcon
