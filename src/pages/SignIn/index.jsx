@@ -4,7 +4,6 @@ import Input from '../../components/Input'
 import SubmitButton from '../../components/SubmitButton/SubmitButton'
 import Logo from '../../components/Svg/Logo'
 import {Facebook, Apple, Google} from '../../components/Svg/SignLogo'
-import { Link } from 'react-router-dom'
 function SignIn() {
   return (
     <>
@@ -14,6 +13,7 @@ function SignIn() {
             <div className="mb-8">
               <Logo />
             </div>
+            <div className='flex justify-center mb-8 text-3xl font-bold'>Sign in</div>
             <div>
               <form className=''>
                 <Input label={"username"} type={"text"} id={'1'}/>
@@ -29,21 +29,30 @@ function SignIn() {
                     <Google />
                   </div>
                 </div>
-                <div className='mt-2 align-middle'>
-                  <input id='checkbox' type="checkbox" className='w-4 h-4 mr-5'/>
-                  <label htmlFor="checkbox">stay signed in</label>
+                <div className='mt-4 align-middle'>
+                  <label className='flex items-center select-none text-sm'>
+                   <input type="checkbox" className='w-4 h-4 mr-3 mt-0.5'/>
+                   stay signed in
+                  </label>
+                  
                 </div>
-                <div className='flex justify-center mt-36'>
+                <div className='flex justify-center mt-20'>
                   <SubmitButton />
                 </div>
               </form>
             </div>
-            <Link to={'/forgot-password'} className='mt-auto'>Can&apos;t sign in ?</Link>
-            <Link to={'/sign-up'}>Create account</Link>
+            <div className='mt-8'>
+              <div className='flex justify-center'>
+                <Link to={'/forgot-password'} className='text-sm select-none'>CAN&apos;T SIGN IN?</Link>
+              </div>
+              <div className='flex justify-center mt-1'>
+                <Link to={'/sign-up'} className='text-sm select-none'>CREATE ACCOUNT</Link>
+              </div>
+            </div>
           </div>
         </div>
         <div className="w-3/4 h-full bg-slate-600">
-          <img className="h-full w-full overflow-hidden object-cover" src={bgImage} />
+          <img className="h-full w-full object-cover" src={bgImage} />
         </div>
       </div>
     </>
