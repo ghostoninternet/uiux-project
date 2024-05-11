@@ -1,9 +1,7 @@
 .input-box {
   position: relative;
-  max-width: 300px;
-  min-width: 170px;
+  width: 300px;
   background-color: #F5F5F5;
-  margin-bottom: 28px;
 }
 
 .input {
@@ -13,7 +11,7 @@
   background: none;
   border-radius: .2rem;
   font-size: 15px;
-  height: 55px;
+  height: 45px;
 }
 
 .label {
@@ -32,8 +30,15 @@
 }
 
 .input:focus~.label, input:valid ~ label {
-  top: 10px;
+  top: 7px;
   left: -5px;
-  font-size: .875rem;
+  font-size: .8rem;
   color: #898989;
+}
+
+input[type=date]:required:invalid::-webkit-datetime-edit {
+  color: transparent;
+}
+input[type=date]:focus::-webkit-datetime-edit {
+  color: black !important;
 }
