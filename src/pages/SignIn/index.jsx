@@ -6,7 +6,7 @@ function SignIn() {
   return (
     <>
       <div className="flex flex-row h-screen w-screen">
-        <div className="w-1/4 h-full bg-gray-200 flex flex-col justify-center">
+        <div className="w-1/4 h-full  flex flex-col justify-center">
           <div className="">
             <Logo />
           </div>
