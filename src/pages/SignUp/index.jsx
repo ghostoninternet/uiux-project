@@ -3,6 +3,7 @@ import Input from '../../components/Input'
 import {Facebook, Apple, Google} from '../../components/Svg/SignLogo'
 import SubmitButton from '../../components/SubmitButton/SubmitButton'
 import Logo from '../../components/Svg/Logo'
+import { Link } from 'react-router-dom'
 function SignUp() {
   return (
     <div className="relative h-screen">
@@ -57,7 +58,7 @@ function SignUp() {
                             <SubmitButton />
                         </div>
 
-                        <div className='font-bold text-xs flex justify-center mt-4'>ALREADY HAVE AN ACCOUNT?</div>
+                        <Link to={'/sign-in'} className='font-bold text-xs flex justify-center mt-4'>ALREADY HAVE AN ACCOUNT?</Link>
                     </form>
                 </div>
             </div>
