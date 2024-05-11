@@ -1,9 +1,15 @@
-import { Link } from 'react-router-dom'
+import { Link, redirect } from 'react-router-dom'
 import bgImage from '../../assets/Untitled.png'
 import Input from '../../components/Input'
 import SubmitButton from '../../components/SubmitButton/SubmitButton'
 import Logo from '../../components/Svg/Logo'
 import {Facebook, Apple, Google} from '../../components/Svg/SignLogo'
+
+const handleForm = () => {
+  redirect('/')
+}
+
+
 function SignIn() {
   return (
     <>
@@ -15,7 +21,7 @@ function SignIn() {
             </div>
             <div className='flex justify-center mb-8 text-3xl font-bold'>Sign in</div>
             <div>
-              <form className=''>
+              <form className='' onSubmit={handleForm} method='post'>
                 <Input label={"username"} type={"text"} id={'1'}/>
                 <Input label={"password"} type={"password"} id={'2'} />
                 <div className='flex justify-between'>
