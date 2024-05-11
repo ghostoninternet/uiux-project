@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom'
 import bgImage from '../../assets/Untitled.png'
 import Input from '../../components/Input'
 import SubmitButton from '../../components/SubmitButton/SubmitButton'
@@ -32,8 +33,10 @@ function SignIn() {
                   <input id='checkbox' type="checkbox" className='w-4 h-4 mr-5'/>
                   <label htmlFor="checkbox">stay signed in</label>
                 </div>
-                <SubmitButton />
-
+                <div className='flex justify-center mt-36'>
+                  <SubmitButton />
+                </div>
+                
               </form>
             </div>
           </div>
