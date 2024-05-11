@@ -4,7 +4,7 @@ import Input from '../../components/Input'
 import SubmitButton from '../../components/SubmitButton/SubmitButton'
 import Logo from '../../components/Svg/Logo'
 import {Facebook, Apple, Google} from '../../components/Svg/SignLogo'
-
+import { Link } from 'react-router-dom'
 function SignIn() {
   return (
     <>
@@ -36,9 +36,10 @@ function SignIn() {
                 <div className='flex justify-center mt-36'>
                   <SubmitButton />
                 </div>
-                
               </form>
             </div>
+            <Link to={'/forgot-password'} className='mt-auto'>Can&apos;t sign in ?</Link>
+            <Link to={'/sign-up'}>Create account</Link>
           </div>
         </div>
         <div className="w-3/4 h-full bg-slate-600">
