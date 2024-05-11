@@ -6,8 +6,11 @@ import interactionPlugin from "@fullcalendar/interaction"
 import { useRef } from 'react';
 export default function BigCalendar({setClickedDate, setEvents}) {
     var events = [
-        { title: 'Event Title', start: '2024-05-20', id: '1' }, 
-        { title: 'Meeting', start: '2024-05-22T10:00:00', end: '2024-05-22T11:00:00' , id: '2'} 
+        { title: 'Nhập điểm bài kiểm tra giải tích 1', start: '2024-05-20'}, 
+        { title: 'Meeting', start: '2024-05-22T10:00:00', end: '2024-05-22T11:00:00'},
+        { title: 'Nhập điểm bài kiểm tra CNTT', start: '2024-05-20'}, 
+        { title: 'Nhập điểm bài kiểm tra TTNT', start: '2024-05-20'},
+
     ];
     
     const calendarRef =  useRef(null)
