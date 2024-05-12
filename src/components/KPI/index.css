@@ -1,0 +1,23 @@
+.big-circle {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 3rem;
+    right: 2rem;
+    border-radius: 50%;
+}
+
+.small-circle {
+    background-color: white;
+    border-radius: 50%;
+}
+
+.scrollbars-hidden::-webkit-scrollbar {
+    display: none;
+}
+
+.scrollbars-hidden {
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+}
