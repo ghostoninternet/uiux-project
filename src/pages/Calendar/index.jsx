@@ -1,4 +1,4 @@
-import {  useRef, useState } from "react"
+import { useState } from "react"
 import BigCalendar from "../../components/Calendar/BigCalendar"
 import ShortTask from "../../components/Task/ShortTask";
 import NewTaskPopUp from "../../components/Popup/NewTaskPopUp";
@@ -6,14 +6,7 @@ function Calendar() {
   
   const [clickedDate, setClickedDate] = useState( new Date().toDateString())
   const [events, setEvents] = useState([]);
-
-  // const PopupRef = useRef(null)
-  const handleOnCLick = () => {
-    console.log(PURef.current.classList.remove("hidden"))
-  }
-  
-  
-  const PURef = useRef(null)
+  const [newTaskToggle, setNewTaskToggle] = useState('hidden');
 
   return (
     <div>
@@ -28,7 +21,7 @@ function Calendar() {
                   <div className="">
                       <div className="flex justify-between">
                         <h2 className="font-semibold">Date&apos;s task</h2>
-                        <button className="bg-[#FABB18] rounded-lg px-3 py-1" onClick={() => handleOnCLick()}>New task</button>
+                        <button className="bg-[#FABB18] rounded-lg px-3 py-1" onClick={() => setNewTaskToggle('')}>New task</button>
                       </div>
                       <h3 className="mb-3 italic">{clickedDate}</h3>
                   </div>
@@ -40,7 +33,7 @@ function Calendar() {
                   }
               </div>
 
-              <div className="w-full h-80 shadow-2xl p-5 mt-6 bg-white rounded-2xl">
+              <div className="w-full h-72 shadow-2xl p-5 mt-6 bg-white rounded-2xl">
                       <div className="flex justify-between">
                         <h2 className="font-semibold">Note</h2>
                         <button className="bg-[#FABB18] rounded-lg px-3 py-1">New note</button>
@@ -48,7 +41,7 @@ function Calendar() {
               </div>
             </div>
         </div>
-        <NewTaskPopUp ref={PURef}/>
+        <NewTaskPopUp popUpToggle={newTaskToggle} setPopUpToggle={setNewTaskToggle}/>
     </div>
   )
 }
