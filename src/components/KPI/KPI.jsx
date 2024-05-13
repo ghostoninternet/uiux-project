@@ -6,8 +6,8 @@ import Task from "./components/Task/Task";
 import { useNavigate } from "react-router-dom";
 
 
-function KPI({title, KPIcompleted, tasksList}) {
-    let KPIcompletedDeg = KPIcompleted * 360 / 100
+function KPI(props) {
+    let KPIcompletedDeg = props.data.KPIcompleted * 360 / 100
     // let splitStr = title.toLowerCase().split(' ');
     // for (var i = 0; i < splitStr.length; i++) {
     //     splitStr[i] = splitStr[i].charAt(0).toUpperCase() + splitStr[i].substring(1);     
@@ -17,7 +17,7 @@ function KPI({title, KPIcompleted, tasksList}) {
     const handleViewMoreClick = () => {
         navigate({
             pathname: 'view-detail',
-            search: `?title=${title}`
+            search: `?title=${props.data.title}`
         })
     }
 
@@ -28,7 +28,7 @@ function KPI({title, KPIcompleted, tasksList}) {
                     <div className="flex items-center mr-2 relative top-[-4px]">
                         <DownArrow />
                     </div>
-                    <h1 className="font-bold text-xl">{title}</h1>
+                    <h1 className="font-bold text-xl">{props.data.title}</h1>
                 </div>
 
                 <div className="flex bg-[#FABB18] rounded-lg items-center py-1.5 hover:cursor-pointer select-none" onClick={()=> handleViewMoreClick()}>
@@ -57,17 +57,17 @@ function KPI({title, KPIcompleted, tasksList}) {
                             )`}}>
                         <div className="small-circle w-[7rem] h-[7rem]"></div>
                         <p className="absolute top-[3rem] text-[#737373] text-sm font-medium">Completed</p>
-                        <p className="absolute top-[4.2rem] text-[#0A0A0A] text-2xl font-bold">{KPIcompleted}%</p>
+                        <p className="absolute top-[4.2rem] text-[#0A0A0A] text-2xl font-bold">{props.data.KPIcompleted}%</p>
                         <p className="absolute top-[102%] text-[#0A0A0A] text-xs font-medium">
-                            <span className="text-[#FABB18]">11</span>
-                            <span> / 14 Tasks</span>
+                            <span className="text-[#FABB18]">{props.data.tasksCompleted}</span>
+                            <span> / {props.data.tasksList.length} Tasks</span>
                         </p>
                     </div>
                 </div>
             </div>
 
             <div className="mt-2 overflow-y-scroll max-h-72 scrollbars-hidden">
-                {tasksList.map((e, i) => {
+                {props.data.tasksList.map((e, i) => {
                     return <Task key={i} title={e.title} Taskcompleted={e.Taskcompleted} weight={e.weight}/>
                 })}
             </div>
