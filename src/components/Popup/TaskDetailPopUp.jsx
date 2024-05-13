@@ -1,15 +1,17 @@
 import PopUp from "./PopUp";
 import NumberPopUpInput from "../Input/NumberPopUpInput";
 import DatePicker from "../Input/DatePicker";
-function TaskDetailPopUp({event, popUpToggle, setPopUpToggle}) {
+import Save from "../Svg/Save";
+Save
+function TaskDetailPopUp({title,event, popUpToggle, setPopUpToggle}) {
   return (
-    <PopUp title={'KPI 1/ ' + event.title} popUpToggle={popUpToggle} setPopUpToggle={setPopUpToggle}>
+    <PopUp title={event.title} popUpToggle={popUpToggle} setPopUpToggle={setPopUpToggle}>
             <form action="" className="flex px-7">
                 <div className="w-3/5 h-ful space-y-3 py-5 pr-10 mr-20">
-                    <h1 className="text-2xl font-extrabold">{event.title}</h1>
-                    <NumberPopUpInput label={event.extendedProps.evaluatuon} value={event.extendedProps.Taskcompleted}/>
-                    <NumberPopUpInput label={event.extendedProps.target} value={event.extendedProps.value}/>
-                    <NumberPopUpInput label={'Weight'} value={event.extendedProps.weight}/>
+                    <h1 className="text-2xl font-extrabold">{title}</h1>
+                    <NumberPopUpInput label={event.evaluatuon} value={event.Taskcompleted}/>
+                    <NumberPopUpInput label={event.target} value={event.value}/>
+                    <NumberPopUpInput label={'Weight'} value={event.weight}/>
                 </div>
                 <div className="border-l-2 border-gray-200 flex flex-col py-5">
                     <div className="pb-32 space-y-7 py-5 pl-7 pr-11">
@@ -21,7 +23,7 @@ function TaskDetailPopUp({event, popUpToggle, setPopUpToggle}) {
                         non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
                         <DatePicker />
                     </div>
-                    <button className="ml-auto px-5 py-2 bg-[#FABB18] rounded-xl font-extrabold text-white items-end" type="submit">Save</button>
+                    
                 </div>
             </form>
     </PopUp>

@@ -10,7 +10,7 @@ function  NewTaskPopUp(props) {
   return (
     <PopUp title={'Create new task'} popUpToggle={props.popUpToggle} setPopUpToggle={props.setPopUpToggle}>
       <form className="space-y-5 px-7 py-3">
-        <TitleInput />
+        <TitleInput placeholder="Task Title or type ‘/’ for command"/>
         <PopUpInput label={'Evaluation'} id={'Evaluation'} placeholder={'Enter evaluate method'}/>
         <div className="flex">
           <PopUpInput label={'Target'} id={'Target'} placeholder={'Enter target'}/>

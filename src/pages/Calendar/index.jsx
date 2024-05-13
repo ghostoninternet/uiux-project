@@ -55,7 +55,7 @@ function Calendar() {
             </div>
         </div>
         <NewTaskPopUp popUpToggle={newTaskToggle} setPopUpToggle={setNewTaskToggle}/>
-        <TaskDetailPopUp event={event} popUpToggle={detailTaskToggle} setPopUpToggle={setDetailTaskToggle}/>
+        <TaskDetailPopUp title={event.title} event={event.extendedProps} popUpToggle={detailTaskToggle} setPopUpToggle={setDetailTaskToggle}/>
     </div>
   )
 }

@@ -6,7 +6,7 @@ import Task from "./components/Task/Task";
 import { useNavigate } from "react-router-dom";
 
 
-function KPI({title, KPIcompleted, tasksList}) {
+function KPI({title, KPIcompleted, tasksList, taskCLick, setTaskDetail, setNewTask }) {
     let KPIcompletedDeg = KPIcompleted * 360 / 100
     // let splitStr = title.toLowerCase().split(' ');
     // for (var i = 0; i < splitStr.length; i++) {
@@ -46,7 +46,7 @@ function KPI({title, KPIcompleted, tasksList}) {
                         <div className="flex items-center pr-2 py-2">
                             <SimplePlus />
                         </div>
-                        <p className="font-semibold leading-[32px]">add task</p>
+                        <p className="font-semibold leading-[32px]" onClick={() => setNewTask('')}>add task</p>
                     </div>
 
                     <div className="big-circle w-36 h-36" 
@@ -68,7 +68,7 @@ function KPI({title, KPIcompleted, tasksList}) {
 
             <div className="mt-2 overflow-y-scroll max-h-72 scrollbars-hidden">
                 {tasksList.map((e, i) => {
-                    return <Task key={i} title={e.title} Taskcompleted={e.Taskcompleted} weight={e.weight}/>
+                    return <Task key={i} event={e} taskClick={taskCLick} setTaskDetail={setTaskDetail}/>
                 })}
             </div>
         </div>
