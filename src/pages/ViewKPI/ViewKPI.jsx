@@ -2,6 +2,7 @@ import AddButton from "../../components/AddButton/AddButton";
 import KPI from "../../components/KPI/KPI";
 import Time from "../../components/Time/Time";
 import { tasksList1, tasksList2 } from "../../api/TaskApi";
+import { TeachingQuality, Research } from "../../api/KpiApi";
 
 function ViewKPI() {
     const handleNewKPIClick = () => {
@@ -21,10 +22,10 @@ function ViewKPI() {
                 </div>
 
                 <div className="mt-8">
-                    <KPI title={'Teaching quality'} KPIcompleted={72} tasksList={tasksList1}/>
+                    <KPI title={TeachingQuality.title} KPIcompleted={TeachingQuality.KPIcompleted} tasksList={TeachingQuality.tasksList}/>
                 </div>
                 <div className="mt-8">
-                    <KPI title={'Research'} KPIcompleted={80} tasksList={tasksList2}/>
+                    <KPI title={Research.title} KPIcompleted={Research.KPIcompleted} tasksList={Research.tasksList}/>
                 </div>
             </div>
         </div>

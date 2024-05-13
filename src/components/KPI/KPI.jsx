@@ -3,9 +3,23 @@ import RightArrow from "../Svg/RightArrow";
 import { SimplePlus } from "../Svg/Plus";
 import '../KPI/index.css'
 import Task from "./components/Task/Task";
+import { useNavigate } from "react-router-dom";
+
 
 function KPI({title, KPIcompleted, tasksList}) {
-    var KPIcompletedDeg = KPIcompleted * 360 / 100
+    let KPIcompletedDeg = KPIcompleted * 360 / 100
+    // let splitStr = title.toLowerCase().split(' ');
+    // for (var i = 0; i < splitStr.length; i++) {
+    //     splitStr[i] = splitStr[i].charAt(0).toUpperCase() + splitStr[i].substring(1);     
+    // }
+    // let noWhitespaceTitle = splitStr.join(' ').replace(/ /g,'')
+    const navigate = useNavigate()
+    const handleViewMoreClick = () => {
+        navigate({
+            pathname: 'view-detail',
+            search: `?title=${title}`
+        })
+    }
 
     return ( 
         <div className="bg-white rounded-lg px-6 min-h-72 shadow-md">
@@ -17,7 +31,7 @@ function KPI({title, KPIcompleted, tasksList}) {
                     <h1 className="font-bold text-xl">{title}</h1>
                 </div>
 
-                <div className="flex bg-[#FABB18] rounded-lg items-center py-1.5 hover:cursor-pointer select-none" >
+                <div className="flex bg-[#FABB18] rounded-lg items-center py-1.5 hover:cursor-pointer select-none" onClick={()=> handleViewMoreClick()}>
                     <div className="text-center ml-3 text-[#ffffff]">View more</div>
                     <div className="px-2">
                         <RightArrow />
