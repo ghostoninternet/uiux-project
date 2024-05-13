@@ -2,12 +2,14 @@ import AddButton from "../../components/AddButton/AddButton";
 import KPI from "../../components/KPI/KPI";
 import Time from "../../components/Time/Time";
 import { tasksList1, tasksList2 } from "../../api/TaskApi";
-import { TeachingQuality, Research } from "../../api/KpiApi";
+import { KpiData } from "../../api/KpiApi";
 
 function ViewKPI() {
+    
     const handleNewKPIClick = () => {
         
     }
+
     return (
         <div>
             <div className="mx-8 mt-4">
@@ -21,12 +23,15 @@ function ViewKPI() {
                     </div>
                 </div>
 
-                <div className="mt-8">
-                    <KPI title={TeachingQuality.title} KPIcompleted={TeachingQuality.KPIcompleted} tasksList={TeachingQuality.tasksList}/>
-                </div>
-                <div className="mt-8">
-                    <KPI title={Research.title} KPIcompleted={Research.KPIcompleted} tasksList={Research.tasksList}/>
-                </div>
+                {
+                    KpiData.map((e, i) => {
+                        return (
+                            <div key={i} className="mt-8">
+                                <KPI title={e.title} KPIcompleted={e.KPIcompleted} tasksList={e.tasksList}/>
+                            </div>
+                        )
+                    })
+                }
             </div>
         </div>
     )
