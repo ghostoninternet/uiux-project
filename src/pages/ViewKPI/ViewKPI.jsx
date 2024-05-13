@@ -30,7 +30,7 @@ function ViewKPI() {
 
     return (
         <div>
-            <div className="mx-8 mt-4">
+            <div className="mx-8 mt-4 min-w-[1180px]">
                 <div className="flex justify-between items-center">
                     <div>
                         <h2 className="text-4xl mb-2">Today</h2>

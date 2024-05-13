@@ -1,0 +1,10 @@
+.big-semi-circle {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+}
+
+.small-semi-circle {
+    border-radius: 50%;
+}
