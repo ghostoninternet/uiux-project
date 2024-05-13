@@ -1,9 +1,9 @@
-import { Link } from "react-router-dom"
 
-export default function ShortTask ({title}  ) {
+
+export default function ShortTask ({title , onClick }) {
   return (
     <div className="flex w-full">
-            <Link className=" text-blue-800" to={'#'}>{title}</Link>
+            <button className=" text-blue-800" onClick={() => onClick()}>{title}</button>
     </div>
   )
 }
