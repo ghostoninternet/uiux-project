@@ -1,65 +1,59 @@
 import AddButton from "../../components/AddButton/AddButton";
 import KPI from "../../components/KPI/KPI";
 import Time from "../../components/Time/Time";
-
+import { KpiData } from "../../api/KpiApi";
+import { useState } from "react";
+import TaskDetailPopUp from "../../components/Popup/TaskDetailPopUp";
+import NewTaskPopUp from "../../components/Popup/NewTaskPopUp";
+import NewKpiPopUp from "../../components/Popup/NewKpiPopUp";
 function ViewKPI() {
-    const handleNewKPIClick = () => {
-        
-    }
-    const tasksList1 = [
-        {
-            title: 'Quality of Project 1',
-            Taskcompleted: 90,
-            weight: 1,
-        },
-        {
-            title: 'Student review 1',
-            Taskcompleted: 20,
-            weight: 1.5,
-        },
-        {
-            title: 'Quality of assgnment 1',
-            Taskcompleted: 60,
-            weight: 0.8,
-        },
-    ]
+    
 
-    const tasksList2 = [
-        {
-            title: 'Quality of Project 2',
-            Taskcompleted: 90,
-            weight: 1,
-        },
-        {
-            title: 'Student review 2',
-            Taskcompleted: 80,
-            weight: 1.5,
-        },
-        {
-            title: 'Quality of assgnment 2',
-            Taskcompleted: 85,
-            weight: 0.8,
-        },
-    ]
+    const [detailTaskToggle, setDetailTaskToggle] = useState('hidden')
+    const taskExample = {
+        title: '',
+        extendedProps: {
+          evaluatuon: '',
+          target: '',
+          value: null,
+          Taskcompleted: null,
+          weight: null,
+        }
+      }
+    const [taskDetail, setTaskDetail] = useState(taskExample)
+    const [newTaskToggle, setNewTaskToggle] = useState('hidden');
+    const [newKpiToggle, setNewKpiToggle] = useState('hidden');
+
+    const handleNewKPIClick = () => {
+        setNewKpiToggle('')
+    }
 
     return (
-        <div className="mx-8 mt-4">
-            <div className="flex justify-between items-center">
-                <div>
-                    <h2 className="text-4xl mb-2">Today</h2>
-                    <Time />
+        <div>
+            <div className="mx-8 mt-4">
+                <div className="flex justify-between items-center">
+                    <div>
+                        <h2 className="text-4xl mb-2">Today</h2>
+                        <Time />
+                    </div>
+                    <div>
+                        <AddButton tittle={'New KPI'} onClick={handleNewKPIClick}/>
+                    </div>
                 </div>
-                <div>
-                    <AddButton tittle={'New KPI'} onClick={handleNewKPIClick}/>
-                </div>
-            </div>
 
-            <div className="mt-8">
-                <KPI title={'Teaching quality'} KPIcompleted={72} tasksList={tasksList1}/>
+                {
+                    KpiData.map((e, i) => {
+                        return (
+                            <div key={i} className="mt-8">
+                                <KPI title={e.title} KPIcompleted={e.KPIcompleted} tasksList={e.tasksList} taskCLick={setDetailTaskToggle} setTaskDetail={setTaskDetail} setNewTask={setNewTaskToggle}/>
+                            </div>
+                        )
+                    })
+                }
             </div>
-            <div className="mt-8">
-                <KPI title={'Research'} KPIcompleted={80} tasksList={tasksList2}/>
-            </div>
+            <NewTaskPopUp popUpToggle={newTaskToggle} setPopUpToggle={setNewTaskToggle}/>
+            <TaskDetailPopUp title={taskDetail.title} event={taskDetail} popUpToggle={detailTaskToggle} setPopUpToggle={setDetailTaskToggle}/>
+            <NewKpiPopUp popUpToggle={newKpiToggle} setPopUpToggle={setNewKpiToggle} />
         </div>
     )
 }

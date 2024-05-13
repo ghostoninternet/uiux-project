@@ -11,6 +11,7 @@ const publicRoutes = [
   { path: '/sign-up', component: SignUp, layout: null },
   { path: '/kpi', component: ViewKPI },
   { path: '/profile', component: Profile}
+  { path: '/kpi/view-detail', component: KPIdetail }
 ]
 
 export { publicRoutes }

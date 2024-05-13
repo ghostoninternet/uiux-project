@@ -4,17 +4,15 @@ import timeGridPlugin from '@fullcalendar/timegrid';
 import listPlugin from '@fullcalendar/list';
 import interactionPlugin from "@fullcalendar/interaction"
 import { useRef } from 'react';
-export default function BigCalendar({setClickedDate, setEvents}) {
-    var events = [
-        { title: 'Nhập điểm bài kiểm tra giải tích 1', start: '2024-05-20'}, 
-        { title: 'Meeting', start: '2024-05-22T10:00:00', end: '2024-05-22T11:00:00'},
-        { title: 'Nhập điểm bài kiểm tra CNTT', start: '2024-05-20'}, 
-        { title: 'Nhập điểm bài kiểm tra TTNT', start: '2024-05-20'},
+import { tasksList1, tasksList2 } from '../../api/TaskApi';
 
-    ];
-    
+export default function BigCalendar({setClickedDate, setEvents, eventClick ,getEventDetail}) {
+
     const calendarRef =  useRef(null)
-
+    const handleEventClick = (info) => {
+      eventClick()
+      getEventDetail(info.event._def)
+    }
 
 
     const handleDateClick = (info) => {
@@ -43,10 +41,11 @@ export default function BigCalendar({setClickedDate, setEvents}) {
           start: "title prev,next", 
           end: "dayGridMonth,timeGridWeek,timeGridDay", 
         }}
-        events={events}
+        events={[...tasksList1,...tasksList2]}
         dateClick={handleDateClick}
         height={'75vh'}
         ref={calendarRef}
+        eventClick={(event) => handleEventClick(event)}
       />
     </div>
   )
