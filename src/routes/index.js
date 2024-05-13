@@ -10,6 +10,7 @@ const publicRoutes = [
   { path: '/sign-up', component: SignUp, layout: null },
   { path: '/calendar', component: Calendar },
   { path: '/kpi', component: ViewKPI },
+  { path: '/kpi/view-detail', component: KPIdetail }
 ]
 
 export { publicRoutes }
