@@ -62,3 +62,8 @@
 .fc .fc-button-primary:focus {
     box-shadow: none;
 }
+
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}

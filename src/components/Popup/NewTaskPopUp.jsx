@@ -9,18 +9,18 @@ Target
 function  NewTaskPopUp(props) { 
   return (
     <PopUp title={'Create new task'} popUpToggle={props.popUpToggle} setPopUpToggle={props.setPopUpToggle}>
-      <form className="space-y-5">
-        <TitleInput />
+      <form className="space-y-5 px-7 py-3">
+        <TitleInput placeholder="Task Title or type ‘/’ for command"/>
         <PopUpInput label={'Evaluation'} id={'Evaluation'} placeholder={'Enter evaluate method'}/>
         <div className="flex">
           <PopUpInput label={'Target'} id={'Target'} placeholder={'Enter target'}/>
           <div className="flex">
               <label htmlFor={'Value'} className="font-bold text-xl block w-[5.5rem]">Value</label> 
-              <input id='Value' type="number" defaultValue={1} className="placeholder:text-gray-400 font-semibold bg-slate-100 py-1 px-2 w-14 placeholder:italic rounded-sm"/>
+              <input id='Value' type="number" defaultValue={1} className="placeholder:text-gray-400 text-center font-semibold bg-[#FFF8E8] py-1 px-2 w-14 placeholder:italic rounded-sm"/>
           </div>
         </div>
         <div>
-          <div className="flex space-x-3 font-bold">
+          <div className="flex space-x-7 font-bold">
           <DatePicker />
           <div className="bg-[#FFF8E8] py-1 px-4 text-sm rounded-lg flex items-center">
               <Target /> <p className="mx-2">Weight</p>

@@ -9,11 +9,11 @@ const options = {
 	maxDate: new Date("2030-01-01"),
 	minDate: new Date("1950-01-01"),
 	theme: {
-		background: "bg-white dark:bg-gray-800",
+		background: "bg-white dark:bg-gray-800 shadow-2xl",
 		todayBtn: "",
 		clearBtn: "",
 		icons: "",
-		text: "",
+		text: "font-bold uppercase",
 		disabledText: "bg-gray-200",
 		input: "bg-[#FFF8E8] border-0 cursor-pointer rounded-lg font-bold",
 		inputIcon: "",
@@ -33,8 +33,9 @@ const options = {
 	inputIdProp: "date",
 	inputPlaceholderProp: "Select Due Date",
 	inputDateFormatProp: {
+        weekday: 'short',
 		day: "numeric",
-		month: "long",
+		month: "short",
 		year: "numeric"
 	}
 }
@@ -49,7 +50,7 @@ function DatePicker() {
 	}
 
 	return (
-		<div className="w-1/5">
+		<div className="w-44">
 			<Datepicker options={options} onChange={handleChange} show={show} setShow={handleClose}>
                 
             </Datepicker>
