@@ -26,7 +26,7 @@ const MenuBar = (props) => {
   }
 
   return (
-    <Link to="/calendar" className="w-full">
+    <Link to={props.link} className="w-full">
       <div ref={ref} onClick={handleOnClick} className="wrapper flex px-9 py-5 w-full rounded-3xl bg-[#FFF8E8] gap-4">
         <div className="svg-icon">
           {

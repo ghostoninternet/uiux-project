@@ -78,16 +78,16 @@ function DefaultLayouts({ children }) {
           <div className="w-full flex flex-col gap-10">
             <div className="w-full px-6 pt-12 space-y-8">
               <div className="w-full">
-                <MenuBar svgIcon={<Dashboard />} darkSvgIcon={<Dashboard />} menuTitle={"Dashboard"} currentActive={currentActive} setCurrentActive={setCurrentActive}/>
+                <MenuBar link={"/"} svgIcon={<Dashboard />} darkSvgIcon={<Dashboard />} menuTitle={"Dashboard"} currentActive={currentActive} setCurrentActive={setCurrentActive}/>
               </div>
               <div className="w-full">
-                <MenuBar svgIcon={<KPI />} darkSvgIcon={<DarkKPI />} menuTitle={"View KPI"} currentActive={currentActive} setCurrentActive={setCurrentActive}/>
+                <MenuBar link={"/kpi"} svgIcon={<KPI />} darkSvgIcon={<DarkKPI />} menuTitle={"View KPI"} currentActive={currentActive} setCurrentActive={setCurrentActive}/>
               </div>
               <div className="w-full">
-                <MenuBar svgIcon={<Profile />} darkSvgIcon={<DarkProfile />} menuTitle={"Profile"} currentActive={currentActive} setCurrentActive={setCurrentActive}/>
+                <MenuBar link={"/profile"} svgIcon={<Profile />} darkSvgIcon={<DarkProfile />} menuTitle={"Profile"} currentActive={currentActive} setCurrentActive={setCurrentActive}/>
               </div>
               <div className="w-full">
-                <MenuBar svgIcon={<Setting />} darkSvgIcon={<DarkSetting />} menuTitle={"Setting"} currentActive={currentActive} setCurrentActive={setCurrentActive}/>
+                <MenuBar link={"/"} svgIcon={<Setting />} darkSvgIcon={<DarkSetting />} menuTitle={"Setting"} currentActive={currentActive} setCurrentActive={setCurrentActive}/>
               </div>
             </div>
 

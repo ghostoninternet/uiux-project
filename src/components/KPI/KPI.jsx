@@ -1,3 +1,4 @@
+/* eslint-disable react-refresh/only-export-components */
 import DownArrow from "../Svg/DownArrow";
 import RightArrow from "../Svg/RightArrow";
 import { SimplePlus } from "../Svg/Plus";
