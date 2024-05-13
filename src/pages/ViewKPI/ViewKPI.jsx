@@ -45,7 +45,7 @@ function ViewKPI() {
                     KpiData.map((e, i) => {
                         return (
                             <div key={i} className="mt-8">
-                                <KPI title={e.title} KPIcompleted={e.KPIcompleted} tasksList={e.tasksList} taskCLick={setDetailTaskToggle} setTaskDetail={setTaskDetail} setNewTask={setNewTaskToggle}/>
+                                <KPI title={e.title} KPIcompleted={e.KPIcompleted} tasksCompleted={e.tasksCompleted} tasksList={e.tasksList} taskCLick={setDetailTaskToggle} setTaskDetail={setTaskDetail} setNewTask={setNewTaskToggle}/>
                             </div>
                         )
                     })

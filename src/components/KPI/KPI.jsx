@@ -7,7 +7,7 @@ import { useNavigate } from "react-router-dom";
 
 
 
-function KPI({title, KPIcompleted, tasksList, taskCLick, setTaskDetail, setNewTask }) {
+function KPI({title, KPIcompleted, tasksList, taskCLick, setTaskDetail, setNewTask, tasksCompleted }) {
     let KPIcompletedDeg = KPIcompleted * 360 / 100
     
     // let splitStr = title.toLowerCase().split(' ');
@@ -19,7 +19,7 @@ function KPI({title, KPIcompleted, tasksList, taskCLick, setTaskDetail, setNewTa
     const handleViewMoreClick = () => {
         navigate({
             pathname: 'view-detail',
-            search: `?title=${props.data.title}`
+            search: `?title=${title}`
         })
     }
 
@@ -30,7 +30,7 @@ function KPI({title, KPIcompleted, tasksList, taskCLick, setTaskDetail, setNewTa
                     <div className="flex items-center mr-2 relative top-[-4px]">
                         <DownArrow />
                     </div>
-                    <h1 className="font-bold text-xl">{props.data.title}</h1>
+                    <h1 className="font-bold text-xl">{title}</h1>
                 </div>
 
                 <div className="flex bg-[#FABB18] rounded-lg items-center py-1.5 hover:cursor-pointer select-none" onClick={()=> handleViewMoreClick()}>
@@ -59,10 +59,10 @@ function KPI({title, KPIcompleted, tasksList, taskCLick, setTaskDetail, setNewTa
                             )`}}>
                         <div className="small-circle w-[7rem] h-[7rem]"></div>
                         <p className="absolute top-[3rem] text-[#737373] text-sm font-medium">Completed</p>
-                        <p className="absolute top-[4.2rem] text-[#0A0A0A] text-2xl font-bold">{props.data.KPIcompleted}%</p>
+                        <p className="absolute top-[4.2rem] text-[#0A0A0A] text-2xl font-bold">{KPIcompleted}%</p>
                         <p className="absolute top-[102%] text-[#0A0A0A] text-xs font-medium">
-                            <span className="text-[#FABB18]">{props.data.tasksCompleted}</span>
-                            <span> / {props.data.tasksList.length} Tasks</span>
+                            <span className="text-[#FABB18]">{tasksCompleted}</span>
+                            <span> / {tasksList.length} Tasks</span>
                         </p>
                     </div>
                 </div>
