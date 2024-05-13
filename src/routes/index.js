@@ -10,7 +10,7 @@ const publicRoutes = [
   { path: '/sign-in', component: SignIn, layout: null },
   { path: '/sign-up', component: SignUp, layout: null },
   { path: '/kpi', component: ViewKPI },
-  { path: '/profile', component: Profile}
+  { path: '/profile', component: Profile},
   { path: '/kpi/view-detail', component: KPIdetail }
 ]
 

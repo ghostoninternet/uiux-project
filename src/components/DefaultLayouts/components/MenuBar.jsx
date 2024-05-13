@@ -3,17 +3,6 @@ import { useEffect, useRef } from "react"
 import { Link } from "react-router-dom"
 
 const MenuBar = (props) => {
-  let path = null
-  switch (props.menuTitle) {
-    case 'Dashboard':
-      path = '/calendar'
-      break;
-    case 'View KPI':
-      path = '/kpi'
-      break;
-    default:
-      break;
-  }
   const ref = useRef()
 
   useEffect(() => {
@@ -37,11 +26,7 @@ const MenuBar = (props) => {
   }
 
   return (
-<<<<<<< HEAD
     <Link to={props.link} className="w-full">
-=======
-    <Link to={path} className="w-full">
->>>>>>> 21c41a1e7defe269877a9cca5268a05c3a81643f
       <div ref={ref} onClick={handleOnClick} className="wrapper flex px-9 py-5 w-full rounded-3xl bg-[#FFF8E8] gap-4">
         <div className="svg-icon">
           {

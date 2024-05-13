@@ -104,7 +104,7 @@ function Profile() {
           <div className="text-2xl font-bold my-5">
             {"Achivements"}
           </div>
-          <div className="grid grid-cols-2 gap-4 pb-20">
+          <div className="grid grid-cols-2 gap-x-6 gap-y-16 pb-10">
             <Achivement achivementTitle={"Done 10 task in one day"} achivementDescription={"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam laoreet tellus ut tincidunt euismod"} />
             <Achivement achivementTitle={"Done 10 task in one day"} achivementDescription={"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam laoreet tellus ut tincidunt euismod"} />
             <Achivement achivementTitle={"Done 10 task in one day"} achivementDescription={"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam laoreet tellus ut tincidunt euismod"} />

@@ -29,8 +29,8 @@ function DefaultLayouts({ children }) {
 
   return (
     <div className="h-screen w-full">
-      <div className="flex flex-row justify-center align-middle w-full h-[12.5%]">
-        <div className="flex flex-row justify-start gap-24 align-middle w-1/5">
+      <div className="flex flex-row justify-center align-middle w-full h-[12.5%] gap-24">
+        <div className="flex flex-row ml-[2rem] mt-[1rem] justify-start gap-14 align-middle w-1/5">
           <div className="my-auto">
             <svg className="w-[120px]" viewBox="0 0 227 177" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path d="M87.1091 31.7069C68.9119 49.1168 54.0439 63.6444 54.0439 63.9326C54.0439 64.2209 66.6771 76.5001 82.0923 91.3159L110.141 118.18H121.999C133.309 118.18 133.811 118.123 132.853 117.143C132.306 116.624 119.627 104.46 104.713 90.2206C89.7999 75.9236 77.6228 64.1056 77.6684 63.875C77.7596 63.4714 78.0333 63.1832 114.473 28.3056C129.889 13.5474 142.795 1.15292 143.206 0.749374C143.753 0.172882 141.427 0.0575867 132.032 -6.10352e-05H120.174L87.1091 31.7069Z" fill="#FABB18"/>
@@ -74,7 +74,7 @@ function DefaultLayouts({ children }) {
       </div>
 
       <div className="flex flex-row w-full h-[87.5%]">
-        <div className="w-[14.2857%] flex flex-col justify-between">
+        <div className="w-[14.2857%] min-w-[260px] flex flex-col justify-between">
           <div className="w-full flex flex-col gap-10">
             <div className="w-full px-6 pt-12 space-y-8">
               <div className="w-full">
