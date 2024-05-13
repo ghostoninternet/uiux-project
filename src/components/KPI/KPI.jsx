@@ -7,8 +7,10 @@ import Task from "./components/Task/Task";
 import { useNavigate } from "react-router-dom";
 
 
-function KPI({title, KPIcompleted, tasksList, taskCLick, setTaskDetail, setNewTask }) {
+
+function KPI({title, KPIcompleted, tasksList, taskCLick, setTaskDetail, setNewTask, tasksCompleted }) {
     let KPIcompletedDeg = KPIcompleted * 360 / 100
+    
     // let splitStr = title.toLowerCase().split(' ');
     // for (var i = 0; i < splitStr.length; i++) {
     //     splitStr[i] = splitStr[i].charAt(0).toUpperCase() + splitStr[i].substring(1);     
@@ -60,8 +62,8 @@ function KPI({title, KPIcompleted, tasksList, taskCLick, setTaskDetail, setNewTa
                         <p className="absolute top-[3rem] text-[#737373] text-sm font-medium">Completed</p>
                         <p className="absolute top-[4.2rem] text-[#0A0A0A] text-2xl font-bold">{KPIcompleted}%</p>
                         <p className="absolute top-[102%] text-[#0A0A0A] text-xs font-medium">
-                            <span className="text-[#FABB18]">11</span>
-                            <span> / 14 Tasks</span>
+                            <span className="text-[#FABB18]">{tasksCompleted}</span>
+                            <span> / {tasksList.length} Tasks</span>
                         </p>
                     </div>
                 </div>

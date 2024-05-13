@@ -30,7 +30,7 @@ function ViewKPI() {
 
     return (
         <div>
-            <div className="mx-8 mt-4">
+            <div className="mx-8 mt-4 min-w-[1180px]">
                 <div className="flex justify-between items-center">
                     <div>
                         <h2 className="text-4xl mb-2">Today</h2>
@@ -45,7 +45,7 @@ function ViewKPI() {
                     KpiData.map((e, i) => {
                         return (
                             <div key={i} className="mt-8">
-                                <KPI title={e.title} KPIcompleted={e.KPIcompleted} tasksList={e.tasksList} taskCLick={setDetailTaskToggle} setTaskDetail={setTaskDetail} setNewTask={setNewTaskToggle}/>
+                                <KPI title={e.title} KPIcompleted={e.KPIcompleted} tasksCompleted={e.tasksCompleted} tasksList={e.tasksList} taskCLick={setDetailTaskToggle} setTaskDetail={setTaskDetail} setNewTask={setNewTaskToggle}/>
                             </div>
                         )
                     })
