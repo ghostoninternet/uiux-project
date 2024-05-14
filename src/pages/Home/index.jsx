@@ -22,7 +22,7 @@ function Home() {
       weight: null,
     }
   }
-  const data = tasksList1.slice(1,7);
+  const data = tasksList1.slice(1,6);
 const [taskDetail, setTaskDetail] = useState(taskExample)
   const navigate = useNavigate();
 
@@ -60,10 +60,13 @@ const [taskDetail, setTaskDetail] = useState(taskExample)
                 <Calendar defaultValue={date} onChange={onChange} next2AriaLabel={false} onClickDay={() => navigate('calendar')}/>
             </div>
             <div className="p-7 w-1/2 bg-white min-h-36 shadow-lg rounded-xl h-1/2">
-              <h1 className="mb-10 font-bold text-xl">Recent task</h1>
+              <div className="flex justify-between mb-10 px-3">
+                <h1 className="font-bold text-xl">Recent task</h1>
+                <button className="bg-black px-4 py-2 rounded-lg text-white hover:bg-slate-50 hover:text-black">View all</button>
+              </div>
               <div className="h-full px-2">
                 {data.map((e,i) => 
-                        <div className="inline-block pt-2 cursor-pointer hover:bg-slate-100 w-full" onClick={() => handleOnClick(e)} key={i}>
+                        <div className="inline-block py-2 cursor-pointer hover:bg-slate-100 w-full border-2 border-[#F1F1F1] rounded-xl mb-2" onClick={() => handleOnClick(e)} key={i}>
                           <div className="inline-flex items-center pr-8">
                               <div className="inline-flex p-2 bg-[#F8F8F7] rounded-[50%] ml-8">
                                   <YellowFolder />
@@ -75,7 +78,6 @@ const [taskDetail, setTaskDetail] = useState(taskExample)
                               </div>
               
                           </div>
-                          <div className="mt-2" style={{border: `0.01rem solid #DFDFDF`}}></div>
                     </div>
                 )}
               </div>
