@@ -47,9 +47,11 @@ const [taskDetail, setTaskDetail] = useState(taskExample)
             <div className="p-7 w-1/2 bg-white min-h-36 shadow-lg rounded-xl">
                 <Calendar defaultValue={date} onChange={onChange} next2AriaLabel={false} onClickDay={() => navigate('calendar')}/>
             </div>
-            <div className="p-7 w-1/2 bg-white min-h-36 shadow-lg rounded-xl">
+            <div className="p-7 w-1/2 bg-white min-h-36 shadow-lg rounded-xl h-1/2">
             <h1 className="mb-10 font-bold text-xl">Recent task</h1>
+            <div className="overflow-scroll h-full">
               {data.map((e,i) => <Task key={i} event={e} taskClick={setDetailTaskToggle} setTaskDetail={setTaskDetail}/>)}
+            </div>
             </div>
         </div>
         <TaskDetailPopUp title={taskDetail.title} event={taskDetail} popUpToggle={detailTaskToggle} setPopUpToggle={setDetailTaskToggle}/>
