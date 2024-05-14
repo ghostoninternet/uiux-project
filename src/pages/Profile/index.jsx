@@ -1,117 +1,58 @@
-import CompletedKPI from "../../components/Svg/CompletedKPI"
-import CreatedKIP from "../../components/Svg/CreatedKIP"
+/* eslint-disable no-unused-vars */
+
 import bgImage from "../../assets/Wallpaper-1.png"
-import Achivement from "./components/Achivement"
+import avatar from "../../assets/HGA-Avatar.png"
+import { ProfileAchivement, ProfileActivity, ProfileGeneral } from "../../components/Svg/ProfileSelection"
+import ProfileGeneralComponent from "./components/ProfileGeneralComponent"
+import ProfileActivityComponent from "./components/ProfileActivityComponent"
+import { useState } from "react"
 
 function Profile() {
+  const [selectTab, setSelectTab] = useState('general')
+
+  const selectedTabStyle = {
+    borderBottomWidth: '4px',
+    borderBottomColor: 'black'
+  }
+
   return (
-    <div className="w-full">
-      <div className="w-[90%]">
+    <div className="w-full flex flex-col gap-10">
+      <div className="w-[90%] flex justify-between mx-auto mt-8">
         <div className="w-full">
-          <div className="w-full">
-          </div>
-          <div>
-
-          </div>
-        </div>
-
-        <div>
-
-        </div>
-      </div>
-      <div className="w-[90%] flex justify-between mx-auto">
-        <div className="w-[30%]">
-          <div className="w-[80%] pt-[20px] pb-[100px] flex flex-col justify-center align-middle bg-white rounded-2xl gap-10 shadow-2xl">
-            <div className="w-[80%] mx-auto flex flex-col gap-2">
-              <div className="font-bold text-xl text-center">
-                {"About Me"}
-              </div>
-              <div className="text-center">
-                {"\"Work hard, be kind, and amazing things will happen.\""}
-              </div>
-            </div>
-            <div className="w-[80%] mx-auto flex flex-col gap-10">
-              <div className="flex gap-8">
-                <div>
-                  <CreatedKIP />
-                </div>
-                <div className="font-bold">
-                  159 KPI Created
-                </div>
-              </div>
-              <div className="flex gap-8">
-                <div>
-                  <CompletedKPI />
-                </div>
-                <div className="font-bold">
-                  102 KPI completed
-                </div>
-              </div>
+          <div className="w-full relative">
+            <img className="h-[180px] rounded-tr-2xl rounded-tl-2xl" src={bgImage} width={"100%"}/>
+            <div className="absolute border-4 border-yellow-400 p-3 rounded-2xl bg-slate-500 bg-opacity-50 text-yellow-400 z-1 top-[10%] right-[2%]">
+              <button>Edit Profile</button>
             </div>
           </div>
-        </div>
-
-        <div className="w-[60%]">
-          <div className="w-full pt-[20px] pb-[100px] flex flex-col justify-center align-middle bg-white rounded-2xl gap-10 shadow-2xl">
-            <div className="w-[80%] mx-auto flex flex-col gap-4">
-              <div className="font-bold text-xl mb-3">
-                {"Contact Infomation"}
-              </div>
-              <div className="font-bold text-xl">
-                {"Hoàng Gia Anh"}
-              </div>
-              <div className="h-[1px] w-full bg-black">
-              </div>
-              <div className="w-full flex justify-between align-middle">
-                <div className="font-bold w-[30%]">
-                  {"Date of birth"}
+          <div className="w-full bg-white p-3 rounded-bl-2xl rounded-br-2xl relative">
+            <div className="w-[45%] absolute flex gap-5 top-[-85px] left-[5%]">
+              <img className="rounded-[50%] min-w-[120]" src={avatar} width={"120px"}/>
+              <div className="flex flex-col justify-end mb-4 font-bold text-[1.5rem]">Hoàng Gia Anh</div>
+            </div>
+            <div className="w-full flex justify-end">
+              <div className="w-[45%] flex justify-around align-middle">
+                <div onClick={(event) => setSelectTab('general')} className="cursor-pointer" style={{ borderBottomWidth: selectTab === 'general' ? '4px' : undefined, borderBottomColor: selectTab === 'general' ? '#FABB18' : undefined }}>
+                  <ProfileGeneral />
                 </div>
-                <div className="w-[50%]">
-                  {"05/09/2003"}
+                <div onClick={(event) => setSelectTab('activity')} className="cursor-pointer" style={{ borderBottomWidth: selectTab === 'activity' ? '4px' : undefined, borderBottomColor: selectTab === 'activity' ? '#FABB18' : undefined }}>
+                  <ProfileActivity />
                 </div>
-              </div>
-              <div className="w-full flex justify-between align-middle">
-                <div className="font-bold w-[30%]">
-                  {"Phone number"}
-                </div>
-                <div className="w-[50%]">
-                  {"(123)-456-7890"}
-                </div>
-              </div>
-              <div className="w-full flex justify-between align-middle">
-                <div className="font-bold w-[30%]">
-                  {"Email"}
-                </div>
-                <div className="w-[50%]">
-                  {"boycodon2k3@gmail.com"}
-                </div>
-              </div>
-              <div className="w-full flex justify-between align-middle">
-                <div className="font-bold w-[30%]">
-                  {"Facebook"}
-                </div>
-                <div className="w-[50%]">
-                  {"www.example.com"}
+                <div onClick={(event) => setSelectTab('achivement')} className="cursor-pointer" style={{ borderBottomWidth: selectTab === 'achivement' ? '4px' : undefined, borderBottomColor: selectTab === 'achivement' ? '#FABB18' : undefined }}>
+                  <ProfileAchivement />
                 </div>
               </div>
             </div>
           </div>
         </div>
       </div>
-
-      <div className="w-[90%] mx-auto bg-white rounded-2xl shadow-2xl flex flex-col">
-        <div className="w-[90%] mx-auto">
-          <div className="text-2xl font-bold my-5">
-            {"Achivements"}
-          </div>
-          <div className="grid grid-cols-2 gap-x-6 gap-y-16 pb-10">
-            <Achivement achivementTitle={"Done 10 task in one day"} achivementDescription={"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam laoreet tellus ut tincidunt euismod"} />
-            <Achivement achivementTitle={"Done 10 task in one day"} achivementDescription={"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam laoreet tellus ut tincidunt euismod"} />
-            <Achivement achivementTitle={"Done 10 task in one day"} achivementDescription={"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam laoreet tellus ut tincidunt euismod"} />
-            <Achivement achivementTitle={"Done 10 task in one day"} achivementDescription={"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam laoreet tellus ut tincidunt euismod"} />
-          </div>
-        </div>
-      </div>
+      {
+        selectTab === 'general' 
+        ? <ProfileGeneralComponent /> 
+        : selectTab === 'activity' 
+        ? <ProfileActivityComponent /> 
+        : null
+      }
     </div>
   )
 }
