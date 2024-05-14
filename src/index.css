@@ -2,6 +2,12 @@
 @tailwind components;
 @tailwind utilities;
 
+
+:root {
+    --toastify-toast-min-height: 80px;
+    --toastify-color-progress-light: var(--toastify-color-success);
+}
+
 .fc .fc-button {
   background-color:  #FFF;
   border: 0;
@@ -66,4 +72,14 @@
 input::-webkit-inner-spin-button {
     -webkit-appearance: none;
     margin: 0;
+}
+
+.Toastify__toast-container--top-right {
+    top: 10%;
+}
+
+.Toastify__toast-theme--light {
+    background-color: #D3FCCF;
+    font-weight: bold;
+    font-size: large;
 }

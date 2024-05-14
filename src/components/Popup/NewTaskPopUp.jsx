@@ -5,11 +5,18 @@ import DesscriptionTextarea from "../Input/DescriptionTextarea";
 import FormSubmitButton from "../Button/FormSubmitButton";
 import DatePicker from "../Input/DatePicker";
 import Target from "../Svg/Target";
-Target
-function  NewTaskPopUp(props) { 
+import { toast } from "react-toastify"
+function  NewTaskPopUp(props) {
+  const handleSubmit = (form) => {
+    form.preventDefault()
+    props.setPopUpToggle(false)
+    toast("Create successfully")
+  }
+  
+
   return (
     <PopUp title={'Create new task'} popUpToggle={props.popUpToggle} setPopUpToggle={props.setPopUpToggle}>
-      <form className="space-y-5 px-7 py-3">
+      <form className="space-y-5 px-7 py-3" onSubmit={(form) => handleSubmit(form)}>
         <TitleInput placeholder="Task Title or type ‘/’ for command"/>
         <PopUpInput label={'Evaluation'} id={'Evaluation'} placeholder={'Enter evaluate method'}/>
         <div className="flex">

@@ -5,13 +5,26 @@ import DatePicker from "../Input/DatePicker"
 import Flag from "../Svg/Flag"
 import ShowMore from "../Svg/ShowMore"
 import FormSubmitButton from "../Button/FormSubmitButton"
+import { toast } from "react-toastify"
+
 const typeOptions = ['One time KPI','Ever day','Every week','Every month']
 
 
+
+
 function NewKpiPopUp({popUpToggle, setPopUpToggle}) {
+  const handleSubmit = (form) => {
+    form.preventDefault()
+    setPopUpToggle(false)
+    toast("Create successfully",{
+      role: "success"
+    })
+  }
+
+
   return (
     <PopUp title="Create new KPI" popUpToggle={popUpToggle} setPopUpToggle={setPopUpToggle}>
-        <form action="" className="space-y-5 px-7 py-5">
+        <form action="" className="space-y-5 px-7 py-5" onSubmit={(form) => handleSubmit(form)}>
           <TitleInput placeholder="KPI name or type ‘/’ for command"/>
           <DesscriptionTextarea />
           <div className="flex space-x-10">
