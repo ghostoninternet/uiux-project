@@ -5,7 +5,7 @@ import Save from "../Svg/Save";
 Save
 function TaskDetailPopUp({title,event, popUpToggle, setPopUpToggle}) {
   return (
-    <PopUp title={event.title} popUpToggle={popUpToggle} setPopUpToggle={setPopUpToggle}>
+    <PopUp title={title} popUpToggle={popUpToggle} setPopUpToggle={setPopUpToggle}>
             <form action="" className="flex px-7">
                 <div className="w-3/5 h-ful space-y-3 py-5 pr-10 mr-20">
                     <h1 className="text-2xl font-extrabold">{title}</h1>
@@ -23,7 +23,10 @@ function TaskDetailPopUp({title,event, popUpToggle, setPopUpToggle}) {
                         non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
                         <DatePicker />
                     </div>
-                    
+                    <button className="ml-auto bg-[#FABB18] rounded-xl px-5 py-2 flex text-white font-bold" type="submit">
+                        Save 
+                      <div className="ml-3 mt-1"><Save /></div>
+                    </button>
                 </div>
             </form>
     </PopUp>

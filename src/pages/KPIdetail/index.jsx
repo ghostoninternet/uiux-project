@@ -4,6 +4,8 @@ import { Fragment, useLayoutEffect, useState } from "react";
 import Time from "../../components/Time/Time";
 import AddButton from "../../components/AddButton/AddButton";
 import '../KPIdetail/index.css'
+import DetailTask from "../../components/Task/DetailTask";
+import EditKpiPopUp from "../../components/Popup/EditKpiPopUp";
 
 export default function index() {
   let [searchParams, setSearchParams] = useSearchParams()
@@ -19,6 +21,19 @@ export default function index() {
     }
   }, [])
 
+  const taskExample = {
+    title: '',
+    extendedProps: {
+      evaluatuon: '',
+      target: '',
+      value: null,
+      Taskcompleted: null,
+      weight: null,
+    }
+  }
+  const [taskDetail, setTaskDetail] = useState(taskExample)
+  const [detailTaskToggle, setDetailTaskToggle] = useState(false)
+  const [editToggle, setEditToggle] = useState(false)
   return (
     !data ? <Fragment /> :
     <div className="mx-8 mt-4">
@@ -65,7 +80,7 @@ export default function index() {
           <div className="pt-4 px-8">
             <div className="flex">
               <p className="font-bold text-2xl">Infomation</p>
-              <div className="flex items-center ml-3">
+              <div className="flex items-center ml-3 hover:bg-slate-200 p-1 rounded-md cursor-pointer" onClick={() => setEditToggle(true)}>
                 <svg width="20" height="19" viewBox="0 0 27 25" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path d="M0.477661 19.7924V25H5.81481L21.5559 9.64102L16.2187 4.43341L0.477661 19.7924ZM25.6833 5.6138C26.2383 5.07221 26.2383 4.19733 25.6833 3.65574L22.3529 0.406194C21.7978 -0.135398 20.9012 -0.135398 20.3461 0.406194L17.7416 2.94751L23.0787 8.15512L25.6833 5.6138Z" fill="black"/>
                 </svg>
@@ -95,13 +110,20 @@ export default function index() {
       <div className="bg-white">
         <div className="px-8 pt-6">
           <div className="flex">
-            <div>Name</div>
-            <div>Progess</div>
-            <div>Weight</div>
-            <div>Status</div>
+            <div className="w-1/3 text-center"><span className="">Name</span></div>
+            <div className="w-[20%] text-center"><span className="">Progess</span></div>
+            <div className="w-1/6 text-center">Weight</div>
+            <div className="w-1/6 text-center">Status</div>
+          </div>
+
+          <div className="px-10">
+            <div>
+              <DetailTask data={data.tasksList[0]}/>
+            </div>
           </div>
         </div>
       </div>
+      <EditKpiPopUp popUpToggle={editToggle} setPopUpToggle={setEditToggle}/>
     </div>
   )
 }

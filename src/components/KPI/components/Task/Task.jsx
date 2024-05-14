@@ -3,7 +3,7 @@ import '../Task/index.css'
 
 function Task({ event, taskClick, setTaskDetail }) {
     const handleOnClick  = () => {
-        taskClick('')
+        taskClick(true)
         setTaskDetail(event)
     }
 

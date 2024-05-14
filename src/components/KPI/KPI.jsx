@@ -49,7 +49,7 @@ function KPI({title, KPIcompleted, tasksList, taskCLick, setTaskDetail, setNewTa
                         <div className="flex items-center pr-2 py-2">
                             <SimplePlus />
                         </div>
-                        <p className="font-semibold leading-[32px]" onClick={() => setNewTask('')}>add task</p>
+                        <p className="font-semibold leading-[32px]" onClick={() => setNewTask(true)}>add task</p>
                     </div>
 
                     <div className="big-circle w-36 h-36" 

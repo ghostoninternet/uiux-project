@@ -9,7 +9,9 @@ import NewKpiPopUp from "../../components/Popup/NewKpiPopUp";
 function ViewKPI() {
     
 
-    const [detailTaskToggle, setDetailTaskToggle] = useState('hidden')
+    const [detailTaskToggle, setDetailTaskToggle] = useState(false)
+    const [newTaskToggle, setNewTaskToggle] = useState(false)
+    const [newKpiToggle, setNewKpiToggle] = useState(false)
     const taskExample = {
         title: '',
         extendedProps: {
@@ -21,11 +23,9 @@ function ViewKPI() {
         }
       }
     const [taskDetail, setTaskDetail] = useState(taskExample)
-    const [newTaskToggle, setNewTaskToggle] = useState('hidden');
-    const [newKpiToggle, setNewKpiToggle] = useState('hidden');
 
     const handleNewKPIClick = () => {
-        setNewKpiToggle('')
+        setNewKpiToggle(true)
     }
 
     return (
