@@ -4,6 +4,7 @@ import { Fragment, useLayoutEffect, useState } from "react";
 import Time from "../../components/Time/Time";
 import AddButton from "../../components/AddButton/AddButton";
 import '../KPIdetail/index.css'
+import DetailTask from "../../components/Task/DetailTask";
 
 export default function index() {
   let [searchParams, setSearchParams] = useSearchParams()
@@ -18,6 +19,19 @@ export default function index() {
       }
     }
   }, [])
+
+  const taskExample = {
+    title: '',
+    extendedProps: {
+      evaluatuon: '',
+      target: '',
+      value: null,
+      Taskcompleted: null,
+      weight: null,
+    }
+  }
+  const [taskDetail, setTaskDetail] = useState(taskExample)
+  const [detailTaskToggle, setDetailTaskToggle] = useState('hidden')
 
   return (
     !data ? <Fragment /> :
@@ -95,10 +109,16 @@ export default function index() {
       <div className="bg-white">
         <div className="px-8 pt-6">
           <div className="flex">
-            <div>Name</div>
-            <div>Progess</div>
-            <div>Weight</div>
-            <div>Status</div>
+            <div className="w-1/3 text-center"><span className="">Name</span></div>
+            <div className="w-[20%] text-center"><span className="">Progess</span></div>
+            <div className="w-1/6 text-center">Weight</div>
+            <div className="w-1/6 text-center">Status</div>
+          </div>
+
+          <div className="px-10">
+            <div>
+              <DetailTask data={data.tasksList[0]}/>
+            </div>
           </div>
         </div>
       </div>
