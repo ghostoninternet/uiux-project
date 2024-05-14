@@ -4,7 +4,7 @@ const TeachingQuality = {
     title: 'Teaching quality',
     KPIcompleted: 80,
     tasksList: tasksList1,
-    tasksCompleted: 8,
+    tasksCompleted: 2,
     startDate: '02/09/1945',
     dueDate: '30/04/1975',
 }

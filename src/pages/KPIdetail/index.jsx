@@ -106,18 +106,36 @@ export default function index() {
         </div>
       </div>
       
-      <div className="bg-white">
+      <div className="bg-white rounded-lg mt-8 shadow-lg">
         <div className="px-8 pt-6">
-          <div className="flex">
+          <div className="flex text-[#9A9A9A] font-semibold text-lg">
             <div className="w-1/3 text-center"><span className="">Name</span></div>
-            <div className="w-[20%] text-center"><span className="">Progess</span></div>
-            <div className="w-1/6 text-center">Weight</div>
-            <div className="w-1/6 text-center">Status</div>
+            <div className="w-[20%] ml-[0.8rem] text-center"><span className="">Progess</span></div>
+            <div className="w-1/6 ml-[1.4rem] text-center">Weight</div>
+            <div className="w-1/6 ml-[0.7rem] text-center">Status</div>
           </div>
 
-          <div className="px-10">
+          <div className="px-10 mt-3 pb-3 scrollbars-hidden overflow-y-scroll max-h-[15rem]">
+            {data.tasksList.map((e, i) => {
+              return (
+                <div>
+                  <DetailTask key={i} data={e}/>
+                </div>
+              )
+            })}
+
             <div>
-              <DetailTask data={data.tasksList[0]}/>
+              <div className="w-[68.5rem] inline-block pt-2 cursor-pointer hover:bg-slate-100">
+                <div className="inline-flex items-center pr-8">
+                    <div className="ml-8 p-2 rounded-[50%] inline-flex bg-[#FEF1D1]">
+                      <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="21" height="21" viewBox="0,0,256,256" fontStyle="fill:#000000;">
+                        <g fill="#ffffff" fillRule="evenodd" stroke="none" strokeWidth="1" strokeLinecap="butt" strokeLinejoin="miter" strokeMiterlimit="10" strokeDasharray="" strokeDashoffset="0" fontFamily="none" fontWeight="none" fontSize="none" textAnchor="none" fontStyle="mix-blend-mode: normal"><g transform="scale(10.66667,10.66667)"><path d="M11,2v9h-9v2h9v9h2v-9h9v-2h-9v-9z"></path></g></g>
+                      </svg>
+                    </div>
+                    <span className="ml-4 text-base w-60 task-title italic text-[#A7A1A1]">Add new task</span>
+                </div>
+                <div className="mt-2" style={{border: `0.01rem solid #DFDFDF`}}></div>
+              </div>
             </div>
           </div>
         </div>
