@@ -12,6 +12,7 @@ export default function BigCalendar({setClickedDate, setEvents, eventClick ,getE
     const handleEventClick = (info) => {
       eventClick()
       getEventDetail(info.event._def)
+      console.log(info.event._def)
     }
 
 
