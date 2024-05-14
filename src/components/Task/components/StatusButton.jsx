@@ -5,7 +5,7 @@ import WarningSvg from "./WarningSvg";
 function StatusButton({ title }) {
     let color = '#188EFA'
     let Comp = PlaySvg
-    let css = 'rounded-[50%]'
+    let css = 'bg-white rounded-[50%]'
     switch (title) {
         case 'Late':
             Comp = WarningSvg
@@ -21,7 +21,7 @@ function StatusButton({ title }) {
     }
     return ( 
         <div className={`h-10 w-[8rem] items-center flex rounded-lg`} style={{backgroundColor: `${color}`}}>
-            <div className={"ml-2 w-5 h-5 flex justify-center items-center bg-white " + css}>
+            <div className={"ml-2 w-5 h-5 flex justify-center items-center " + css}>
                 <Comp />
             </div>
             <span className="ml-2 font-semibold text-white mr-2">{title}</span>
