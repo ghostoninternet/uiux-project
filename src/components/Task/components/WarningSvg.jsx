@@ -1,0 +1,7 @@
+function WarningSvg() {
+    return ( 
+        <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" width="20px" height="20px" viewBox="0,0,256,256"><g fill="#ffffff" fillRule="nonzero" stroke="none" strokeWidth="1" strokeLinecap="butt" strokeLinejoin="miter" strokeMiterlimit="10" strokeDasharray="" strokeDashoffset="0" fontFamily="none" fontWeight="none" fontSize="none" textAnchor="none" fontStyle="mix-blend-mode: normal"><g transform="scale(5.12,5.12)"><path d="M49.77734,45.34766l-23.91016,-41.41797c-0.35937,-0.61719 -1.375,-0.61719 -1.73437,0l-24,41.57031c-0.17578,0.30859 -0.17578,0.69141 0,1c0.17969,0.30859 0.51172,0.5 0.86719,0.5h48c0.00781,0 0.01563,0 0.01953,0c0.55469,0 1,-0.44531 1,-1c0,-0.25 -0.08984,-0.47656 -0.24219,-0.65234zM23.49219,19.26563c0,-0.21484 0.14453,-0.35937 0.35938,-0.35937h2.29688c0.21484,0 0.35547,0.14453 0.35547,0.35938v14.46094c0,0.21484 -0.14062,0.35938 -0.35547,0.35938h-2.29687c-0.21484,0 -0.35937,-0.14453 -0.35937,-0.35937zM26.57813,39.9375c0,0.21484 -0.14453,0.35547 -0.35547,0.35547h-2.44141c-0.21484,0 -0.35547,-0.14453 -0.35547,-0.35547v-2.62109c0,-0.21484 0.14453,-0.35547 0.35547,-0.35547h2.44141c0.21484,0 0.35547,0.14063 0.35547,0.35547z"></path></g></g></svg>
+    )
+}
+
+export default WarningSvg;
