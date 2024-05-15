@@ -147,7 +147,7 @@ function DefaultLayouts({ children }) {
             </div>
             {
               !smallSidebar &&
-              (<div className="w-full px-[3rem] flex justify-between gap-10">
+              (<div className="w-full px-[2.4rem] flex justify-between gap-10">
                <div className="cursor-pointer hover:bg-slate-200"><Facebook /></div>
                 <div className="cursor-pointer hover:bg-slate-200"><WhatsApp /></div>
                 <div className="cursor-pointer hover:bg-slate-200"><Twitter /></div>
@@ -166,8 +166,8 @@ function DefaultLayouts({ children }) {
           </div>
           <div className="flex flex-col">
             <div className="h-[4px] w-full bg-black"></div>
-            <div className="flex gap-3 px-9 mt-3 mb-10">
-              <div>
+            <div className="cursor-pointer flex gap-3 px-9 mt-3 mb-10">
+              <div className="">
                 <HelpIcon />
               </div>
               {

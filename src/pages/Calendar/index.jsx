@@ -3,8 +3,12 @@ import BigCalendar from "../../components/Calendar/BigCalendar"
 import ShortTask from "../../components/Task/ShortTask";
 import NewTaskPopUp from "../../components/Popup/NewTaskPopUp";
 import TaskDetailPopUp from "../../components/Popup/TaskDetailPopUp";
+import BackArrow from "../../components/Svg/BackArrow";
+import { useNavigate } from "react-router-dom"
+
 function Calendar() {
-  
+  const navigate = useNavigate()
+
   const [clickedDate, setClickedDate] = useState( new Date().toDateString())
   const [events, setEvents] = useState([]);
   const [newTaskToggle, setNewTaskToggle] = useState(false);
@@ -23,9 +27,12 @@ function Calendar() {
   
   return (
     <div>
-        <div className="flex p-5">
-            <h1 className="font-normal mr-5 text-3xl">Calendar</h1>
-            <img width="30" height="24" src="https://img.icons8.com/material/24/calendar--v1.png" alt="calendar--v1"/>
+        <div className="flex p-5 gap-4">
+            <button className="hover:bg-slate-200 hover:rounded-lg px-1" onClick={() => navigate('/')}>
+              <BackArrow />
+            </button>
+            <h1 className="font-normal text-3xl">Calendar</h1>
+            <img width="40" height="25" src="https://img.icons8.com/material/24/calendar--v1.png" alt="calendar--v1"/>
         </div>
         <div className="flex justify-between">
             <BigCalendar setClickedDate={setClickedDate} setEvents={setEvents} eventClick={() => setDetailTaskToggle(true)} getEventDetail={setEvent}/>

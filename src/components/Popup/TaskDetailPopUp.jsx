@@ -2,11 +2,19 @@ import PopUp from "./PopUp";
 import NumberPopUpInput from "../Input/NumberPopUpInput";
 import DatePicker from "../Input/DatePicker";
 import Save from "../Svg/Save";
-Save
+import { toast } from "react-toastify";
+
 function TaskDetailPopUp({title,event, popUpToggle, setPopUpToggle}) {
+
+  const handleFormSubmission = (e) => {
+    e.preventDefault()
+    toast('Save successfully!')
+    setPopUpToggle(false)
+  }
+
   return (
     <PopUp title={title} popUpToggle={popUpToggle} setPopUpToggle={setPopUpToggle}>
-            <form action="" className="flex px-7">
+            <form action="" onSubmit={handleFormSubmission} className="flex px-7">
                 <div className="w-3/5 h-ful space-y-3 py-5 pr-10 mr-20">
                     <h1 className="text-2xl font-extrabold">{title}</h1>
                     <NumberPopUpInput label={event.evaluatuon} value={event.Taskcompleted}/>

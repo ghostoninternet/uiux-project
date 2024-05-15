@@ -20,7 +20,7 @@ export default function Setting() {
           <div className="text-4xl font-[625] mb-8">
             Select Theme
           </div>
-          <div className="w-3/12 flex justify-around mb-8">
+          <div className="w-3/12 min-w-[16rem] flex justify-around mb-8">
             <div className="cursor-pointer w-16 h-16 bg-white border-[2px] rounded-3xl"></div>
             <div className="cursor-pointer w-16 h-16 bg-black border-[2px] border-black rounded-3xl"></div>
             <div className="cursor-pointer w-16 h-16 bg-gray-400 border-[2px] border-gray-400 rounded-3xl"></div>
@@ -28,7 +28,7 @@ export default function Setting() {
           <div className="text-4xl font-[625] mb-8">
             Font Size
           </div>
-          <div className="w-3/12 mb-20 pl-10">
+          <div className="w-3/12 min-w-[16rem] mb-20 pl-10">
             <span className="cursor-pointer text-[1.5rem] mr-14">Aa</span>
             <span className="cursor-pointer text-[2.5rem] mr-10">Aa</span>
             <span className="cursor-pointer text-[3.5rem]">Aa</span>
