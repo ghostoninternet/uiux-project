@@ -133,7 +133,7 @@ function DefaultLayouts({ children }) {
           <div className="w-full flex flex-col gap-10">
             <div className="w-full px-6 pt-12 space-y-8">
               <div className="w-full">
-                <MenuBar smallSidebar={smallSidebar} link={"/dashboard"} svgIcon={<Dashboard />} darkSvgIcon={<DarkDashboard />} menuTitle={"Dashboard"} currentActive={currentActive} setCurrentActive={setCurrentActive} />
+                <MenuBar smallSidebar={smallSidebar} link={"/"} svgIcon={<Dashboard />} darkSvgIcon={<DarkDashboard />} menuTitle={"Dashboard"} currentActive={currentActive} setCurrentActive={setCurrentActive} />
               </div>
               <div className="w-full">
                 <MenuBar smallSidebar={smallSidebar} link={"/kpi"} svgIcon={<KPI />} darkSvgIcon={<DarkKPI />} menuTitle={"View KPI"} currentActive={currentActive} setCurrentActive={setCurrentActive} />

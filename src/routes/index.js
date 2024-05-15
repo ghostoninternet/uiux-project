@@ -11,7 +11,6 @@ import Edit from "../pages/Profile/components/Edit"
 
 const publicRoutes = [
   { path: '/', component: Home },
-  { path: '/dashboard', component: Home },
   { path: '/calendar', component: Calendar },
   { path: '/kpi', component: ViewKPI },
   { path: '/kpi/view-detail', component: KPIdetail },
