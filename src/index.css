@@ -97,3 +97,23 @@ input::-webkit-inner-spin-button {
     font-weight: bold;
     font-size: large;
 }
+
+.scrollbar::-webkit-scrollbar {
+    width: 20px;
+    height: 20px;
+  }
+
+  .scrollbar::-webkit-scrollbar-track {
+    border-radius: 100vh;
+    background: #f3f0f0;
+  }
+
+  .scrollbar::-webkit-scrollbar-thumb {
+    background: #524E4E;
+    border-radius: 100vh;
+    border: 3px solid #f6f7ed;
+  }
+
+  .scrollbar::-webkit-scrollbar-thumb:hover {
+    background: #524E4E;
+  }
