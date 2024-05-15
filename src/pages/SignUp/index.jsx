@@ -7,7 +7,7 @@ import { Link } from 'react-router-dom'
 function SignUp() {
   return (
     <div className="relative h-screen">
-        <div className="ml-10 relative z-10 top-8">
+        <div className="ml-10 relative z-20 top-8">
             <Logo/>
         </div>
         <img src={bgImage} alt="" className='w-full h-full object-cover absolute top-0 left-0 rotate-0'/>
@@ -17,19 +17,19 @@ function SignUp() {
                 <div className='flex justify-center'>
                     <form>
                         <div className='mb-3'>
-                            <Input label={"email"} type={"text"} id={'0'}/>
+                            <Input label={"email"} type={"text"} id={'0'} width={'100%'}/>
                         </div>
                         <div className='mb-3'>
-                            <Input label={"username"} type={"text"} id={'1'}/>
+                            <Input label={"username"} type={"text"} id={'1'} width={'100%'}/>
                         </div>
                         <div className='mb-3'>
-                            <Input label={"birthday"} type={"date"} id={'2'}/>
+                            <Input label={"birthday"} type={"date"} id={'2'} width={'100%'}/>
                         </div>
                         <div className='mb-3'>
-                            <Input label={"password"} type={"password"} id={'3'}/>
+                            <Input label={"password"} type={"password"} id={'3'} width={'100%'}/>
                         </div>
                         <div className='mb-3'>
-                            <Input label={"confirm password"} type={"password"} id={'4'}/>
+                            <Input label={"confirm password"} type={"password"} id={'4'} width={'100%'}/>
                         </div>
                         
                 
