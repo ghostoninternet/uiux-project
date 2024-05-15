@@ -3,7 +3,7 @@ import BigCalendar from "../../components/Calendar/BigCalendar"
 import ShortTask from "../../components/Task/ShortTask";
 import NewTaskPopUp from "../../components/Popup/NewTaskPopUp";
 import TaskDetailPopUp from "../../components/Popup/TaskDetailPopUp";
-function Dashboard() {
+function Calendar() {
   
   const [clickedDate, setClickedDate] = useState( new Date().toDateString())
   const [events, setEvents] = useState([]);
@@ -60,4 +60,4 @@ function Dashboard() {
   )
 }
 
-export default Dashboard 
+export default Calendar 
