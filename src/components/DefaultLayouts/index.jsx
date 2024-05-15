@@ -3,7 +3,7 @@ import { useEffect, useRef, useState } from "react"
 import Bell from "../../assets/notification-bell-svgrepo-com.svg"
 import UserIcon from "../Svg/UserIcon"
 import MenuBar from "./components/MenuBar"
-import { Dashboard, Profile, Setting, KPI, DarkProfile, DarkSetting, DarkKPI } from "../Svg/MenuBarIcon"
+import { Dashboard, Profile, Setting, KPI, DarkProfile, DarkSetting, DarkKPI, DarkDashboard } from "../Svg/MenuBarIcon"
 import { Facebook, Twitter, WhatsApp } from "../Svg/SocialMedia"
 import HelpIcon from "../Svg/HelpIcon"
 import { Link, useLocation  } from "react-router-dom"
@@ -82,7 +82,7 @@ function DefaultLayouts({ children }) {
               </svg>
             </Link>
           </div>
-          <div className="my-auto">
+          <div className="mt-4">
             <button onClick={handleOnClickHamburger}>
               <div className="flex flex-col justify-between w-[40px] h-[30px] rigin-center overflow-hidden">
                 <div className="bg-black h-[4px] w-9"></div>
@@ -127,7 +127,7 @@ function DefaultLayouts({ children }) {
           <div className="w-full flex flex-col gap-10">
             <div className="w-full px-6 pt-12 space-y-8">
               <div className="w-full">
-                <MenuBar smallSidebar={smallSidebar} link={"/dashboard"} svgIcon={<Dashboard />} darkSvgIcon={<Dashboard />} menuTitle={"Dashboard"} currentActive={currentActive} setCurrentActive={setCurrentActive} />
+                <MenuBar smallSidebar={smallSidebar} link={"/dashboard"} svgIcon={<Dashboard />} darkSvgIcon={<DarkDashboard />} menuTitle={"Dashboard"} currentActive={currentActive} setCurrentActive={setCurrentActive} />
               </div>
               <div className="w-full">
                 <MenuBar smallSidebar={smallSidebar} link={"/kpi"} svgIcon={<KPI />} darkSvgIcon={<DarkKPI />} menuTitle={"View KPI"} currentActive={currentActive} setCurrentActive={setCurrentActive} />
@@ -136,7 +136,7 @@ function DefaultLayouts({ children }) {
                 <MenuBar smallSidebar={smallSidebar} link={"/profile"} svgIcon={<Profile />} darkSvgIcon={<DarkProfile />} menuTitle={"Profile"} currentActive={currentActive} setCurrentActive={setCurrentActive} />
               </div>
               <div className="w-full">
-                <MenuBar smallSidebar={smallSidebar} link={"/"} svgIcon={<Setting />} darkSvgIcon={<DarkSetting />} menuTitle={"Setting"} currentActive={currentActive} setCurrentActive={setCurrentActive} />
+                <MenuBar smallSidebar={smallSidebar} link={"/setting"} svgIcon={<Setting />} darkSvgIcon={<DarkSetting />} menuTitle={"Setting"} currentActive={currentActive} setCurrentActive={setCurrentActive} />
               </div>
             </div>
             {

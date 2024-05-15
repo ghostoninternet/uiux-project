@@ -1,6 +1,18 @@
 export function Dashboard() {
   return (
     <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <rect width="11.375" height="6.5" rx="1.5" fill="#FABB18"/>
+      <rect x="14.625" y="19.5" width="11.375" height="6.5" rx="1.5" fill="#FABB18"/>
+      <rect y="9.75" width="11.375" height="16.25" rx="1.5" fill="#050505"/>
+      <rect x="14.625" width="11.375" height="16.25" rx="1.5" fill="#050505"/>
+    </svg>
+
+  )
+}
+
+export function DarkDashboard() {
+  return (
+    <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
       <rect width="11.375" height="6.5" rx="1.5" fill="#FABB18" />
       <rect x="14.625" y="19.5" width="11.375" height="6.5" rx="1.5" fill="#FABB18" />
       <rect y="9.75" width="11.375" height="16.25" rx="1.5" fill="#F1F1F1" />

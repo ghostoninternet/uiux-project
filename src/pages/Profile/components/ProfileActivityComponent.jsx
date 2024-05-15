@@ -25,6 +25,42 @@ function ProfileActivityComponent() {
       activityType: "Create new task",
       activityTitle: "Đi tập gym",
       activityDescription: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam laoreet tellus ut tincidunt euismod."
+    },
+    {
+      activityTime: "Yesterday",
+      activityType: "Create new task",
+      activityTitle: "Đi tập gym",
+      activityDescription: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam laoreet tellus ut tincidunt euismod."
+    },
+    {
+      activityTime: "Yesterday",
+      activityType: "Create new task",
+      activityTitle: "Đi tập gym",
+      activityDescription: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam laoreet tellus ut tincidunt euismod."
+    },
+    {
+      activityTime: "Yesterday",
+      activityType: "Create new task",
+      activityTitle: "Đi tập gym",
+      activityDescription: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam laoreet tellus ut tincidunt euismod."
+    },
+    {
+      activityTime: "Yesterday",
+      activityType: "Create new task",
+      activityTitle: "Đi tập gym",
+      activityDescription: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam laoreet tellus ut tincidunt euismod."
+    },
+    {
+      activityTime: "Yesterday",
+      activityType: "Create new task",
+      activityTitle: "Đi tập gym",
+      activityDescription: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam laoreet tellus ut tincidunt euismod."
+    },
+    {
+      activityTime: "Yesterday",
+      activityType: "Create new task",
+      activityTitle: "Đi tập gym",
+      activityDescription: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam laoreet tellus ut tincidunt euismod."
     }
   ]
   return (
