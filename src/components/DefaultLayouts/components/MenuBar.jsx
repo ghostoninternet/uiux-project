@@ -3,21 +3,10 @@ import { useEffect, useRef } from "react"
 import { Link } from "react-router-dom"
 
 const MenuBar = (props) => {
-  let path = null
-  switch (props.menuTitle) {
-    case 'Dashboard':
-      path = '/calendar'
-      break;
-    case 'View KPI':
-      path = '/kpi'
-      break;
-    default:
-      break;
-  }
   const ref = useRef()
 
   useEffect(() => {
-    if (props.currentActive === props.menuTitle) {
+    if (props.currentActive === props.menuTitle.toLowerCase()) {
       ref.current.classList.remove('bg-[#FFF8E8]')
       ref.current.classList.add('bg-black', 'text-white')
     } else {
@@ -37,7 +26,7 @@ const MenuBar = (props) => {
   }
 
   return (
-    <Link to={path} className="w-full">
+    <Link to={props.link} className="w-full">
       <div ref={ref} onClick={handleOnClick} className="wrapper flex px-9 py-5 w-full rounded-3xl bg-[#FFF8E8] gap-4">
         <div className="svg-icon">
           {
