@@ -1,20 +1,46 @@
-import Achivement from "./Achivement"
+import Activity from "./Activity"
 
 function ProfileActivityComponent() {
+  const activities = [
+    {
+      activityTime: "5 minutes ago",
+      activityType: "Create new task",
+      activityTitle: "Đi tập gym",
+      activityDescription: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam laoreet tellus ut tincidunt euismod."
+    },
+    {
+      activityTime: "30 minutes ago",
+      activityType: "Finish task",
+      activityTitle: "Đấm chết cm thằng Hà",
+      activityDescription: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam laoreet tellus ut tincidunt euismod."
+    },
+    {
+      activityTime: "59 minutes ago",
+      activityType: "Create new KPI",
+      activityTitle: "Chăm sóc sức khỏe",
+      activityDescription: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam laoreet tellus ut tincidunt euismod."
+    },
+    {
+      activityTime: "Yesterday",
+      activityType: "Create new task",
+      activityTitle: "Đi tập gym",
+      activityDescription: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam laoreet tellus ut tincidunt euismod."
+    }
+  ]
   return (
-    <div className="w-[90%] mx-auto bg-white rounded-2xl shadow-2xl flex flex-col">
+    <div className="w-[90%] mx-auto bg-white rounded-2xl shadow-2xl">
       <div className="w-[90%] mx-auto">
-        <div className="text-2xl font-bold my-5">
-          {"Achivements"}
+        <div className="font-bold text-3xl mt-5">
+          Activities
         </div>
-        <div className="grid grid-cols-2 gap-x-6 gap-y-16 pb-10">
-          <Achivement achivementTitle={"Done 10 task in one day"} achivementDescription={"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam laoreet tellus ut tincidunt euismod"} />
-          <Achivement achivementTitle={"Done 10 task in one day"} achivementDescription={"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam laoreet tellus ut tincidunt euismod"} />
-          <Achivement achivementTitle={"Done 10 task in one day"} achivementDescription={"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam laoreet tellus ut tincidunt euismod"} />
-          <Achivement achivementTitle={"Done 10 task in one day"} achivementDescription={"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam laoreet tellus ut tincidunt euismod"} />
+        <div className="mt-5 ml-8 mb-10">
+          <ol className="relative border-s-4 border-[#FABB18]">
+            { activities.map((activity, index) => <Activity key={index} activityTime={activity.activityTime} activityType={activity.activityType} activityTitle={activity.activityTitle} activityDescription={activity.activityDescription} />)}
+          </ol>
         </div>
       </div>
-    </div>)
+    </div>
+  )
 }
 
 export default ProfileActivityComponent

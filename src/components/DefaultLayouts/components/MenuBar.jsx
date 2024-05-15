@@ -6,7 +6,7 @@ const MenuBar = (props) => {
   const ref = useRef()
 
   useEffect(() => {
-    if (props.currentActive === props.menuTitle) {
+    if (props.currentActive === props.menuTitle.toLowerCase()) {
       ref.current.classList.remove('bg-[#FFF8E8]')
       ref.current.classList.add('bg-black', 'text-white')
     } else {

@@ -1,23 +1,18 @@
 /* eslint-disable no-unused-vars */
-
 import bgImage from "../../assets/Wallpaper-1.png"
 import avatar from "../../assets/HGA-Avatar.png"
 import { ProfileAchivement, ProfileActivity, ProfileGeneral } from "../../components/Svg/ProfileSelection"
 import ProfileGeneralComponent from "./components/ProfileGeneralComponent"
 import ProfileActivityComponent from "./components/ProfileActivityComponent"
 import { useState } from "react"
+import ProfileAchivementComponent from "./components/ProfileAchivementComponent"
 
 function Profile() {
   const [selectTab, setSelectTab] = useState('general')
 
-  const selectedTabStyle = {
-    borderBottomWidth: '4px',
-    borderBottomColor: 'black'
-  }
-
   return (
-    <div className="w-full flex flex-col gap-10">
-      <div className="w-[90%] flex justify-between mx-auto mt-8">
+    <div className="w-full flex flex-col gap-12">
+      <div className="w-[90%] flex justify-between mx-auto mt-8 shadow-2xl">
         <div className="w-full">
           <div className="w-full relative">
             <img className="h-[180px] rounded-tr-2xl rounded-tl-2xl" src={bgImage} width={"100%"}/>
@@ -27,8 +22,8 @@ function Profile() {
           </div>
           <div className="w-full bg-white p-3 rounded-bl-2xl rounded-br-2xl relative">
             <div className="w-[45%] absolute flex gap-5 top-[-85px] left-[5%]">
-              <img className="rounded-[50%] min-w-[120]" src={avatar} width={"120px"}/>
-              <div className="flex flex-col justify-end mb-4 font-bold text-[1.5rem]">Hoàng Gia Anh</div>
+              <img className="rounded-[50%] border-4 border-white min-w-[120]" src={avatar} width={"240px"}/>
+              <div className="flex flex-col justify-end mb-2 font-bold text-[1.5rem]">Hoàng Gia Anh</div>
             </div>
             <div className="w-full flex justify-end">
               <div className="w-[45%] flex justify-around align-middle">
@@ -51,7 +46,7 @@ function Profile() {
         ? <ProfileGeneralComponent /> 
         : selectTab === 'activity' 
         ? <ProfileActivityComponent /> 
-        : null
+        : <ProfileAchivementComponent />
       }
     </div>
   )
