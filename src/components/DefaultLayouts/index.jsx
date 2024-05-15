@@ -1,6 +1,5 @@
 /* eslint-disable no-unused-vars */
 import { useEffect, useRef, useState } from "react"
-import Bell from "../../assets/notification-bell-svgrepo-com.svg"
 import UserIcon from "../Svg/UserIcon"
 import MenuBar from "./components/MenuBar"
 import { Dashboard, Profile, Setting, KPI, DarkProfile, DarkSetting, DarkKPI } from "../Svg/MenuBarIcon"
@@ -15,6 +14,7 @@ import BellBlack from "../Svg/BellBlack"
 import TrashCan from "../Svg/TrashCan"
 import DownArrow from "../Svg/DownArrow"
 import Cancel from "../Svg/Cancel"
+
 function DefaultLayouts({ children }) {
   const location = useLocation()
   console.log(location.pathname.split('/'))
@@ -67,8 +67,16 @@ function DefaultLayouts({ children }) {
     }
   }
   
+  const disappearUserToggleDown = () => {
+      if(menuToggleDown === true) {
+        setToggleDown(false)
+      }
+  }
+
+
+
   return (
-    <div className="h-screen w-full">
+    <div className="h-screen w-full" onClick={() => disappearUserToggleDown()}>
       <div className="flex flex-row justify-center align-middle w-full min-h-[114px] gap-24">
         <div className="flex flex-row ml-[2rem] mt-[1rem] justify-start gap-14 align-middle w-1/5">
           <div className="my-auto">
@@ -103,7 +111,7 @@ function DefaultLayouts({ children }) {
             </label>
             <input onFocus={handleOnFocusInput} value={search} onChange={(e) => setSearch(e.target.value)} id="search-bar" type="text"
               className="bg-gray-100 border-transparent border-[1px] px-5 py-3 rounded-3xl w-full outline-none" />
-            <button onClick={handleOnClickButton} className="hover:bg-slate-200 p-1 rounded-xl absolute top-[12px] right-[18px]">
+            <button onClick={handleOnClickButton} className="hover:bg-slate-200 px-1 rounded-xl absolute top-[12px] right-[18px]">
               <Cancel />
             </button>
           </div>
@@ -142,18 +150,18 @@ function DefaultLayouts({ children }) {
             {
               !smallSidebar &&
               (<div className="w-full px-[3rem] flex justify-between gap-10">
-                <Facebook />
-                <WhatsApp />
-                <Twitter />
+               <div className="cursor-pointer hover:bg-slate-200"><Facebook /></div>
+                <div className="cursor-pointer hover:bg-slate-200"><WhatsApp /></div>
+                <div className="cursor-pointer hover:bg-slate-200"><Twitter /></div>
               </div>)
             }
             {
               smallSidebar &&
               (
                 <div className="w-full flex flex-col gap-10 px-[3rem]">
-                  <Facebook />
-                  <WhatsApp />
-                  <Twitter />
+                  <div className="cursor-pointer hover:bg-slate-200"><Facebook /></div>
+                  <div className="cursor-pointer hover:bg-slate-200"><WhatsApp /></div>
+                  <div className="cursor-pointer hover:bg-slate-200"><Twitter /></div>
                 </div>
               )
             }
@@ -194,7 +202,7 @@ function DefaultLayouts({ children }) {
           <div className="flex border-b-2 border-gray-200 p-2">
           <div className="relative">
             <UserIcon />
-            <div className="h-4 w-4 rounded-full bg-green-400 absolute left-[67%] bottom-[60%]"></div>
+            <div className="h-4 w-4 rounded-full bg-green-400 absolute left-[67%] bottom-[60%] border-2 border-white"></div>
           </div>
            <div className="">
               <h1 className="font-bold text-xl">Username</h1>

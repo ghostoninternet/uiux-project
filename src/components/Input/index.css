@@ -42,3 +42,26 @@ input[type=date]:required:invalid::-webkit-datetime-edit {
 input[type=date]:focus::-webkit-datetime-edit {
   color: black !important;
 }
+
+.edit-input {
+  background-color: white;
+  border: 2px black solid;
+  padding: 3px;
+  border-radius: 5px;
+}
+.edit-input > label {
+  background-color: white;
+  padding: 0px 5px;
+  color: black;
+}
+
+.edit-input > input:focus {
+  outline: 0;
+}
+
+.edit-input > input:focus~.label, .edit-input > input:valid ~ label {
+  top: 0px;
+  left: 5px;
+  font-size: .8rem;
+  color: black;
+}
