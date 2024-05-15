@@ -68,6 +68,12 @@
 .fc .fc-button-primary:focus {
     box-shadow: none;
 }
+.fc-daygrid-block-event {
+    cursor: pointer;
+    background-color: #FABB18;
+    border: 0;
+    font-weight: 600;
+}
 
 input::-webkit-inner-spin-button {
     -webkit-appearance: none;

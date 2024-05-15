@@ -8,35 +8,3 @@
 .small-semi-circle {
     border-radius: 50%;
 }
-
-.react-calendar {
-    height: auto;
-    background: white;
-    font-family: Arial, Helvetica, sans-serif;
-    line-height: 1.125em;
-  }
-
-.react-calendar__month-view__days {
-    
-}
-
-.react-calendar__month-view__days__day {
-    padding: 20px 20px;
-    border: 1.5px #F3F3F4 solid;
-}
-
-.react-calendar__month-view__weekdays {
-    text-align: center;
-    padding: 30px 0px;
-}
-.react-calendar__month-view__weekdays__weekday {
-    font-weight: bold;
-    text-decoration: none;
-}
-.react-calendar__navigation {
-    font-weight: bold;
-    font-size: 1.25rem;
-    line-height: 1.75rem;
-    justify-content: space-between;
-    display: flex;
-}

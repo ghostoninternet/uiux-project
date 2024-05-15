@@ -1,4 +1,6 @@
 import YellowFolder from "../Svg/YellowFolder";
+import MenuVertical from "./components/MenuVertical";
+import StatusButton from "./components/StatusButton";
 
 function DetailTask( { data } ) {
     return ( 
@@ -12,7 +14,15 @@ function DetailTask( { data } ) {
                     <div className="rounded" style={{border: `0.1rem solid #FABB18`, width: `${data.Taskcompleted*12/100}rem`}}></div>
                 </div>
 
-                <div className="ml-[3.55rem] w-20 text-center py-1 bg-[#FFF8E8] rounded-lg text-xl">{data.weight}</div>
+                <div className="ml-[5.5rem] w-[6.5rem] text-center py-1 bg-[#FFF8E8] rounded-lg text-xl">{data.weight}</div>
+
+                <div className="ml-[6rem]">
+                    <StatusButton title={data.status}/>
+                </div>
+
+                <div className="ml-[2.5rem]">
+                    <MenuVertical />
+                </div>
             </div>
             <div className="mt-2" style={{border: `0.01rem solid #DFDFDF`}}></div>
         </div>

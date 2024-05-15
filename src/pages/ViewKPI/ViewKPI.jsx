@@ -41,15 +41,19 @@ function ViewKPI() {
                     </div>
                 </div>
 
-                {
-                    KpiData.map((e, i) => {
-                        return (
-                            <div key={i} className="mt-8">
-                                <KPI title={e.title} KPIcompleted={e.KPIcompleted} tasksCompleted={e.tasksCompleted} tasksList={e.tasksList} taskCLick={setDetailTaskToggle} setTaskDetail={setTaskDetail} setNewTask={setNewTaskToggle}/>
-                            </div>
-                        )
-                    })
-                }
+                <div className="scrollbars-hidden overflow-y-scroll max-h-[32rem] mt-8">
+                    {
+                        KpiData.map((e, i) => {
+                            let css = 'mt-8'
+                            if (!i) css = ''
+                            return (
+                                <div key={i} className={css}>
+                                    <KPI title={e.title} KPIcompleted={e.KPIcompleted} tasksCompleted={e.tasksCompleted} tasksList={e.tasksList} taskCLick={setDetailTaskToggle} setTaskDetail={setTaskDetail} setNewTask={setNewTaskToggle}/>
+                                </div>
+                            )
+                        })
+                    }
+                </div>
             </div>
             <NewTaskPopUp popUpToggle={newTaskToggle} setPopUpToggle={setNewTaskToggle}/>
             <TaskDetailPopUp title={taskDetail.title} event={taskDetail} popUpToggle={detailTaskToggle} setPopUpToggle={setDetailTaskToggle}/>

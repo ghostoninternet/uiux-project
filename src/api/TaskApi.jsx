@@ -6,7 +6,8 @@ export const tasksList1 = [
         target: 'Điểm tối đa',
         value: 100,
         weight: 1,
-        start: '2024-05-20'
+        start: '2024-05-20',
+        status: 'In progess'
     },
     {
         title: 'Student review 1',
@@ -15,7 +16,8 @@ export const tasksList1 = [
         value: 100,
         Taskcompleted: 20,
         weight: 1.5,
-        start: '2024-05-20'
+        start: '2024-05-20',
+        status: 'Done'
     },
     {
         title: 'Quality of assgnment 1',
@@ -24,42 +26,8 @@ export const tasksList1 = [
         target: 'Điểm tối đa',
         value: 100,
         weight: 0.8,
-        start: '2024-05-20'
-    },
-    {
-        title: 'Student review 1',
-        Taskcompleted: 20,
-        weight: 1.5,
-    },
-    {
-        title: 'Quality of assgnment 1',
-        Taskcompleted: 60,
-        weight: 0.8,
-    },
-    {
-        title: 'Quality of Project 1',
-        Taskcompleted: 90,
-        weight: 1,
-    },
-    {
-        title: 'Student review 1',
-        Taskcompleted: 20,
-        weight: 1.5,
-    },
-    {
-        title: 'Quality of assgnment 1',
-        Taskcompleted: 60,
-        weight: 0.8,
-    },
-    {
-        title: 'Student review 1',
-        Taskcompleted: 20,
-        weight: 1.5,
-    },
-    {
-        title: 'Quality of assgnment 1',
-        Taskcompleted: 60,
-        weight: 0.8,
+        start: '2024-05-20',
+        status: 'Late'
     },
 ]
 
@@ -71,7 +39,8 @@ export const tasksList2 = [
         target: 'Điểm tối đa',
         value: 100,
         weight: 1,
-        start: '2024-05-22'
+        start: '2024-05-22',
+        status: 'In progess'
     },
     {
         title: 'Student review 2',
@@ -80,7 +49,9 @@ export const tasksList2 = [
         target: 'Điểm tối đa',
         value: 100,
         weight: 1.5,
-        start: '2024-05-22'
+        start: '2024-05-22',
+        status: 'Done'
+        
     },
     {
         title: 'Quality of assgnment 2',
@@ -89,6 +60,50 @@ export const tasksList2 = [
         target: 'Điểm tối đa',
         value: 100,
         weight: 0.8,
-        start: '2024-05-23'
+        start: '2024-05-23',
+        status: 'Late'
+    },
+    
+    {
+        title: 'Student review 1',
+        Taskcompleted: 20,
+        weight: 1.5,
+        status: 'In progess'
+    },
+    {
+        title: 'Quality of assgnment 1',
+        Taskcompleted: 60,
+        weight: 0.8,
+        status: 'In progess'
+    },
+    {
+        title: 'Quality of Project 1',
+        Taskcompleted: 90,
+        weight: 1,
+        status: 'In progess'
+    },
+    {
+        title: 'Student review 1',
+        Taskcompleted: 20,
+        weight: 1.5,
+        status: 'In progess'
+    },
+    {
+        title: 'Quality of assgnment 1',
+        Taskcompleted: 60,
+        weight: 0.8,
+        status: 'In progess'
+    },
+    {
+        title: 'Student review 1',
+        Taskcompleted: 20,
+        weight: 1.5,
+        status: 'In progess'
+    },
+    {
+        title: 'Quality of assgnment 1',
+        Taskcompleted: 60,
+        weight: 0.8,
+        status: 'In progess'
     },
 ]
