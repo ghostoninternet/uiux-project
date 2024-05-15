@@ -27,15 +27,17 @@ const MenuBar = (props) => {
 
   return (
     <Link to={props.link} className="w-full">
-      <div ref={ref} onClick={handleOnClick} className="wrapper flex px-9 py-5 w-full rounded-3xl bg-[#FFF8E8] gap-4">
+      <div ref={ref} onClick={handleOnClick} 
+        className="wrapper flex px-7 py-5 w-full rounded-3xl bg-[#FFF8E8] gap-4"
+      >
         <div className="svg-icon">
           {
             props.currentActive === props.menuTitle ? props.darkSvgIcon : props.svgIcon
           }
         </div>
-        <div className="my-auto menu-title">
-          {props.menuTitle}
-        </div>
+        {
+          !props.smallSidebar && <div className="my-auto menu-title">{props.menuTitle}</div>
+        }
       </div>
     </Link>
   )

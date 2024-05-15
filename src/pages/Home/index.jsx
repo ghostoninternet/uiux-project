@@ -57,7 +57,7 @@ const [taskDetail, setTaskDetail] = useState(taskExample)
 
         <div className="flex space-x-8">
             <div className="p-7 w-1/2 bg-white min-h-36 shadow-lg rounded-xl">
-                <Calendar defaultValue={date} onChange={onChange} next2AriaLabel={false} onClickDay={() => navigate('calendar')}/>
+                <Calendar defaultValue={date} onChange={onChange} next2AriaLabel={false} onClickDay={() => navigate('dashboard')}/>
             </div>
             <div className="p-7 w-1/2 bg-white min-h-36 shadow-lg rounded-xl h-1/2">
               <div className="flex justify-between mb-10 px-3">

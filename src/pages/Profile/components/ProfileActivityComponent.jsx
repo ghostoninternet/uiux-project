@@ -33,8 +33,8 @@ function ProfileActivityComponent() {
         <div className="font-bold text-3xl mt-5">
           Activities
         </div>
-        <div className="mt-5 ml-8 mb-10">
-          <ol className="relative border-s-4 border-[#FABB18]">
+        <div className="mt-5 ml-4 mb-10 scrollbars-hidden overflow-auto max-h-[20rem]">
+          <ol className="relative border-s-4 ml-4 border-[#FABB18]">
             { activities.map((activity, index) => <Activity key={index} activityTime={activity.activityTime} activityType={activity.activityType} activityTitle={activity.activityTitle} activityDescription={activity.activityDescription} />)}
           </ol>
         </div>

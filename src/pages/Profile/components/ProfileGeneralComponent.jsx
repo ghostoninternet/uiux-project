@@ -3,7 +3,7 @@ import CreatedKIP from "../../../components/Svg/CreatedKIP"
 
 function ProfileGeneralComponent() {
   return (
-    <div className="w-[90%] flex justify-between mx-auto">
+    <div className="w-[90%]  flex justify-between mx-auto">
       <div className="w-[30%]">
         <div className="w-[80%] pt-[20px] pb-[100px] flex flex-col justify-center align-middle bg-white rounded-2xl gap-10 shadow-2xl">
           <div className="w-[80%] mx-auto flex flex-col gap-2">
