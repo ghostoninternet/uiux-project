@@ -13,7 +13,8 @@ import UserNoCircle from "../Svg/UserNoCircle"
 import Config from "../Svg/Config"
 import BellBlack from "../Svg/BellBlack"
 import TrashCan from "../Svg/TrashCan"
-
+import DownArrow from "../Svg/DownArrow"
+import Cancel from "../Svg/Cancel"
 function DefaultLayouts({ children }) {
   const location = useLocation()
   console.log(location.pathname.split('/'))
@@ -70,21 +71,27 @@ function DefaultLayouts({ children }) {
 
         <div className="flex flex-row justify-start gap-20 align-middle w-3/5 my-auto">
           <div className="w-11/12 relative">
-            <label ref={labelRef} htmlFor="search-bar" className="absolute left-[50%] top-[12px]">{`🔍 Search`}</label>
+            <label ref={labelRef} htmlFor="search-bar" className="absolute left-[50%] top-[12px] flex">
+            <svg fill="#000000" width="18" height="18" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg" className=" mt-1 mr-3">
+                <path d="M12.027 9.92L16 13.95 14 16l-4.075-3.976A6.465 6.465 0 0 1 6.5 13C2.91 13 0 10.083 0 6.5 0 2.91 2.917 0 6.5 0 10.09 0 13 2.917 13 6.5a6.463 6.463 0 0 1-.973 3.42zM1.997 6.452c0 2.48 2.014 4.5 4.5 4.5 2.48 0 4.5-2.015 4.5-4.5 0-2.48-2.015-4.5-4.5-4.5-2.48 0-4.5 2.014-4.5 4.5z" fillRule="evenodd"/>
+            </svg>
+              Search</label>
             <input onFocus={handleOnFocusInput} value={search} onChange={(e) => setSearch(e.target.value)} id="search-bar" type="text" 
             className="bg-gray-100 border-transparent border-[1px] px-5 py-3 rounded-3xl w-full outline-none" />
-            <button onClick={handleOnClickButton} className="bg-gray-200 px-1 border-2 border-gray-200 rounded-xl absolute top-[12px] right-[18px]">X</button>
+            <button onClick={handleOnClickButton} className="hover:bg-gray-200 px-1 rounded-xl absolute top-[12px] right-[18px]">
+              <Cancel />
+            </button>
           </div>
           <div>
-            <img width={"50px"} src={Bell} />
+            <BellBlack size={45} />
           </div>
         </div>
 
-        <div className="flex flex-row justify-end align-middle w-1/5 gap-10 my-auto" onClick={() => setToggleDown(!menuToggleDown)}>
-          <div className="text-2xl my-auto">
-            Username
+        <div className="flex flex-row justify-end align-middle w-1/5 gap-10 my-auto cursor-pointer hover:bg-slate-100 rounded-lg" onClick={() => setToggleDown(!menuToggleDown)}>
+          <div className="text-2xl my-auto flex">
+            Username <div className="mt-3 ml-2"><DownArrow /></div>
           </div>
-          <div>
+          <div className="my-auto">
             <UserIcon />
           </div>
         </div>
@@ -141,10 +148,11 @@ function DefaultLayouts({ children }) {
         leaveFrom="opacity-100"
         leaveTo="opacity-0"
       >
-        <div className="fixed bg-white top-[10%] right-[5%] h-auto w-1/5 shadow-xl rounded-xl py-2">
+        <div className="fixed bg-white top-[10%] right-[3%] h-auto w-1/5 shadow-xl rounded-xl py-2">
           <div className="flex border-b-2 border-gray-200 p-2">
-          <div>
+          <div className="relative">
             <UserIcon />
+            <div className="h-4 w-4 rounded-full bg-green-400 absolute left-[67%] bottom-[60%]"></div>
           </div>
            <div className="">
               <h1 className="font-bold text-xl">Username</h1>
@@ -152,13 +160,15 @@ function DefaultLayouts({ children }) {
            </div>
           </div>
           <ul className="px-4 font-semibold">
-            <li className="py-2 flex hover:bg-slate-100 rounded-e-md"><div className="mr-3"><UserNoCircle /></div>Profile</li>
-            <li className="py-2 flex hover:bg-slate-100 rounded-e-md"><div className="mr-3"><Paint /></div>Theme</li>
-            <li className="py-2 flex hover:bg-slate-100 rounded-e-md"><div className="mr-3"><Config /></div>Setting</li>
-            <li className="py-2 border-b-2 border-gray-200 flex hover:bg-slate-100 rounded-e-md"><div className="mr-3"><BellBlack /></div>Notification setting</li>
-            <li className="py-2 flex hover:bg-slate-100 rounded-e-md"><div className="mr-3"><TrashCan  /></div>Trash</li>
-            <li className="py-2 hover:bg-slate-100 rounded-e-md"><Link to="/sign-in" className="flex">
-            <div className="mr-3"><svg fill="#000000" width="25" height="25" viewBox="0 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" xmlSpace="preserve"><path d="M25.229,14.5l-16.003,0c-0.828,-0 -1.5,0.672 -1.5,1.5c-0,0.828 0.672,1.5 1.5,1.5l16.038,0l-3.114,3.114c-0.585,0.585 -0.585,1.536 0,2.121c0.586,0.586 1.536,0.586 2.122,0c-0,0 2.567,-2.567 4.242,-4.242c1.367,-1.367 1.367,-3.583 0,-4.95l-4.242,-4.243c-0.586,-0.585 -1.536,-0.585 -2.122,0c-0.585,0.586 -0.585,1.536 0,2.122l3.079,3.078Z"/><path d="M20,24l-0,-4.5l-10.774,0c-1.932,-0 -3.5,-1.568 -3.5,-3.5c-0,-1.932 1.568,-3.5 3.5,-3.5l10.774,0l-0,-4.5c-0,-2.761 -2.239,-5 -5,-5c-2.166,-0 -4.834,0 -7,-0c-1.326,-0 -2.598,0.527 -3.536,1.464c-0.937,0.938 -1.464,2.21 -1.464,3.536c-0,4.439 -0,11.561 0,16c-0,1.326 0.527,2.598 1.464,3.536c0.938,0.937 2.21,1.464 3.536,1.464c2.166,0 4.834,0 7,0c1.326,0 2.598,-0.527 3.536,-1.464c0.937,-0.938 1.464,-2.21 1.464,-3.536Z"/></svg></div>
+            <li className="p-2 flex hover:bg-slate-100 rounded-e-md cursor-pointer">
+              <div className="mr-3"><UserNoCircle /></div>Profile
+            </li>
+            <li className="p-2 flex hover:bg-slate-100 rounded-e-md cursor-pointer"><div className="mr-3"><Paint /></div>Theme</li>
+            <li className="p-2 flex hover:bg-slate-100 rounded-e-md cursor-pointer"><div className="mr-3"><Config /></div>Setting</li>
+            <li className="p-2 border-b-2 border-gray-200 flex hover:bg-slate-100 rounded-e-md cursor-pointer"><div className="mr-3"><BellBlack size={25} /></div>Notification setting</li>
+            <li className="p-2 flex hover:bg-slate-100 rounded-e-md cursor-pointer"><div className="mr-3"><TrashCan  /></div>Trash</li>
+            <li className="p-2 hover:bg-slate-100 rounded-e-md cursor-pointer"><Link to="/sign-in" className="flex">
+            <div className="mr-3 cursor-pointer"><svg fill="#000000" width="25" height="25" viewBox="0 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" xmlSpace="preserve"><path d="M25.229,14.5l-16.003,0c-0.828,-0 -1.5,0.672 -1.5,1.5c-0,0.828 0.672,1.5 1.5,1.5l16.038,0l-3.114,3.114c-0.585,0.585 -0.585,1.536 0,2.121c0.586,0.586 1.536,0.586 2.122,0c-0,0 2.567,-2.567 4.242,-4.242c1.367,-1.367 1.367,-3.583 0,-4.95l-4.242,-4.243c-0.586,-0.585 -1.536,-0.585 -2.122,0c-0.585,0.586 -0.585,1.536 0,2.122l3.079,3.078Z"/><path d="M20,24l-0,-4.5l-10.774,0c-1.932,-0 -3.5,-1.568 -3.5,-3.5c-0,-1.932 1.568,-3.5 3.5,-3.5l10.774,0l-0,-4.5c-0,-2.761 -2.239,-5 -5,-5c-2.166,-0 -4.834,0 -7,-0c-1.326,-0 -2.598,0.527 -3.536,1.464c-0.937,0.938 -1.464,2.21 -1.464,3.536c-0,4.439 -0,11.561 0,16c-0,1.326 0.527,2.598 1.464,3.536c0.938,0.937 2.21,1.464 3.536,1.464c2.166,0 4.834,0 7,0c1.326,0 2.598,-0.527 3.536,-1.464c0.937,-0.938 1.464,-2.21 1.464,-3.536Z"/></svg></div>
               Log out</Link></li>
           </ul>
         </div>

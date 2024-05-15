@@ -34,6 +34,14 @@
     margin-bottom: auto;
     
 }
+
+.fc-daygrid-day-frame {
+    max-height: 50px;
+    overflow: hidden;
+}
+
+
+
 .fc-daygrid-day-frame:hover {
     background-color: #FFF8E8;
 }
