@@ -7,6 +7,7 @@ import Profile from "../pages/Profile"
 import Home from "../pages/Home"
 import Calendar from "../pages/Calendar"
 import Setting from "../pages/Setting"
+import Edit from "../pages/Profile/components/Edit"
 
 const publicRoutes = [
   { path: '/', component: Home },
@@ -16,6 +17,7 @@ const publicRoutes = [
   { path: '/kpi/view-detail', component: KPIdetail },
   { path: '/profile', component: Profile },
   { path: '/setting', component: Setting },
+  { path: '/profile/edit', component: Edit },
   { path: '/sign-in', component: SignIn, layout: null },
   { path: '/sign-up', component: SignUp, layout: null }
 ]
