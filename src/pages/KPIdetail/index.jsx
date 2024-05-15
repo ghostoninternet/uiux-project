@@ -6,9 +6,12 @@ import AddButton from "../../components/AddButton/AddButton";
 import '../KPIdetail/index.css'
 import DetailTask from "../../components/Task/DetailTask";
 import EditKpiPopUp from "../../components/Popup/EditKpiPopUp";
+import NewTaskPopUp from "../../components/Popup/NewTaskPopUp";
+import TaskDetailPopUp from "../../components/Popup/TaskDetailPopUp";
 
-export default function index() {
+export default function KPIdetail() {
   let [searchParams, setSearchParams] = useSearchParams()
+  const [newTaskToggle, setNewTaskToggle] = useState(false)
   const [data, setData] = useState()
   useLayoutEffect(() => {
     let title = searchParams.get('title')
@@ -23,17 +26,20 @@ export default function index() {
 
   const taskExample = {
     title: '',
-    extendedProps: {
       evaluatuon: '',
       target: '',
       value: null,
       Taskcompleted: null,
       weight: null,
-    }
   }
   const [taskDetail, setTaskDetail] = useState(taskExample)
   const [detailTaskToggle, setDetailTaskToggle] = useState(false)
   const [editToggle, setEditToggle] = useState(false)
+  
+  const handleTaskClick = (e,task) => {
+    setDetailTaskToggle(true)
+  }
+  
   return (
     !data ? <Fragment /> :
     <div className="mx-8 mt-4">
@@ -43,7 +49,7 @@ export default function index() {
               <Time />
           </div>
           <div>
-              <AddButton tittle={'New KPI'}/>
+              <AddButton tittle={'New Task'} onClick={() => setNewTaskToggle(true)}/>
           </div>
       </div>
 
@@ -117,10 +123,10 @@ export default function index() {
           </div>
 
           <div className="px-10 mt-3 pb-3 scrollbars-hidden overflow-y-scroll max-h-[15rem]">
-            {data.tasksList.map((e, i) => {
+            {data.tasksList.map((task, i) => {
               return (
-                <div>
-                  <DetailTask key={i} data={e}/>
+                <div key={i}>
+                  <DetailTask data={task} onClick={(e) => handleTaskClick(e,task)}/>
                 </div>
               )
             })}
@@ -142,6 +148,8 @@ export default function index() {
         </div>
       </div>
       <EditKpiPopUp popUpToggle={editToggle} setPopUpToggle={setEditToggle}/>
+      <NewTaskPopUp popUpToggle={newTaskToggle} setPopUpToggle={setNewTaskToggle}/>
+      <TaskDetailPopUp title={taskDetail.title} event={taskDetail} popUpToggle={detailTaskToggle} setPopUpToggle={setDetailTaskToggle}/>
     </div>
   )
 }
