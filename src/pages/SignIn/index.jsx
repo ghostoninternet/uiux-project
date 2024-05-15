@@ -4,9 +4,10 @@ import Input from '../../components/Input'
 import SubmitButton from '../../components/SubmitButton/SubmitButton'
 import Logo from '../../components/Svg/Logo'
 import {Facebook, Apple, Google} from '../../components/Svg/SignLogo'
-
+import { useNavigate } from 'react-router-dom'
 
 function SignIn() {
+  const navigate = useNavigate();
   return (
     <>
       <div className="flex flex-row h-screen w-screen">
@@ -18,7 +19,7 @@ function SignIn() {
             <div className='flex justify-center mb-8 text-3xl font-bold'>Sign in</div>
 
             <div className='flex justify-center'>
-              <form>
+              <form onSubmit={() => navigate('/')}>
                 <div className='mb-7'>
                   <Input label={"username"} type={"text"} id={'1'}/>
                 </div>

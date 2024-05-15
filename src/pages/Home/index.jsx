@@ -22,7 +22,7 @@ function Home() {
       weight: null,
     }
   }
-  const data = tasksList1.slice(1,6);
+  const data = tasksList1.slice(0,6);
 const [taskDetail, setTaskDetail] = useState(taskExample)
   const navigate = useNavigate();
 
@@ -57,7 +57,7 @@ const [taskDetail, setTaskDetail] = useState(taskExample)
 
         <div className="flex space-x-8">
             <div className="p-7 w-1/2 bg-white min-h-36 shadow-lg rounded-xl">
-                <Calendar defaultValue={date} onChange={onChange} next2AriaLabel={false} onClickDay={() => navigate('calendar')}/>
+                <Calendar defaultValue={date} onChange={onChange} next2AriaLabel={false} onClickDay={() => navigate('/calendar')}/>
             </div>
             <div className="p-7 w-1/2 bg-white min-h-36 shadow-lg rounded-xl h-1/2">
               <div className="flex justify-between mb-10 px-3">
@@ -66,12 +66,12 @@ const [taskDetail, setTaskDetail] = useState(taskExample)
               </div>
               <div className="h-full px-2">
                 {data.map((e,i) => 
-                        <div className="inline-block py-2 cursor-pointer hover:bg-slate-100 w-full border-2 border-[#F1F1F1] rounded-xl mb-2" onClick={() => handleOnClick(e)} key={i}>
+                        <div className="inline-block py-2 cursor-pointer hover:bg-slate-100 w-full border-2 border-[#F1F1F1] rounded-xl mb-2 overflow-hidden" onClick={() => handleOnClick(e)} key={i}>
                           <div className="inline-flex items-center pr-8">
                               <div className="inline-flex p-2 bg-[#F8F8F7] rounded-[50%] ml-8">
                                   <YellowFolder />
                               </div>
-                              <span className="ml-4 text-xl w-60 task-title">{e.title}</span>
+                              <span className="ml-4 text-xl w-40 task-title">{e.title}</span>
                               <div className="ml-10 w-20 text-center py-1 bg-[#FABB18] rounded-lg text-md">{e.weight}</div>
                               <div className="flex ml-10 w-28 rounded bg-slate-300">
                                   <div className="rounded" style={{border: `0.1rem solid #FABB18`, width: `${e.Taskcompleted*7/100}rem`}}></div>

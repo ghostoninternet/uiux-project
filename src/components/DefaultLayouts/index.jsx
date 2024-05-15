@@ -7,11 +7,20 @@ import { Dashboard, Profile, Setting, KPI, DarkProfile, DarkSetting, DarkKPI } f
 import { Facebook, Twitter, WhatsApp } from "../Svg/SocialMedia"
 import HelpIcon from "../Svg/HelpIcon"
 import { Link, useLocation  } from "react-router-dom"
+import { Transition } from "@headlessui/react"
+import Paint from "../Svg/Paint"
+import UserNoCircle from "../Svg/UserNoCircle"
+import Config from "../Svg/Config"
+import BellBlack from "../Svg/BellBlack"
+import TrashCan from "../Svg/TrashCan"
 
 function DefaultLayouts({ children }) {
   const location = useLocation()
   console.log(location.pathname.split('/'))
   
+  const [menuToggleDown, setToggleDown] = useState(false);
+
+
   useEffect(() => {
     setCurrentActive(location.pathname.split('/')[1])
   }, [location.pathname])
@@ -71,7 +80,7 @@ function DefaultLayouts({ children }) {
           </div>
         </div>
 
-        <div className="flex flex-row justify-end align-middle w-1/5 gap-10 my-auto">
+        <div className="flex flex-row justify-end align-middle w-1/5 gap-10 my-auto" onClick={() => setToggleDown(!menuToggleDown)}>
           <div className="text-2xl my-auto">
             Username
           </div>
@@ -118,10 +127,44 @@ function DefaultLayouts({ children }) {
           </div>
         </div>
 
-        <div className="w-[85.7143%] bg-gray-100 rounded-tl-3xl">
+        <div className="w-[85%] bg-gray-100 rounded-tl-3xl">
             {children}
         </div>
       </div>
+
+      <Transition
+        show={menuToggleDown}
+        enter="transition-opacity duration-200"
+        enterFrom="opacity-0"
+        enterTo="opacity-100"
+        leave="transition-opacity duration-150"
+        leaveFrom="opacity-100"
+        leaveTo="opacity-0"
+      >
+        <div className="fixed bg-white top-[10%] right-[5%] h-auto w-1/5 shadow-xl rounded-xl py-2">
+          <div className="flex border-b-2 border-gray-200 p-2">
+          <div>
+            <UserIcon />
+          </div>
+           <div className="">
+              <h1 className="font-bold text-xl">Username</h1>
+              <p>Online</p>
+           </div>
+          </div>
+          <ul className="px-4 font-semibold">
+            <li className="py-2 flex hover:bg-slate-100 rounded-e-md"><div className="mr-3"><UserNoCircle /></div>Profile</li>
+            <li className="py-2 flex hover:bg-slate-100 rounded-e-md"><div className="mr-3"><Paint /></div>Theme</li>
+            <li className="py-2 flex hover:bg-slate-100 rounded-e-md"><div className="mr-3"><Config /></div>Setting</li>
+            <li className="py-2 border-b-2 border-gray-200 flex hover:bg-slate-100 rounded-e-md"><div className="mr-3"><BellBlack /></div>Notification setting</li>
+            <li className="py-2 flex hover:bg-slate-100 rounded-e-md"><div className="mr-3"><TrashCan  /></div>Trash</li>
+            <li className="py-2 hover:bg-slate-100 rounded-e-md"><Link to="/sign-in" className="flex">
+            <div className="mr-3"><svg fill="#000000" width="25" height="25" viewBox="0 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" xmlSpace="preserve"><path d="M25.229,14.5l-16.003,0c-0.828,-0 -1.5,0.672 -1.5,1.5c-0,0.828 0.672,1.5 1.5,1.5l16.038,0l-3.114,3.114c-0.585,0.585 -0.585,1.536 0,2.121c0.586,0.586 1.536,0.586 2.122,0c-0,0 2.567,-2.567 4.242,-4.242c1.367,-1.367 1.367,-3.583 0,-4.95l-4.242,-4.243c-0.586,-0.585 -1.536,-0.585 -2.122,0c-0.585,0.586 -0.585,1.536 0,2.122l3.079,3.078Z"/><path d="M20,24l-0,-4.5l-10.774,0c-1.932,-0 -3.5,-1.568 -3.5,-3.5c-0,-1.932 1.568,-3.5 3.5,-3.5l10.774,0l-0,-4.5c-0,-2.761 -2.239,-5 -5,-5c-2.166,-0 -4.834,0 -7,-0c-1.326,-0 -2.598,0.527 -3.536,1.464c-0.937,0.938 -1.464,2.21 -1.464,3.536c-0,4.439 -0,11.561 0,16c-0,1.326 0.527,2.598 1.464,3.536c0.938,0.937 2.21,1.464 3.536,1.464c2.166,0 4.834,0 7,0c1.326,0 2.598,-0.527 3.536,-1.464c0.937,-0.938 1.464,-2.21 1.464,-3.536Z"/></svg></div>
+              Log out</Link></li>
+          </ul>
+        </div>
+      </Transition>
+
+
     </div>
   )
 }
