@@ -6,7 +6,7 @@ import FormSubmitButton from "../Button/FormSubmitButton";
 import DatePicker from "../Input/DatePicker";
 import Target from "../Svg/Target";
 import { toast } from "react-toastify"
-function  NewTaskPopUp(props) {
+function NewTaskPopUp(props) {
   const handleSubmit = (form) => {
     form.preventDefault()
     props.setPopUpToggle(false)
