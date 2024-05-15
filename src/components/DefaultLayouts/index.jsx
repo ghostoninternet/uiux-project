@@ -73,10 +73,8 @@ function DefaultLayouts({ children }) {
       }
   }
 
-
-
   return (
-    <div className="h-screen w-full" onClick={() => disappearUserToggleDown()}>
+    <div className="h-screen w-full overflow-hidden" onClick={() => disappearUserToggleDown()}>
       <div className="flex flex-row justify-center align-middle w-full min-h-[114px] gap-24">
         <div className="flex flex-row ml-[2rem] mt-[1rem] justify-start gap-14 align-middle w-1/5">
           <div className="my-auto">
