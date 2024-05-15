@@ -48,7 +48,6 @@ function DefaultLayouts({ children }) {
     const divSidebar = sidebarRef.current
     const divContent = contentRef.current
     setSmallSidebar(!smallSidebar)
-    console.log(smallSidebar)
 
     if (divSidebar.classList.contains('w-[14.2857%]')) {
       divSidebar.classList.remove('min-w-[260px]', 'w-[14.2857%]')
@@ -95,7 +94,7 @@ function DefaultLayouts({ children }) {
 
         <div className="flex flex-row justify-start gap-20 align-middle w-3/5 my-auto">
           <div className="w-11/12 relative">
-            <label ref={labelRef} htmlFor="search-bar" className="absolute left-[50%] top-[12px]">{`🔍 Search`}</label>
+            <label ref={labelRef} htmlFor="search-bar" className="absolute left-[50%] top-[12px] opacity-50">{`🔍 Search`}</label>
             <input onFocus={handleOnFocusInput} value={search} onChange={(e) => setSearch(e.target.value)} id="search-bar" type="text"
               className="bg-gray-100 border-transparent border-[1px] px-5 py-3 rounded-3xl w-full outline-none" />
             <button onClick={handleOnClickButton} className="bg-gray-200 px-1 border-2 border-gray-200 rounded-xl absolute top-[12px] right-[18px]">X</button>
@@ -169,7 +168,7 @@ function DefaultLayouts({ children }) {
           </div>
         </div>
 
-        <div className="w-[85%] overflow-auto scrollbar bg-gray-100 rounded-tl-3xl">
+        <div ref={contentRef} className="w-[85.7143%] overflow-auto scrollbar bg-gray-100 rounded-tl-3xl">
             {children}
         </div>
       </div>
@@ -183,7 +182,7 @@ function DefaultLayouts({ children }) {
         leaveFrom="opacity-100"
         leaveTo="opacity-0"
       >
-        <div className="fixed bg-white top-[10%] right-[5%] h-auto w-1/5 shadow-xl rounded-xl py-2">
+        <div className="fixed bg-white top-[10%] right-[3%] h-auto w-1/5 shadow-xl rounded-xl py-2">
           <div className="flex border-b-2 border-gray-200 p-2">
           <div>
             <UserIcon />

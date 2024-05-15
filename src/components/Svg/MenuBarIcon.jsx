@@ -62,8 +62,20 @@ export function DarkProfile() {
 
 export function Profile() {
   return (
-    <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 20 20" id="profile"><g fill="none" fillRule="evenodd"><g fill="#000" transform="translate(-420 -2159)"><g transform="translate(56 160)"><path d="M374 2009c-2.206 0-4-1.794-4-4s1.794-4 4-4 4 1.794 4 4-1.794 4-4 4m3.758.673A5.983 5.983 0 0 0 380 2005a6 6 0 1 0-9.758 4.673c-3.659 1.375-6.242 4.772-6.242 9.327h2c0-5 3.589-8 8-8s8 3 8 8h2c0-4.555-2.583-7.952-6.242-9.327"></path></g></g></g></svg>
-  );
+    <svg width="30" height="30" viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink">
+      <mask id="mask0_607_1239" style={{ maskType: 'alpha' }} maskUnits="userSpaceOnUse" x="0" y="0" width="48" height="44">
+        <rect width="48" height="44" fill="url(#pattern0_607_1239)" />
+      </mask>
+      <g mask="url(#mask0_607_1239)">
+        <rect x="-1" y="-4" width="60" height="61" fill="#000000" />
+      </g>
+      <defs>
+        <pattern id="pattern0_607_1239" patternContentUnits="objectBoundingBox" width="1" height="1">
+          <image xlinkHref="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAGAAAABgCAYAAADimHc4AAAACXBIWXMAAAsTAAALEwEAmpwYAAADPElEQVR4nO2cy2oUQRSGPxeSKFF0ISQICmqCeAmoK+/gM2hMwBcQUXHvfaEQssnGS2IeQXwBXSiYSHAhuIm6MN7QJBvFieYClhSpwXEMIeN096me/j/4NzMhp89/eqq7+lQ1CCGEEEIIIYQQQggRH2uBHmAQGAUmgbmgyfDZANANrLE+2EaiAxgCpgG3TPm/vQe0Wx98nlkF9AHzNRhfLf/r6AWarZPJG+3AyzqMr9YI0GadVF7YE8Z0l7A+AJ3WyeXhzJ9MwfzKIrRaJxkrzcCLFM0v63m4vogq+jIwv6xr1cGLTkeddzu16ruGor8ZytD8sm4ZnWxRznCnDQpQ0ox5gR4D88s6GY6h0AwaFuCudfIxMGpYAD9DLjxThgWYKLz7wKxhAWZUAFQAa6Y0BNkyqouwLQOGBbhjnHsUdBsW4IR18jHQEh4LZG1+KcQWLDTQsy6AH/pERSdsLkPz/dxjSzm4WKA3wwLcDDFFVUtyJAPzh4GmysDiD75h/j5F8z8BGyviiUXoDKsXkjbfF3b3YgHFv2wAHic87Gg5So00hdULpTrvdm5ozK+P1tBAr6UQpdDt0q1mgrSEHq5/fvMsNFNmgybCZ7eBLs1whRBCCCGEEEIIIYQQUT/7PwLsyiCW74odVo8A9gGXgEfAj/Ac/zOwKUXzNwNfQiwf8yFwEdhLQdgJXAVeLdFMeQtsTcn8N0vEHQf6gUPAChqI9cAF4HUNHa2PwIEEj+Fg+J/LjT8GnAfWkWO2hyWH/7sFdS70hOt5rcBq4Hodm8BLYQmj30ieG9pCPzapne/jwNka24z+jVnngHcJHcN8aHdGvbJiJXAlxZXOJeA+cBrYH8xoDmoNQ5b/7kGKG7/9MVwOuUaFv8A9TSlpF6H8rp5tRIJfqfAtAlNcxvoKHLc2398p/IrADGckn/sZK/O7Cm6+qyjCKYsJ1UwEybtI9BPYkWUBhiNI2kWmJ1mZfyyCZF2kOtqob7dyOVEmG/9qeaZTNI1lUQCL14u5nMjPlFPHOkkXuVQAVADzs9DpF2BvhNMQZG+GM5CuAagA5meh0y/A3ginIcjeDGcgXQNo8AIIIYQQQgghhBBCCHLJb/bnPNZybY9WAAAAAElFTkSuQmCC" transform="matrix(0.00954861 0 0 0.0104167 0.0416667 0)" />
+        </pattern>
+      </defs>
+    </svg>
+  )
 }
 
 export function DarkSetting() {

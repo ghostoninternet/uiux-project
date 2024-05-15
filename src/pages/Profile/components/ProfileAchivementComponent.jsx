@@ -7,7 +7,13 @@ function ProfileAchivementComponent() {
         <div className="text-2xl font-bold my-5">
           {"Achivements"}
         </div>
-        <div className="grid grid-cols-2 gap-x-6 gap-y-16 pb-10">
+        <div className="grid grid-cols-2 gap-x-6 gap-y-16 pb-10 scrollbars-hidden overflow-auto max-h-[22rem]">
+          <Achivement achivementTitle={"Done 10 task in one day"} achivementDescription={"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam laoreet tellus ut tincidunt euismod"} />
+          <Achivement achivementTitle={"Done 10 task in one day"} achivementDescription={"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam laoreet tellus ut tincidunt euismod"} />
+          <Achivement achivementTitle={"Done 10 task in one day"} achivementDescription={"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam laoreet tellus ut tincidunt euismod"} />
+          <Achivement achivementTitle={"Done 10 task in one day"} achivementDescription={"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam laoreet tellus ut tincidunt euismod"} />
+          <Achivement achivementTitle={"Done 10 task in one day"} achivementDescription={"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam laoreet tellus ut tincidunt euismod"} />
+          <Achivement achivementTitle={"Done 10 task in one day"} achivementDescription={"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam laoreet tellus ut tincidunt euismod"} />
           <Achivement achivementTitle={"Done 10 task in one day"} achivementDescription={"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam laoreet tellus ut tincidunt euismod"} />
           <Achivement achivementTitle={"Done 10 task in one day"} achivementDescription={"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam laoreet tellus ut tincidunt euismod"} />
           <Achivement achivementTitle={"Done 10 task in one day"} achivementDescription={"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam laoreet tellus ut tincidunt euismod"} />
