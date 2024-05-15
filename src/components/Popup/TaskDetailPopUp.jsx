@@ -14,7 +14,7 @@ function TaskDetailPopUp({title,event, popUpToggle, setPopUpToggle}) {
                     <NumberPopUpInput label={'Weight'} value={event.weight}/>
                 </div>
                 <div className="border-l-2 border-gray-200 flex flex-col py-5">
-                    <div className="pb-32 space-y-7 py-5 pl-7 pr-11">
+                    <div className="pb-20 space-y-7 py-5 pl-7 pr-11">
                     <h1 className="font-medium text-3xl">Description</h1>
                     <p className="w-96">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor 
                         incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
