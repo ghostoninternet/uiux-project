@@ -44,7 +44,7 @@ function KPI({title, KPIcompleted, tasksList, taskCLick, setTaskDetail, setNewTa
 
             <div>
                 <div className="flex relative">
-                    <p className="font-semibold mr-6">To do list</p>
+                    <p className="font-semibold mr-6 leading-loose">To do list</p>
                     <div className="flex bg-[#FABB18] rounded-xl px-2.5 select-none hover:cursor-pointer">
                         <div className="flex items-center pr-2 py-2">
                             <SimplePlus />

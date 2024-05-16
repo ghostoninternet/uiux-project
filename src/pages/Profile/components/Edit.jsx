@@ -13,6 +13,19 @@ function Edit() {
             <div className="relative w-full">
                 <img src={bgImage} alt="" className="rounded-t-xl w-full h-56 object-cover"/>
                 <img className="absolute left-1/2 -translate-x-1/2 rounded-[50%] border-4 border-white w-60 h-60 object-cover top-1/3" src={avatar}/>
+                <div className="absolute rounded-full w-20 h-20 bg-[#FABB18] top-44 right-20 pl-6 p-5">
+                          <svg width="30" height="30" viewBox="0 -0.5 21 21" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink">
+                            <g id="Page-1" stroke="none" strokeWidth="1" fill="none" fillRule="evenodd">
+                                <g id="Dribbble-Light-Preview" transform="translate(-59.000000, -400.000000)" fill="#000000">
+                                    <g id="icons" transform="translate(56.000000, 160.000000)">
+                                        <path d="M3,260 L24,260 L24,258.010742 L3,258.010742 L3,260 Z M13.3341,254.032226 L9.3,254.032226 L9.3,249.950269 L19.63095,240 L24,244.115775 L13.3341,254.032226 Z" id="edit_fill-[#1480]">
+
+                        </path>
+                                    </g>
+                                </g>
+                            </g>
+                        </svg>
+                </div>
             </div>
 
             <div className="mt-28 p-3 flex justify-center">

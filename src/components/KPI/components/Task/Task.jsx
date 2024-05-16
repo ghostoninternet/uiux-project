@@ -13,8 +13,8 @@ function Task({ event, taskClick, setTaskDetail }) {
                 <div className="inline-flex p-2 bg-[#F8F8F7] rounded-[50%] ml-8">
                     <FolderSVG />
                 </div>
-                <span className="ml-4 text-xl w-60 task-title">{event.title}</span>
-                <div className="flex ml-10 w-[28rem] rounded bg-slate-300">
+                <span className="ml-4 w-52 task-title">{event.title}</span>
+                <div className="flex ml-5 w-[28rem] rounded bg-slate-300">
                     <div className="rounded" style={{border: `0.1rem solid #FABB18`, width: `${event.Taskcompleted*28/100}rem`}}></div>
                 </div>
 

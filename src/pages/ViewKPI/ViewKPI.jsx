@@ -41,7 +41,7 @@ function ViewKPI() {
                     </div>
                 </div>
 
-                <div className="scrollbars-hidden overflow-y-scroll max-h-[39rem] mt-8">
+                <div className="scrollbars-hidden overflow-y-scroll max-h-fit mt-8">
                     {
                         KpiData.map((e, i) => {
                             let css = 'mt-8'
