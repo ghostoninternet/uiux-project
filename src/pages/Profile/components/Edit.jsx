@@ -9,14 +9,14 @@ function Edit() {
   const navigate = useNavigate()
   return (
     <div className="p-10 overflow-hidden">
-        <div className="w-full bg-white min-h-36 shadow-lg rounded-xl h-auto">
+        <div className="w-full bg-white min-h-44 shadow-lg rounded-xl h-auto">
             <div className="relative w-full">
                 <img src={bgImage} alt="" className="rounded-t-xl w-full h-56 object-cover"/>
-                <img className="absolute left-1/2 -translate-x-1/2 rounded-[50%] border-4 border-white w-60 h-60 object-cover top-1/2" src={avatar}/>
+                <img className="absolute left-1/2 -translate-x-1/2 rounded-[50%] border-4 border-white w-60 h-60 object-cover top-1/3" src={avatar}/>
             </div>
 
-            <div className="mt-36 p-3 flex justify-center">
-              <button className="bg-[#FABB18] rounded-full px-7 py-3 font-bold text-white flex text-lg w-1/4">
+            <div className="mt-28 p-3 flex justify-center">
+              <button className="bg-[#FABB18] rounded-full px-7 py-3 font-bold text-white flex text-lg w-64">
                 <svg fill="#FFFFFF" height="25" width="25" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" viewBox="0 0 487 487" xmlSpace="preserve" className="mr-3">
                   <g>
                     <g>
