@@ -123,7 +123,7 @@ function DefaultLayouts({ children }) {
           </div>
         </div>
 
-        <div className="flex flex-row justify-end align-middle w-1/5 my-auto cursor-pointer hover:bg-slate-100 rounded-lg mr-5" onClick={() => setToggleDown(!menuToggleDown)}>
+        <div className="flex flex-row justify-end align-middle w-auto my-auto pl-5 cursor-pointer hover:bg-slate-100 rounded-lg mr-5" onClick={() => setToggleDown(!menuToggleDown)}>
           <div className="text-xl my-auto flex font-semibold">
             Username <div className="mt-2 ml-2"><DownArrow /></div>
           </div>

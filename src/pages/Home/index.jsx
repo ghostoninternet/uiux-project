@@ -76,7 +76,7 @@ const [taskDetail, setTaskDetail] = useState(taskExample)
                               <span className="ml-4 text-lg w-40 task-title">{e.title}</span>
                               <div className="ml-7 w-20 text-center py-1 bg-[#FABB18] rounded-lg text-md">{e.weight}</div>
                               <div className="flex ml-10 w-[20%] rounded bg-slate-300">
-                                  <div className="rounded bg-[#FABB18] h-[3px]" style={{ width: `${e.Taskcompleted*7/100}rem`}}></div>
+                                  <div className="rounded bg-[#FABB18] h-[3px]" style={{ width: `${e.Taskcompleted}%`}}></div>
                               </div>
               
                           </div>
