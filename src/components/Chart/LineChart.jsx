@@ -21,15 +21,24 @@ Chart.register(
 );
 
 function LineChart({label = false}) {
-
     const options = {
-        plugins: {
-            legend: {
-                display: label 
+            layout: {
+                padding: 20
+            },
+            plugins: {
+                legend: {
+                    display: label,
+                    position: 'bottom',
+                    labels: {
+                        font: {
+                            size: '20',
+                            weight: '700',
+                        } 
+                },
+        
             }
         }
     }
-
   return (
     <Line options={options} data={LineChartData} />
   )
