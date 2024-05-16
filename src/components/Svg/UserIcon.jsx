@@ -1,6 +1,6 @@
 function UserIcon() {
   return (
-    <svg width="106" height="69" viewBox="0 0 106 69" fill="none" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink">
+    <svg width="80" height="60" viewBox="0 0 106 69" fill="none" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink">
       <mask id="mask0_410_1668" style={{ maskType: 'alpha' }} maskUnits="userSpaceOnUse" x="0" y="0" width="106" height="69">
         <rect width="106" height="69" fill="url(#pattern0_410_1668)" />
       </mask>
