@@ -9,18 +9,19 @@
 }
 
 .fc .fc-button {
-  background-color:  #FFF;
-  border: 0;
-  color: black;
+    background-color: #FFF;
+    border: 0;
+    color: black;
 }
 
 .fc .fc-button:hover {
     color: #FABB18;
-    background-color:  #FFF;
+    background-color: #FFF;
 }
 
 
-.fc .fc-button-primary:not(:disabled).fc-button-active, .fc .fc-button-primary:not(:disabled):active {
+.fc .fc-button-primary:not(:disabled).fc-button-active,
+.fc .fc-button-primary:not(:disabled):active {
     color: #FABB18;
     background-color: #FFF;
     border: 0;
@@ -32,7 +33,7 @@
     line-height: 1.5;
     margin-top: auto;
     margin-bottom: auto;
-    
+
 }
 
 .fc-daygrid-day-frame {
@@ -68,7 +69,8 @@
     background-color: #FABB18 !important;
 }
 
-.fc .fc-button-primary:not(:disabled).fc-button-active:focus, .fc .fc-button-primary:not(:disabled):active:focus {
+.fc .fc-button-primary:not(:disabled).fc-button-active:focus,
+.fc .fc-button-primary:not(:disabled):active:focus {
     border: 0;
     box-shadow: none;
 }
@@ -76,6 +78,7 @@
 .fc .fc-button-primary:focus {
     box-shadow: none;
 }
+
 .fc-daygrid-block-event {
     cursor: pointer;
     background-color: #FABB18;
@@ -101,19 +104,47 @@ input::-webkit-inner-spin-button {
 .scrollbar::-webkit-scrollbar {
     width: 20px;
     height: 20px;
-  }
+}
 
-  .scrollbar::-webkit-scrollbar-track {
+.scrollbar::-webkit-scrollbar-track {
     border-radius: 100vh;
     background: #f3f0f0;
-  }
+}
 
-  .scrollbar::-webkit-scrollbar-thumb {
+.scrollbar::-webkit-scrollbar-thumb {
     background: #524E4E;
     border-radius: 100vh;
     border: 3px solid #f6f7ed;
-  }
+}
 
-  .scrollbar::-webkit-scrollbar-thumb:hover {
+.scrollbar::-webkit-scrollbar-thumb:hover {
     background: #524E4E;
-  }
+}
+
+.react-calendar__navigation__arrow.react-calendar__navigation__prev2-button {
+    margin-right: 15px;
+    padding-left: 10px;
+    padding-right: 10px;
+    font-size: 30px;
+}
+
+.react-calendar__navigation__arrow.react-calendar__navigation__prev-button {
+    margin-right: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
+    font-size: 30px;
+}
+
+.react-calendar__navigation__arrow.react-calendar__navigation__next2-button {
+    margin-left: 15px;
+    padding-left: 10px;
+    padding-right: 10px;
+    font-size: 30px;
+}
+
+.react-calendar__navigation__arrow.react-calendar__navigation__next-button {
+    margin-right: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
+    font-size: 30px;
+}

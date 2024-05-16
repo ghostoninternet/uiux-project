@@ -11,7 +11,7 @@ function SignUp() {
             <Logo/>
         </div>
         <img src={bgImage} alt="" className='w-full h-full object-cover absolute top-0 left-0 rotate-0'/>
-        <div className='absolute top-[0%] left-[65%] h-[100%] w-[25%] bg-white flex justify-center min-w-[380px]'>
+        <div className='z-30 absolute top-[0%] left-[65%] h-[100%] w-[25%] bg-white flex justify-center min-w-[380px]'>
             <div className='w-[80%] overflow-hidden'>
                 <div className='flex justify-center mb-8 text-3xl font-bold mt-4'>Sign up</div>
                 <div className='flex justify-center'>
