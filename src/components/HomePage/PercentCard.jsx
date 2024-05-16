@@ -1,7 +1,13 @@
+import ShowMore from "../Svg/ShowMore"
+
+
 function PercentCard({ title, value }) {
   return (
     <div className="p-7 w-1/3 bg-white min-h-36 shadow-lg rounded-xl flex flex-col justify-between">
+      <div className="flex justify-between">
       <h1 className="font-bold text-xl">{title}</h1>
+      <ShowMore />
+      </div>
       <div className="flex justify-between">
         <h1 className="font-semibold text-2xl">{value}%</h1>
         <div className="p-2 bg-[#FABB18] rounded-lg">

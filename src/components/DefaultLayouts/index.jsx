@@ -201,7 +201,7 @@ function DefaultLayouts({ children }) {
         leaveFrom="opacity-100"
         leaveTo="opacity-0"
       >
-        <div className="fixed bg-white top-[10%] right-[3%] h-auto w-1/5 shadow-xl rounded-xl py-2">
+        <div className="fixed bg-white top-[10%] right-[3%] h-auto w-1/5 drop-shadow-2xl  rounded-xl py-2">
           <div className="flex border-b-2 border-gray-200 p-2">
           <div className="relative">
             <UserIcon />
@@ -237,11 +237,11 @@ function DefaultLayouts({ children }) {
         leaveFrom="opacity-100"
         leaveTo="opacity-0"
       >
-        <div className="fixed bg-white top-[10%] right-[22%] h-auto w-[23%] shadow-xl rounded-xl py-2 flex flex-col">
+        <div className="fixed bg-white top-[10%] right-[22%] h-auto w-[23%] drop-shadow-2xl  rounded-xl py-2 flex flex-col">
               <h1 className="py-2 font-semibold text-lg px-5 text-end border-b-[1px] border-slate-400 text-yellow-400">Notifications</h1>
-              <ul className="px-5 h-96 overflow-y-scroll">
+              <ul className="h-96 overflow-y-scroll">
               {NotiData.map((noti,index) => <li key={index}>
-                  <div className="py-3">
+                  <div className="py-3 px-5 hover:bg-slate-100 cursor-pointer">
                     <h1 className="font-medium text-yellow-500 mb-1">{noti.message}</h1>
                     <div className="flex px-3">
                       <div>

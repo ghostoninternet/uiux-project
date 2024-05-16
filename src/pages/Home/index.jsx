@@ -41,11 +41,13 @@ const [taskDetail, setTaskDetail] = useState(taskExample)
             <div className="flex justify-between h-9">
             <h1 className="mb-10 font-bold text-xl">Weekly Trends</h1>
             <div className="flex space-x-5 h-9">
-                <div className="bg-slate-200 rounded-lg p-2">
+                <div className="bg-slate-200 rounded-lg p-2 hover:bg-transparent">
                   <ShowMore />
                 </div>
-                <div className="bg-slate-200 rounded-lg p-2">
-                <svg width="25" height="25" viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg"><path fill="#000000" d="M768 256H353.6a32 32 0 1 1 0-64H800a32 32 0 0 1 32 32v448a32 32 0 0 1-64 0V256z"/><path fill="#000000" d="M777.344 201.344a32 32 0 0 1 45.312 45.312l-544 544a32 32 0 0 1-45.312-45.312l544-544z"/></svg>
+                <div className="bg-slate-200 rounded-lg p-2 hover:bg-transparent">
+                  <svg width="25" height="25" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg" fill="none">
+                    <path stroke="#000000" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4.343 15.657L15.657 4.343m0 0v9.9m0-9.9h-9.9"/>
+                  </svg>                
                 </div>
             </div>
             </div>
@@ -61,20 +63,20 @@ const [taskDetail, setTaskDetail] = useState(taskExample)
             </div>
             <div className="p-7 w-1/2 bg-white min-h-36 shadow-lg rounded-xl h-1/2">
               <div className="flex justify-between mb-10 px-3">
-                <h1 className="font-bold text-xl">Recent task</h1>
-                <button className="bg-black px-4 py-2 rounded-lg text-white hover:bg-slate-50 hover:text-black">View all</button>
+                <h1 className="font-bold text-xl leading-loose">Recent task</h1>
+                <button className="bg-black px-4 py-2 rounded-lg text-white hover:bg-slate-50 hover:text-black font-medium">View all</button>
               </div>
               <div className="h-full px-2">
                 {data.map((e,i) => 
                         <div className="inline-block py-2 cursor-pointer hover:bg-slate-100 w-full border-2 border-[#F1F1F1] rounded-xl mb-2 overflow-hidden" onClick={() => handleOnClick(e)} key={i}>
-                          <div className="inline-flex items-center pr-8">
+                          <div className="inline-flex items-center pr-8 w-full">
                               <div className="inline-flex p-2 bg-[#F8F8F7] rounded-[50%] ml-8">
                                   <YellowFolder />
                               </div>
-                              <span className="ml-4 text-xl w-40 task-title">{e.title}</span>
-                              <div className="ml-10 w-20 text-center py-1 bg-[#FABB18] rounded-lg text-md">{e.weight}</div>
-                              <div className="flex ml-10 w-28 rounded bg-slate-300">
-                                  <div className="rounded" style={{border: `0.1rem solid #FABB18`, width: `${e.Taskcompleted*7/100}rem`}}></div>
+                              <span className="ml-4 text-lg w-40 task-title">{e.title}</span>
+                              <div className="ml-7 w-20 text-center py-1 bg-[#FABB18] rounded-lg text-md">{e.weight}</div>
+                              <div className="flex ml-10 w-[20%] rounded bg-slate-300">
+                                  <div className="rounded bg-[#FABB18] h-[3px]" style={{ width: `${e.Taskcompleted*7/100}rem`}}></div>
                               </div>
               
                           </div>
