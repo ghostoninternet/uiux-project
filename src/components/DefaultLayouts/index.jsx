@@ -14,11 +14,13 @@ import BellBlack from "../Svg/BellBlack"
 import TrashCan from "../Svg/TrashCan"
 import DownArrow from "../Svg/DownArrow"
 import Cancel from "../Svg/Cancel"
+import { NotiData } from "../../api/NotiData"
 
 function DefaultLayouts({ children }) {
   const location = useLocation()
   const navigate = useNavigate()
   const [menuToggleDown, setToggleDown] = useState(false);
+  const [notificationToggle, setNotificationToggle] = useState(false)
 
   useEffect(() => {
     setCurrentActive(location.pathname.split('/')[1])
@@ -71,6 +73,9 @@ function DefaultLayouts({ children }) {
       if(menuToggleDown === true) {
         setToggleDown(false)
       }
+      if(notificationToggle === true) {
+        setNotificationToggle(false)
+      }
   }
 
   return (
@@ -113,12 +118,12 @@ function DefaultLayouts({ children }) {
               <Cancel />
             </button>
           </div>
-          <div className="mt-2">
+          <div className="mt-2 cursor-pointer" onClick={() => setNotificationToggle(!notificationToggle)}>
             <BellBlack size={35} />
           </div>
         </div>
 
-        <div className="flex flex-row justify-end align-middle w-1/5 my-auto cursor-pointer hover:bg-slate-100 rounded-lg" onClick={() => setToggleDown(!menuToggleDown)}>
+        <div className="flex flex-row justify-end align-middle w-1/5 my-auto cursor-pointer hover:bg-slate-100 rounded-lg mr-5" onClick={() => setToggleDown(!menuToggleDown)}>
           <div className="text-xl my-auto flex font-semibold">
             Username <div className="mt-2 ml-2"><DownArrow /></div>
           </div>
@@ -221,6 +226,41 @@ function DefaultLayouts({ children }) {
           </ul>
         </div>
       </Transition>
+
+      
+      <Transition
+        show={notificationToggle}
+        enter="transition-opacity duration-200"
+        enterFrom="opacity-0"
+        enterTo="opacity-100"
+        leave="transition-opacity duration-150"
+        leaveFrom="opacity-100"
+        leaveTo="opacity-0"
+      >
+        <div className="fixed bg-white top-[10%] right-[23%] h-auto w-1/5 shadow-xl rounded-xl py-2 flex flex-col">
+              <h1 className="py-2 font-bold text-lg px-5 text-end border-b-2 border-slate-400 text-yellow-600">Notifications</h1>
+              <ul className="px-3">
+              {NotiData.map((noti,index) => <li key={index}>
+                  <div className="py-3">
+                    <h1 className="font-semibold text-yellow-500 mb-1">{noti.message}</h1>
+                    <div className="flex">
+                      <div>
+                      <svg width="25" height="25" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M12 7V12L14.5 10.5M21 12C21 16.9706 16.9706 21 12 21C7.02944 21 3 16.9706 3 12C3 7.02944 7.02944 3 12 3C16.9706 3 21 7.02944 21 12Z" stroke="#000000" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                      </svg>
+                      </div>
+                    <p className="text-black px-3">{noti.time}</p>
+                    </div>
+                  </div>
+
+              </li>)}
+              </ul>
+        </div>
+      </Transition>
+
+
+
+
 
 
     </div>
