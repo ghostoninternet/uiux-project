@@ -119,8 +119,8 @@ function DefaultLayouts({ children }) {
         </div>
 
         <div className="flex flex-row justify-end align-middle w-1/5 gap-10 my-auto cursor-pointer hover:bg-slate-100 rounded-lg" onClick={() => setToggleDown(!menuToggleDown)}>
-          <div className="text-2xl my-auto flex">
-            Username <div className="mt-3 ml-2"><DownArrow /></div>
+          <div className="text-xl my-auto flex font-semibold">
+            Username <div className="mt-2 ml-2"><DownArrow /></div>
           </div>
           <div className="my-auto">
             <UserIcon />
@@ -166,14 +166,14 @@ function DefaultLayouts({ children }) {
           </div>
           <div className="flex flex-col">
             <div className="h-[4px] w-full bg-black"></div>
-            <div className="cursor-pointer flex gap-3 px-9 mt-3 mb-10">
+            <div className="cursor-pointer flex gap-3 px-9 mt-3 mb-5">
               <div className="">
                 <HelpIcon />
               </div>
               {
                 !smallSidebar &&
                 (
-                  <div className="text-2xl my-auto">
+                  <div className="text-xl my-auto font-semibold">
                     Help
                   </div>
                 )

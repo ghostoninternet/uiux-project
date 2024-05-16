@@ -10,7 +10,7 @@ const MenuBar = (props) => {
   return (
     <Link to={props.link} className="w-full">
       <div onClick={handleOnClick} 
-        className="wrapper flex px-7 py-5 w-full rounded-3xl gap-4"
+        className="wrapper flex px-7 py-4 w-full rounded-2xl gap-4"
         style={{
           backgroundColor: props.currentActive === props.link.split('/')[1].toLowerCase() ? 'black' : '#FFF8E8',
           color: props.currentActive === props.link.split('/')[1].toLowerCase() ? 'white' : undefined
@@ -22,7 +22,7 @@ const MenuBar = (props) => {
           }
         </div>
         {
-          !props.smallSidebar && <div className="my-auto menu-title">{props.menuTitle}</div>
+          !props.smallSidebar && <div className="my-auto menu-title font-semibold text-lg">{props.menuTitle}</div>
         }
       </div>
     </Link>

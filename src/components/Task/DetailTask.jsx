@@ -10,8 +10,8 @@ function DetailTask( { data } ) {
                     <YellowFolder />
                 </div>
                 <span className="ml-4 text-xl w-60 task-title">{data.title}</span>
-                <div className="flex ml-[4rem] w-[12rem] rounded" style={{border: `0.1rem solid #DFDFDF`}}>
-                    <div className="rounded" style={{border: `0.1rem solid #FABB18`, width: `${data.Taskcompleted*12/100}rem`}}></div>
+                <div className="flex ml-[4rem] w-[12rem] h-[3px] rounded bg-slate-200">
+                    <div className="rounded bg-[#FABB18]" style={{ width: `${data.Taskcompleted*12/100}rem`}}></div>
                 </div>
 
                 <div className="ml-[5.5rem] w-[6.5rem] text-center py-1 bg-[#FFF8E8] rounded-lg text-xl">{data.weight}</div>
