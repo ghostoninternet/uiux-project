@@ -118,8 +118,9 @@ function DefaultLayouts({ children }) {
               <Cancel />
             </button>
           </div>
-          <div className="cursor-pointer hover:bg-slate-100 p-2 rounded-md" onClick={() => setNotificationToggle(!notificationToggle)}>
+          <div className="relative cursor-pointer hover:bg-slate-100 p-2 rounded-md" onClick={() => setNotificationToggle(!notificationToggle)}>
             <BellBlack size={35} />
+            <div className="absolute top-1/4 left-2/3 rounded-full w-3 h-3 bg-yellow-400"></div>
           </div>
         </div>
 
@@ -201,7 +202,7 @@ function DefaultLayouts({ children }) {
         leaveFrom="opacity-100"
         leaveTo="opacity-0"
       >
-        <div className="fixed bg-white top-[10%] right-[3%] h-auto w-1/5 drop-shadow-2xl  rounded-xl py-2">
+        <div className="fixed bg-white top-[10%] right-[3%] h-auto w-1/5 drop-shadow-2xl  rounded-xl py-2 z-50">
           <div className="flex border-b-2 border-gray-200 p-2">
           <div className="relative">
             <UserIcon />
@@ -237,7 +238,7 @@ function DefaultLayouts({ children }) {
         leaveFrom="opacity-100"
         leaveTo="opacity-0"
       >
-        <div className="fixed bg-white top-[10%] right-[22%] h-auto w-[23%] drop-shadow-2xl  rounded-xl py-2 flex flex-col">
+        <div className="fixed bg-white top-[10%] right-[20%] h-auto w-[23%] drop-shadow-2xl  rounded-xl py-2 flex flex-col z-50">
               <h1 className="py-2 font-semibold text-lg px-5 text-end border-b-[1px] border-slate-400 text-yellow-400">Notifications</h1>
               <ul className="h-96 overflow-y-scroll">
               {NotiData.map((noti,index) => <li key={index}>

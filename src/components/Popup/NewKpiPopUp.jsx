@@ -42,8 +42,6 @@ function NewKpiPopUp({popUpToggle, setPopUpToggle}) {
           <div className="flex">
             <input type="file" name="import" id="" className="file:mr-4 file:py-2 file:px-4 file:rounded-full file:border-0 file:text-sm 
             file:font-semibold file:bg-[#FFF8E8] file:text-[#FABB18] hover:file:bg-[#ffebbe] text-sm text-slate-500 "/>
-            <input type="file" name="import" id="" className="file:mr-4 file:py-2 file:px-4 file:rounded-full file:border-0 file:text-sm 
-            file:font-semibold file:bg-[#FFF8E8] file:text-[#FABB18] hover:file:bg-[#ffebbe] text-sm text-slate-500"/>
             <FormSubmitButton />
           </div>
         </form>

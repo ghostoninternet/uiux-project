@@ -8,7 +8,7 @@ import Home from "../pages/Home"
 import Calendar from "../pages/Calendar"
 import Setting from "../pages/Setting"
 import Edit from "../pages/Profile/components/Edit"
-
+import Chart from "../pages/Chart"
 const publicRoutes = [
   { path: '/', component: Home },
   { path: '/calendar', component: Calendar },
@@ -17,6 +17,7 @@ const publicRoutes = [
   { path: '/profile', component: Profile },
   { path: '/setting', component: Setting },
   { path: '/profile/edit', component: Edit },
+  { path: '/chart', component: Chart },
   { path: '/sign-in', component: SignIn, layout: null },
   { path: '/sign-up', component: SignUp, layout: null }
 ]

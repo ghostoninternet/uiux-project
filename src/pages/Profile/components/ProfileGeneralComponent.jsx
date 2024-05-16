@@ -19,7 +19,7 @@ function ProfileGeneralComponent() {
               <div>
                 <CreatedKIP />
               </div>
-              <div className="font-bold">
+              <div className="font-bold leading-loose">
                 159 KPI Created
               </div>
             </div>
@@ -27,7 +27,7 @@ function ProfileGeneralComponent() {
               <div>
                 <CompletedKPI />
               </div>
-              <div className="font-bold">
+              <div className="font-bold leading-loose">
                 102 KPI completed
               </div>
             </div>

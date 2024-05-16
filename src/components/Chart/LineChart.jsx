@@ -20,12 +20,12 @@ Chart.register(
     Legend
 );
 
-function LineChart() {
+function LineChart({label = false}) {
 
     const options = {
         plugins: {
             legend: {
-                display: false 
+                display: label 
             }
         }
     }

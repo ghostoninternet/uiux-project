@@ -41,14 +41,15 @@ const [taskDetail, setTaskDetail] = useState(taskExample)
             <div className="flex justify-between h-9">
             <h1 className="mb-10 font-bold text-xl">Weekly Trends</h1>
             <div className="flex space-x-5 h-9">
-                <div className="bg-slate-200 rounded-lg p-2 hover:bg-transparent">
+              <div className="rounded-lg p-1 hover:bg-slate-200 cursor-pointer" onClick={() => navigate("/chart")}>
+                    <svg width="25" height="25" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg" fill="none">
+                      <path stroke="#000000" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4.343 15.657L15.657 4.343m0 0v9.9m0-9.9h-9.9"/>
+                    </svg>                
+              </div>
+                <div className="rounded-lg p-2 hover:bg-slate-200 cursor-pointer">
                   <ShowMore />
                 </div>
-                <div className="bg-slate-200 rounded-lg p-2 hover:bg-transparent">
-                  <svg width="25" height="25" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg" fill="none">
-                    <path stroke="#000000" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4.343 15.657L15.657 4.343m0 0v9.9m0-9.9h-9.9"/>
-                  </svg>                
-                </div>
+            
             </div>
             </div>
             <div className="ml-5">
@@ -73,12 +74,12 @@ const [taskDetail, setTaskDetail] = useState(taskExample)
                               <div className="inline-flex p-2 bg-[#F8F8F7] rounded-[50%] ml-8">
                                   <YellowFolder />
                               </div>
-                              <span className="ml-4 text-lg w-40 task-title">{e.title}</span>
+                              <span className="ml-4 w-40 task-title">{e.title}</span>
                               <div className="ml-7 w-20 text-center py-1 bg-[#FABB18] rounded-lg text-md">{e.weight}</div>
-                              <div className="flex ml-10 w-[20%] rounded bg-slate-300">
+                              <div className="flex ml-7 w-[25%] rounded bg-slate-300">
                                   <div className="rounded bg-[#FABB18] h-[3px]" style={{ width: `${e.Taskcompleted}%`}}></div>
                               </div>
-              
+                              <p className="text-xs ml-2 font-medium italic">{e.Taskcompleted}%</p>
                           </div>
                     </div>
                 )}
