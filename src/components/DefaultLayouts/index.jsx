@@ -238,7 +238,7 @@ function DefaultLayouts({ children }) {
         leaveFrom="opacity-100"
         leaveTo="opacity-0"
       >
-        <div className="fixed bg-white top-[10%] right-[20%] h-auto w-[23%] drop-shadow-2xl  rounded-xl py-2 flex flex-col z-50">
+        <div className="fixed bg-white top-[10%] right-[20%] h-auto w-[23%] drop-shadow-2xl  rounded-xl flex flex-col z-50">
               <h1 className="py-2 font-semibold text-lg px-5 text-end border-b-[1px] border-slate-400 text-yellow-400">Notifications</h1>
               <ul className="h-96 overflow-y-scroll">
               {NotiData.map((noti,index) => <li key={index}>

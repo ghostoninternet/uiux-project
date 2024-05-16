@@ -75,7 +75,7 @@ const [taskDetail, setTaskDetail] = useState(taskExample)
                                   <YellowFolder />
                               </div>
                               <span className="ml-4 w-40 task-title">{e.title}</span>
-                              <div className="ml-7 w-20 text-center py-1 bg-[#FABB18] rounded-lg text-md">{e.weight}</div>
+                              <div className="ml-7 w-20 text-center py-1 bg-[#FABB18] rounded-lg text-md font-semibold">{e.weight}</div>
                               <div className="flex ml-7 w-[25%] rounded bg-slate-300">
                                   <div className="rounded bg-[#FABB18] h-[3px]" style={{ width: `${e.Taskcompleted}%`}}></div>
                               </div>

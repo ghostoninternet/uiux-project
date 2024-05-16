@@ -35,7 +35,7 @@ function ProfileGeneralComponent() {
         </div>
       </div>
 
-      <div className="w-[60%]">
+      <div className="w-[70%]">
         <div className="w-full pt-[20px] pb-[100px] flex flex-col justify-center align-middle bg-white rounded-2xl gap-10 shadow-2xl">
           <div className="w-[80%] mx-auto flex flex-col gap-4">
             <div className="font-bold text-xl mb-3">
