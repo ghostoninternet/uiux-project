@@ -118,7 +118,7 @@ function DefaultLayouts({ children }) {
               <Cancel />
             </button>
           </div>
-          <div className="mt-2 cursor-pointer" onClick={() => setNotificationToggle(!notificationToggle)}>
+          <div className="cursor-pointer hover:bg-slate-100 p-2 rounded-md" onClick={() => setNotificationToggle(!notificationToggle)}>
             <BellBlack size={35} />
           </div>
         </div>
@@ -237,19 +237,19 @@ function DefaultLayouts({ children }) {
         leaveFrom="opacity-100"
         leaveTo="opacity-0"
       >
-        <div className="fixed bg-white top-[10%] right-[23%] h-auto w-1/5 shadow-xl rounded-xl py-2 flex flex-col">
-              <h1 className="py-2 font-bold text-lg px-5 text-end border-b-2 border-slate-400 text-yellow-600">Notifications</h1>
-              <ul className="px-3">
+        <div className="fixed bg-white top-[10%] right-[22%] h-auto w-[23%] shadow-xl rounded-xl py-2 flex flex-col">
+              <h1 className="py-2 font-semibold text-lg px-5 text-end border-b-[1px] border-slate-400 text-yellow-400">Notifications</h1>
+              <ul className="px-5 h-96 overflow-y-scroll">
               {NotiData.map((noti,index) => <li key={index}>
                   <div className="py-3">
-                    <h1 className="font-semibold text-yellow-500 mb-1">{noti.message}</h1>
-                    <div className="flex">
+                    <h1 className="font-medium text-yellow-500 mb-1">{noti.message}</h1>
+                    <div className="flex px-3">
                       <div>
                       <svg width="25" height="25" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <path d="M12 7V12L14.5 10.5M21 12C21 16.9706 16.9706 21 12 21C7.02944 21 3 16.9706 3 12C3 7.02944 7.02944 3 12 3C16.9706 3 21 7.02944 21 12Z" stroke="#000000" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                      <path d="M12 7V12L14.5 10.5M21 12C21 16.9706 16.9706 21 12 21C7.02944 21 3 16.9706 3 12C3 7.02944 7.02944 3 12 3C16.9706 3 21 7.02944 21 12Z" stroke="gray" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
                       </svg>
                       </div>
-                    <p className="text-black px-3">{noti.time}</p>
+                    <p className="text-gray-500 ml-2">{noti.time}</p>
                     </div>
                   </div>
 
