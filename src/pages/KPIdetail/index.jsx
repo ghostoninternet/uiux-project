@@ -48,8 +48,6 @@ export default function KpiDetail() {
     setDetailTaskToggle(true)
   }
 
-
-
   return (
     !data ? <Fragment /> :
       <div className="mx-8 mt-5">
@@ -141,7 +139,7 @@ export default function KpiDetail() {
             <div className="px-10 mt-3 pb-3 scrollbars-hidden overflow-y-scroll max-h-[15rem]">
               {data.tasksList.map((task, i) => {
                 return (
-                  <div key={i} onClick={(e) => handleOnClickTask(e, task)}>
+                  <div className="w-full" key={i} onClick={(e) => handleOnClickTask(e, task)}>
                     <DetailTask data={task} />
                   </div>
                 )

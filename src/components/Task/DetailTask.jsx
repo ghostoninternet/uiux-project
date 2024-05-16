@@ -4,9 +4,9 @@ import StatusButton from "./components/StatusButton";
 
 function DetailTask( { data } ) {
     return ( 
-        <div className="inline-block pt-2 cursor-pointer hover:bg-slate-100">
-            <div className="inline-flex items-center pr-8">
-                <div className="inline-flex p-2 bg-[#F8F8F7] rounded-[50%] ml-8">
+        <div className="w-full inline-block pt-2 cursor-pointer hover:bg-slate-100">
+            <div className="w-full flex justify-evenly items-center pr-8">
+                <div className="inline-flex p-2 pl-[0.25rem] bg-[#F8F8F7] rounded-[50%] ml-8">
                     <YellowFolder />
                 </div>
                 <span className="ml-4 text-xl w-60 task-title">{data.title}</span>
