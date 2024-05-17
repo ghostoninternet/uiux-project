@@ -39,6 +39,16 @@ export const tasksList1 = [
         start: '2024-05-20',
         status: 'Late'
     },
+    {
+        title: 'Quality of assgnment 1',
+        Taskcompleted: 60,
+        evaluatuon: 'Điểm bài tập về nhà',
+        target: 'Điểm tối đa',
+        value: 100,
+        weight: 0.8,
+        start: '2024-05-20',
+        status: 'Late'
+    },
 ]
 
 export const tasksList2 = [
