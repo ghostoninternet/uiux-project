@@ -2,8 +2,8 @@ export const tasksList1 = [
     {
         title: 'Quality of Project 1 ',
         Taskcompleted: 90,
-        evaluatuon: 'Điểm bài tập lớn',
-        target: 'Điểm tối đa',
+        evaluatuon: 'class project average score',
+        target: 'Max Score',
         value: 100,
         weight: 1,
         start: '2024-05-20',
@@ -11,8 +11,8 @@ export const tasksList1 = [
     },
     {
         title: 'Student review 1',
-        evaluatuon: 'Đánh giá trung bình của sinh viên',
-        target: 'Điểm tối đa',
+        evaluatuon: 'Student review score',
+        target: 'Max score',
         value: 100,
         Taskcompleted: 20,
         weight: 1.5,
@@ -20,20 +20,10 @@ export const tasksList1 = [
         status: 'Done'
     },
     {
-        title: 'Quality of assgnment 1',
+        title: 'Ratio student pass 1',
         Taskcompleted: 60,
-        evaluatuon: 'Điểm bài tập về nhà',
-        target: 'Điểm tối đa',
-        value: 100,
-        weight: 0.8,
-        start: '2024-05-20',
-        status: 'Late'
-    },
-    {
-        title: 'Quality of assgnment 1',
-        Taskcompleted: 60,
-        evaluatuon: 'Điểm bài tập về nhà',
-        target: 'Điểm tối đa',
+        evaluatuon: 'Ratio of student pass',
+        target: 'Max',
         value: 100,
         weight: 0.8,
         start: '2024-05-20',

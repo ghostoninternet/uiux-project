@@ -24,11 +24,15 @@ function KPI({title, KPIcompleted, tasksList, taskCLick, setTaskDetail, setNewTa
         })
     }
 
+    const handleDownArrowClick = (e) => {
+        console.log(e.target)
+    }
+
     return ( 
-        <div className="bg-white rounded-lg px-6 min-h-72 shadow-md">
+        <div className="bg-white rounded-lg px-6 min-h-72 shadow-md pb-4">
             <div className="pt-3 flex justify-between">
                 <div className="flex">
-                    <div className="flex items-center mr-2 relative top-[-4px]">
+                    <div className="flex items-center mr-2 relative top-[-4px] hover:cursor-pointer" onClick={(e) => {handleDownArrowClick(e)}}>
                         <DownArrow />
                     </div>
                     <h1 className="font-bold text-xl">{title}</h1>

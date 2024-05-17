@@ -1,7 +1,7 @@
 import { tasksList1, tasksList2 } from "../api/TaskApi";
 
 const TeachingQuality = {
-    title: 'Teaching quality',
+    title: 'UI/UX teaching quality',
     KPIcompleted: 80,
     tasksList: tasksList1,
     tasksCompleted: 2,
