@@ -118,7 +118,7 @@ export default function KpiDetail() {
               </div>
 
               <div className="mb-4">
-                <span className="font-semibold">Decripstion: “</span>
+                <span className="font-semibold">Description: “</span>
                 <span><i>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non risus. Suspendisse lectus tortor, dignissim sit amet, adipiscing nec, ultricies sed, dolor.</i></span>
                 <span className="font-semibold">”</span>
               </div>

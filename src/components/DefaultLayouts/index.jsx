@@ -188,7 +188,7 @@ function DefaultLayouts({ children }) {
           </div>
         </div>
 
-        <div ref={contentRef} className="w-[85.7143%] overflow-auto scrollbar bg-gray-100 rounded-tl-3xl">
+        <div ref={contentRef} className="w-[85.7143%] overflow-auto scrollbar bg-gray-100 rounded-tl-3xl shadow-inner">
             {children}
         </div>
       </div>
