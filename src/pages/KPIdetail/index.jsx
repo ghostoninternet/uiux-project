@@ -135,7 +135,7 @@ export default function KpiDetail() {
               <div className="w-1/6 ml-[0.7rem] text-center">Status</div>
             </div>
 
-            <div className="px-10 mt-3 pb-3 scrollbars-hidden overflow-y-scroll">
+            <div className="px-10 mt-3 pb-3 scrollbars-hidden overflow-y-scroll kpi-detail">
               {data.tasksList.map((task, i) => {
                 return (
                   <div className="w-full" key={i} onClick={(e) => handleOnClickTask(e, task)}>

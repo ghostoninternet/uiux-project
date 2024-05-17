@@ -6,6 +6,7 @@ import { useState } from "react";
 import TaskDetailPopUp from "../../components/Popup/TaskDetailPopUp";
 import NewTaskPopUp from "../../components/Popup/NewTaskPopUp";
 import NewKpiPopUp from "../../components/Popup/NewKpiPopUp";
+import '../ViewKPI/index.css'
 
 function ViewKPI() {
     const [detailTaskToggle, setDetailTaskToggle] = useState(false)
@@ -40,7 +41,7 @@ function ViewKPI() {
                     </div>
                 </div>
 
-                <div className="scrollbars-hidden overflow-y-scroll max-h-fit mt-8">
+                <div className="scrollbars-hidden overflow-y-scroll mt-8 view-kpi">
                     {
                         KpiData.map((e, i) => {
                             let css = 'mt-8'

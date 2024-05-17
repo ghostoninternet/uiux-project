@@ -23,7 +23,7 @@ Chart.register(
 function LineChart({label = false}) {
     const options = {
             layout: {
-                padding: 20
+                padding: 0
             },
             plugins: {
                 legend: {

@@ -8,3 +8,7 @@
 .small-semi-circle {
     border-radius: 50%;
 }
+
+.kpi-detail {
+    max-height: calc(100vh - 33.5rem);
+}
