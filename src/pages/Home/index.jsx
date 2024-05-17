@@ -52,7 +52,7 @@ const [taskDetail, setTaskDetail] = useState(taskExample)
             
             </div>
             </div>
-            <div className="ml-5">
+            <div className="ml-3">
               <LineChart />
             </div>
           </div>

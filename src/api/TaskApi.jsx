@@ -14,7 +14,7 @@ export const tasksList1 = [
         evaluatuon: 'Student review score',
         target: 'Max score',
         value: 100,
-        Taskcompleted: 20,
+        Taskcompleted: 100,
         weight: 1.5,
         start: '2024-05-20',
         status: 'Done'
