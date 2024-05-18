@@ -9,16 +9,16 @@ export default function Setting() {
 
   return (
     <div className="w-full p-8">
-      <div className="w-full bg-white flex shadow-2xl rounded-2xl h-full">
+      <div className="w-full bg-white flex shadow-2xl rounded-2xl h-[42rem]">
         <div className="w-1/5 min-w-[24rem] pt-12 px-10 border-gray-200 border-r-2 py-5">
           <Tab selectedTab={selectedTab} setSelectedTab={setSelectedTab} tabTitle={"Appearance"} />
           <Tab selectedTab={selectedTab} setSelectedTab={setSelectedTab} tabTitle={"Account setting"} />
           <Tab selectedTab={selectedTab} setSelectedTab={setSelectedTab} tabTitle={"Notification"} />
           <Tab selectedTab={selectedTab} setSelectedTab={setSelectedTab} tabTitle={"Language"} />
         </div>
-        <div className="w-4/5 min-w-[48rem] mb-5">
+        <div className="w-4/5 min-w-[48rem] mb-5  overflow-y-scroll">
         <h1 className="mb-5 font-bold text-4xl pt-6 pl-6">{selectedTab}</h1>
-          <div className="pt-2 pl-10 min-h-96">
+          <div className="pt-2 pl-10">
             {selectedTab == "Appearance"  && <Apperance />}
             {selectedTab == "Account setting"  && <Account />}
             {selectedTab == "Notification"  && <Notification />}

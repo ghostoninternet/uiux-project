@@ -7,7 +7,7 @@ import { useNavigate } from "react-router-dom";
 import YellowFolder from "../../components/Svg/YellowFolder"
 import { tasksList1 } from "../../api/TaskApi";
 import TaskDetailPopUp from "../../components/Popup/TaskDetailPopUp";
-import LineChart from "../../components/Chart/LineChart";
+import BarChart from "../../components/Chart/BarChart";
 
 function Home() {
   const [date, onChange] = useState(new Date())
@@ -53,7 +53,7 @@ const [taskDetail, setTaskDetail] = useState(taskExample)
             </div>
             </div>
             <div className="ml-3">
-              <LineChart />
+              <BarChart />
             </div>
           </div>
         </div>

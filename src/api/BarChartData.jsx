@@ -6,7 +6,7 @@ export const BarChartData = {
         data: [80,30],
         backgroundColor: "#FABB18",
         borderColor: "black",
-        borderWidth: 3    
+        borderWidth: 2    
         },
     ],
 }
