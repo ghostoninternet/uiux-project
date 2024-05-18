@@ -5,12 +5,13 @@ import DesscriptionTextarea from "../Input/DescriptionTextarea";
 import FormSubmitButton from "../Button/FormSubmitButton";
 import DatePicker from "../Input/DatePicker";
 import Target from "../Svg/Target";
-import { toast } from "react-toastify"
+import { ToastSuccess } from "./ToastSuccess.";
+
 function NewTaskPopUp(props) {
   const handleSubmit = (form) => {
     form.preventDefault()
     props.setPopUpToggle(false)
-    toast("Create successfully")
+    ToastSuccess()
   }
   
 

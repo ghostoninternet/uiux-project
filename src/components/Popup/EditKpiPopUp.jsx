@@ -1,10 +1,9 @@
-import { toast } from "react-toastify"
 import DatePicker from "../Input/DatePicker"
 import DesscriptionTextarea from "../Input/DescriptionTextarea"
 import Cancel from "../Svg/Cancel"
 import Save from "../Svg/Save"
 import PopUp from "./PopUp"
-
+import { ToastSuccess } from "./ToastSuccess."
 
 function EditKpiPopUp({ popUpToggle, setPopUpToggle}) {
     const typeOptions = ['One time KPI','Ever day','Every week','Every month']
@@ -12,7 +11,7 @@ function EditKpiPopUp({ popUpToggle, setPopUpToggle}) {
     const handleSubmit = (form) => {
         form.preventDefault()
         setPopUpToggle(false)
-        toast(<div className="flex">Save successfully!</div>)
+        ToastSuccess()
       }
 
   return (

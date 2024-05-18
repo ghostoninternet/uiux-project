@@ -5,7 +5,8 @@ import DatePicker from "../Input/DatePicker"
 import Flag from "../Svg/Flag"
 import ShowMore from "../Svg/ShowMore"
 import FormSubmitButton from "../Button/FormSubmitButton"
-import { toast } from "react-toastify"
+import { ToastSuccess } from "./ToastSuccess."
+
 
 const typeOptions = ['One time KPI','Ever day','Every week','Every month']
 
@@ -16,9 +17,7 @@ function NewKpiPopUp({popUpToggle, setPopUpToggle}) {
   const handleSubmit = (form) => {
     form.preventDefault()
     setPopUpToggle(false)
-    toast("Create successfully",{
-      role: "success"
-    })
+    ToastSuccess()
   }
 
 

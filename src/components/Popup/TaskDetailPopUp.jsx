@@ -2,13 +2,13 @@ import PopUp from "./PopUp";
 import NumberPopUpInput from "../Input/NumberPopUpInput";
 import DatePicker from "../Input/DatePicker";
 import Save from "../Svg/Save";
-import { toast } from "react-toastify";
+import { ToastSuccess } from "./ToastSuccess.";
 
 function TaskDetailPopUp({title,event, popUpToggle, setPopUpToggle}) {
 
   const handleFormSubmission = (e) => {
     e.preventDefault()
-    toast('Save successfully!')
+    ToastSuccess()
     setPopUpToggle(false)
   }
 
