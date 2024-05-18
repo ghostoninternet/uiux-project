@@ -32,7 +32,7 @@ function Account() {
         </div>
 
         <div className="mb-7 pr-20">
-            <h1 className="font-semibold text-2xl border-b-2 border-gray-200 pb-2 text-red-500 w-1/2">Delete account</h1>
+            <h1 className="font-semibold text-2xl border-b-2 border-gray-200 pb-2 text-red-600 w-1/2">Delete account</h1>
             <p className="pt-2">Once you delete your account, there is no going back. Please be certain.</p>
             <button className="mt-2 border-2 border-[#FABB18] rounded-lg p-2  text-center font-semibold bg-[#FABB18] ">Delete account</button>
         </div>

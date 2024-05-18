@@ -2,7 +2,7 @@
 function Apperance() {
   return (
     <div>
-         <div className="text-2xl font-[625] mb-5">
+         <div className="text-2xl font-[625] mb-5 border-b-2 border-gray-300 w-1/2">
               Select Theme
             </div>
             <div className="w-3/12 min-w-[16rem] flex justify-around mb-8">
@@ -10,13 +10,13 @@ function Apperance() {
               <div className="cursor-pointer w-16 h-16 bg-black border-[2px] border-black rounded-3xl"></div>
               <div className="cursor-pointer w-16 h-16 bg-gray-400 border-[2px] border-gray-400 rounded-3xl"></div>
             </div>
-            <div className="text-2xl font-[625] mb-5">
+            <div className="text-2xl font-[625] mb-5 border-b-2 border-gray-300 w-1/2">
               Font Size
             </div>
-            <div className="w-3/12 min-w-[16rem] mb-10 pl-10">
-              <span className="cursor-pointer text-[1.5rem] mr-14">Aa</span>
-              <span className="cursor-pointer text-[2.5rem] mr-10">Aa</span>
-              <span className="cursor-pointer text-[3.5rem]">Aa</span>
+            <div className="w-3/12 min-w-[16rem] mb-10 pl-10 font-semibold">
+              <span className="cursor-pointer text-xl mr-14">Aa</span>
+              <span className="cursor-pointer text-2xl mr-10">Aa</span>
+              <span className="cursor-pointer text-4xl">Aa</span>
             </div>
             <div className="font-[625] text-xl mb-5">
               Are you sure you want to quit ?

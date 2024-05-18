@@ -148,3 +148,13 @@ input::-webkit-inner-spin-button {
     padding-right: 10px;
     font-size: 30px;
 }
+
+::-webkit-scrollbar {
+    background-color: transparent;
+    padding-right: 1rem;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color:#524E4E;
+    border-radius: 2rem;
+}
