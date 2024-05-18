@@ -5,6 +5,7 @@ function PopUp( props) {
     <>
       <Transition
         show={props.popUpToggle}
+        
       >
 
       <TransitionChild
