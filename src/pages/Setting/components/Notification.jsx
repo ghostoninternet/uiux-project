@@ -4,7 +4,7 @@ Switch
 
 function Notification() {
   return (
-    <div className="flex flex-col gap-8 pr-10">
+    <div className="flex flex-col gap-8 w-full">
       <Switch label={"All notifications"}/>
       <Switch label={"Remind notifications"}/>
       <Switch label={"Upcoming task"}/>

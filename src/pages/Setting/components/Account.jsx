@@ -2,7 +2,7 @@ import {Facebook, Apple, Google} from '../../../components/Svg/SignLogo'
 
 function Account() {
   return (
-    <div>
+    <div className='w-full'>
         <div className="mb-7 pr-20">
             <h1 className="font-semibold text-2xl border-b-2 border-gray-200 pb-2 w-1/2">Change username</h1>
             <p className="pt-2">Changing your username can have unintended side effects.</p>
