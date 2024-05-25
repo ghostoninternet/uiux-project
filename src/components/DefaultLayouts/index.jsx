@@ -15,7 +15,7 @@ import TrashCan from "../Svg/TrashCan"
 import DownArrow from "../Svg/DownArrow"
 import Cancel from "../Svg/Cancel"
 import { NotiData } from "../../api/NotiData"
-
+import Search from "../Svg/Search"
 function DefaultLayouts({ children }) {
   const location = useLocation()
   const navigate = useNavigate()
@@ -107,9 +107,7 @@ function DefaultLayouts({ children }) {
         <div className="flex flex-row justify-start gap-20 align-middle w-3/5 my-auto">
           <div className="w-11/12 relative">
             <label ref={labelRef} htmlFor="search-bar" className="absolute left-1/2 -translate-x-1/2 top-[12px] opacity-50 flex">
-            <svg fill="#000000" width="18" height="18" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg" className="mr-3 mt-1">
-                <path d="M12.027 9.92L16 13.95 14 16l-4.075-3.976A6.465 6.465 0 0 1 6.5 13C2.91 13 0 10.083 0 6.5 0 2.91 2.917 0 6.5 0 10.09 0 13 2.917 13 6.5a6.463 6.463 0 0 1-.973 3.42zM1.997 6.452c0 2.48 2.014 4.5 4.5 4.5 2.48 0 4.5-2.015 4.5-4.5 0-2.48-2.015-4.5-4.5-4.5-2.48 0-4.5 2.014-4.5 4.5z" fillRule="evenodd"/>
-            </svg>
+           <Search />
               Search
             </label>
             <input onFocus={handleOnFocusInput} value={search} onChange={(e) => setSearch(e.target.value)} id="search-bar" type="text"
