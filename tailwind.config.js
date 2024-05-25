@@ -6,12 +6,6 @@ export default {
     "./src/**/**/*.{js,ts,jsx,tsx}",
     "./node_modules/tailwind-datepicker-react/dist/**/*.js"
   ],
-  theme: {
-    extend: {},
-    // colors: {
-    //   // primary: '#FABB18',
-    //   // second: '#FFF8E8'
-    // }
-  },
+  theme: {},
   plugins: [],
 }

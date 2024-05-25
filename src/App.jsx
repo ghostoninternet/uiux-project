@@ -4,6 +4,7 @@ import { Fragment } from 'react'
 import DefaultLayouts from './components/DefaultLayouts'
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import MobileLayout from './components/MobileLayout';
 function App() {
 
   return (
@@ -12,7 +13,12 @@ function App() {
           <Routes>
             {publicRoutes.map((route, index) => {
               const Page = route.component
-              let Layout = DefaultLayouts
+              let Layout
+              if (route.path.includes('mobile')) {
+                Layout = MobileLayout                
+              } else {
+                Layout = DefaultLayouts
+              }
  
               if (route.layout) {
                 Layout = route.layout
