@@ -3,8 +3,17 @@ import { DarkDashboard, KPI } from "../Svg/MenuBarIcon"
 import { CirclePlus } from "../Svg/Plus"
 import Search from "../Svg/Search"
 import BellBlack from "../Svg/BellBlack"
+import ClipLoader from "react-spinners/ClipLoader";
+import { useEffect, useState } from "react"
 function MobileLayout({children}) {
+  const [loading, setLoading] = useState(false)
 
+  useEffect(() => {
+    setLoading(true)
+    setTimeout(() => {
+      setLoading(false)
+    }, 1500)
+  },[])
 
   return (
     <div className="bg-[#FFF8E8] h-screen relative overflow-hidden">
@@ -25,8 +34,18 @@ function MobileLayout({children}) {
           </div>
         </div>
       </div>
-      <div className="min-h-screen bg-white px-8 overflow-scroll">
-        {children}
+      <div className="h-screen bg-white px-8 overflow-scroll">
+        {loading ?
+          <div className="flex items-center justify-center h-full"> 
+            <ClipLoader
+            color={'#FABB18'}
+            loading={loading}
+            size={50}
+            aria-label="Loading Spinner"
+            data-testid="loader"
+          />
+         </div>
+        : children}
       </div>
       <div className="h-auto w-[100%] absolute bg-[#FFF8E8] bottom-0 rounded-t-[20px] py-3">
         <div className="w-[100%] flex justify-between px-5 items-center">
