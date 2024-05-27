@@ -9,7 +9,9 @@ import Calendar from "../pages/Calendar"
 import Setting from "../pages/Setting"
 import Edit from "../pages/Profile/components/Edit"
 import Chart from "../pages/Chart"
-import MobileHome from "../pages/Mobile/Home"
+
+import MobileHome from "../mobilePages/Home"
+import MobileKpi from '../mobilePages/Kpi'
 
 const publicRoutes = [
   { path: '/', component: Home },
@@ -22,7 +24,9 @@ const publicRoutes = [
   { path: '/chart', component: Chart },
   { path: '/sign-in', component: SignIn, layout: null },
   { path: '/sign-up', component: SignUp, layout: null },
-  { path: '/mobile', component: MobileHome }
+
+  { path: '/mobile', component: MobileHome },
+  { path: '/mobile/kpi', component: MobileKpi }
 ]
 
 export { publicRoutes }
