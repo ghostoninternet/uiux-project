@@ -12,6 +12,8 @@ import Chart from "../pages/Chart"
 
 import MobileHome from "../mobilePages/Home"
 import MobileKpi from '../mobilePages/Kpi'
+import KpiDetail from "../pages/KPIdetail"
+import NoHeaderMobileLayout from "../components/MobileLayout/noHeaderMobileLayout"
 
 const publicRoutes = [
   { path: '/', component: Home },
@@ -26,7 +28,8 @@ const publicRoutes = [
   { path: '/sign-up', component: SignUp, layout: null },
 
   { path: '/mobile', component: MobileHome },
-  { path: '/mobile/kpi', component: MobileKpi }
+  { path: '/mobile/kpi', component: MobileKpi },
+  { path: '/mobile/kpi/view-detail', component: KpiDetail, layout: NoHeaderMobileLayout }
 ]
 
 export { publicRoutes }
