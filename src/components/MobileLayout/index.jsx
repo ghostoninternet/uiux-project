@@ -34,7 +34,7 @@ function MobileLayout({children}) {
           </div>
         </div>
       </div>
-      <div className="h-screen bg-white px-8 overflow-scroll">
+      <div className="h-5/6 bg-white px-8 overflow-scroll">
         {loading ?
           <div className="flex items-center justify-center h-full"> 
             <ClipLoader
@@ -43,6 +43,7 @@ function MobileLayout({children}) {
             size={50}
             aria-label="Loading Spinner"
             data-testid="loader"
+            speedMultiplier={0.5}
           />
          </div>
         : children}
