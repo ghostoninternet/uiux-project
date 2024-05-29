@@ -5,7 +5,7 @@ import Search from "../Svg/Search"
 import BellBlack from "../Svg/BellBlack"
 import ClipLoader from "react-spinners/ClipLoader";
 import { useEffect, useState } from "react"
-function MobileLayout({children}) {
+function NoPaddingMobileLayout({children}) {
   const [loading, setLoading] = useState(false)
 
   // useEffect(() => {
@@ -34,7 +34,7 @@ function MobileLayout({children}) {
           </div>
         </div>
       </div>
-      <div className="bg-white px-6 relative top-[5rem] h-[calc(100vh-10rem)]">
+      <div className="bg-white relative top-[5rem] h-[calc(100vh-10rem)]">
         {loading ?
           <div className="flex items-center justify-center h-full"> 
             <ClipLoader
@@ -43,7 +43,6 @@ function MobileLayout({children}) {
             size={50}
             aria-label="Loading Spinner"
             data-testid="loader"
-            speedMultiplier={0.5}
           />
          </div>
         : children}
@@ -79,4 +78,4 @@ function MobileLayout({children}) {
   )
 }
 
-export default MobileLayout
+export default NoPaddingMobileLayout

@@ -1,0 +1,45 @@
+export function MobileRightArrow() {
+    return (
+        <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" width="2rem" height="2rem" viewBox="0,0,256,256"><g fill="#000000" fillRule="nonzero" stroke="none" strokeWidth="1" strokeLinecap="butt" strokeLinejoin="miter" strokeMiterlimit="10" strokeDasharray="" strokeDashoffset="0" fontFamily="none" fontWeight="none" fontSize="none" textAnchor="none" fontStyle="mix-blend-mode: normal"><g transform="scale(5.12,5.12)"><path d="M38.03516,13.98828c-0.40625,-0.00781 -0.77734,0.23438 -0.94141,0.60547c-0.16016,0.375 -0.07812,0.80859 0.20703,1.09766l7.97656,8.30859h-43.25391c-0.35937,-0.00391 -0.69531,0.18359 -0.875,0.49609c-0.18359,0.3125 -0.18359,0.69531 0,1.00781c0.17969,0.3125 0.51563,0.5 0.875,0.49609h43.25391l-7.97656,8.30859c-0.38281,0.39844 -0.36719,1.03125 0.03125,1.41406c0.39844,0.38281 1.03125,0.37109 1.41406,-0.03125l10.26563,-10.69141l-10.26562,-10.69141c-0.18359,-0.19922 -0.44141,-0.3125 -0.71094,-0.32031z"></path></g></g></svg>
+    )
+}
+
+export function MobileYellowFolder({ width=22, height=22}) {
+    return ( 
+        <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width={width} height={height} viewBox="0,0,256,256" fontStyle="fill:#000000;">
+            <g fill="#fabb18" fillRule="nonzero" stroke="none" strokeWidth="1" strokeLinecap="butt" strokeLinejoin="miter" strokeMiterlimit="10" strokeDasharray="" strokeDashoffset="0" fontFamily="none" fontWeight="none" fontSize="none" textAnchor="none" fontStyle="mix-blend-mode: normal"><g transform="scale(10.66667,10.66667)"><path d="M4.25,3c-1.23106,0 -2.25,1.01894 -2.25,2.25v12.5c0,1.23106 1.01894,2.25 2.25,2.25h15.5c1.23106,0 2.25,-1.01894 2.25,-2.25v-10.5c0,-1.23106 -1.01894,-2.25 -2.25,-2.25h-9.12891c-0.13334,0 -0.25957,-0.05254 -0.35352,-0.14648l-1.12109,-1.12109c-0.46805,-0.46805 -1.10492,-0.73242 -1.76758,-0.73242zM4.25,5h3.12891c0.13334,0 0.25957,0.05254 0.35352,0.14648l1.12109,1.12109c0.46805,0.46805 1.10492,0.73242 1.76758,0.73242h9.12891c0.14894,0 0.25,0.10106 0.25,0.25v10.5c0,0.14894 -0.10106,0.25 -0.25,0.25h-15.5c-0.14894,0 -0.25,-0.10106 -0.25,-0.25v-12.5c0,-0.14894 0.10106,-0.25 0.25,-0.25z"></path></g></g>
+        </svg>
+    )
+}
+
+export function MobileLeftArrow() {
+    return ( 
+        <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" width="2.5rem" height="2.5rem" viewBox="0,0,256,256"><g fill="#000000" fillRule="nonzero" stroke="none" strokeWidth="1" strokeLinecap="butt" strokeLinejoin="miter" strokeMiterlimit="10" strokeDasharray="" strokeDashoffset="0" fontFamily="none" fontWeight="none" fontSize="none" textAnchor="none" fontStyle="mix-blend-mode: normal"><g transform="scale(5.33333,5.33333)"><path d="M13.4707,12.98633c-0.38956,0.01135 -0.75941,0.17386 -1.03125,0.45313l-10,10c-0.58555,0.58579 -0.58555,1.5353 0,2.12109l10,10c0.37623,0.39185 0.9349,0.54969 1.46055,0.41265c0.52565,-0.13704 0.93616,-0.54754 1.07319,-1.07319c0.13704,-0.52565 -0.0208,-1.08432 -0.41265,-1.46055l-7.43945,-7.43945h37.37891c0.54095,0.00765 1.04412,-0.27656 1.31683,-0.74381c0.27271,-0.46725 0.27271,-1.04514 0,-1.51238c-0.27271,-0.46725 -0.77588,-0.75146 -1.31683,-0.74381h-37.37891l7.43945,-7.43945c0.4429,-0.43135 0.57582,-1.09023 0.33479,-1.65955c-0.24103,-0.56932 -0.80665,-0.93247 -1.42463,-0.91467z"></path></g></g></svg>
+    )
+}
+
+export function ExcelLogo() {
+    return (
+        <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="4.5rem" height="4.5rem" viewBox="0,0,256,256"
+            fontStyle="fill:#000000;">
+            <g fill="none" fillRule="nonzero" stroke="none" strokeWidth="1" strokeLinecap="butt" strokeLinejoin="miter" strokeMiterlimit="10" strokeDasharray="" strokeDashoffset="0" fontFamily="none" fontWeight="none" fontSize="none" textAnchor="none" fontStyle="mix-blend-mode: normal"><g transform="scale(5.33333,5.33333)"><path d="M29,6h-13.256c-0.963,0 -1.744,0.781 -1.744,1.744v7.259h15z" fill="#169154"></path><path d="M14,33.054v7.202c0,0.963 0.781,1.744 1.743,1.744h13.257v-8.946z" fill="#18482a"></path><path d="M14,15.003h15v9.002h-15z" fill="#0c8045"></path><path d="M14,24.005h15v9.05h-15z" fill="#17472a"></path><g><path d="M42.256,6h-13.256v9.003h15v-7.259c0,-0.963 -0.781,-1.744 -1.744,-1.744z" fill="#29c27f"></path><path d="M29,33.054v8.946h13.257c0.962,0 1.743,-0.781 1.743,-1.743v-7.202h-15z" fill="#27663f"></path><path d="M29,15.003h15v9.002h-15z" fill="#19ac65"></path><path d="M29,24.005h15v9.05h-15z" fill="#129652"></path></g><path d="M22.319,34h-16.638c-0.928,0 -1.681,-0.753 -1.681,-1.681v-16.638c0,-0.928 0.753,-1.681 1.681,-1.681h16.638c0.928,0 1.681,0.753 1.681,1.681v16.638c0,0.928 -0.753,1.681 -1.681,1.681z" fill="#0c7238"></path><path d="M9.807,19h2.386l1.936,3.754l2.046,-3.754h2.229l-3.071,5l3.141,5h-2.351l-2.11,-3.93l-2.101,3.93h-2.386l3.193,-5.018z" fill="#ffffff"></path></g></g>
+        </svg>
+    )
+}
+
+export function WordLogo() {
+    return (
+        <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="4.5rem" height="4.5rem" viewBox="0 0 48 48">
+            <linearGradient id="Q7XamDf1hnh~bz~vAO7C6a_pGHcje298xSl_gr1" x1="28" x2="28" y1="14.966" y2="6.45" gradientUnits="userSpaceOnUse"><stop offset="0" stopColor="#42a3f2"></stop><stop offset="1" stopColor="#42a4eb"></stop></linearGradient><path fill="url(#Q7XamDf1hnh~bz~vAO7C6a_pGHcje298xSl_gr1)" d="M42,6H14c-1.105,0-2,0.895-2,2v7.003h32V8C44,6.895,43.105,6,42,6z"></path><linearGradient id="Q7XamDf1hnh~bz~vAO7C6b_pGHcje298xSl_gr2" x1="28" x2="28" y1="42" y2="33.054" gradientUnits="userSpaceOnUse"><stop offset="0" stopColor="#11408a"></stop><stop offset="1" stopColor="#103f8f"></stop></linearGradient><path fill="url(#Q7XamDf1hnh~bz~vAO7C6b_pGHcje298xSl_gr2)" d="M12,33.054V40c0,1.105,0.895,2,2,2h28c1.105,0,2-0.895,2-2v-6.946H12z"></path><linearGradient id="Q7XamDf1hnh~bz~vAO7C6c_pGHcje298xSl_gr3" x1="28" x2="28" y1="-15.46" y2="-15.521" gradientUnits="userSpaceOnUse"><stop offset="0" stopColor="#3079d6"></stop><stop offset="1" stopColor="#297cd2"></stop></linearGradient><path fill="url(#Q7XamDf1hnh~bz~vAO7C6c_pGHcje298xSl_gr3)" d="M12,15.003h32v9.002H12V15.003z"></path><linearGradient id="Q7XamDf1hnh~bz~vAO7C6d_pGHcje298xSl_gr4" x1="12" x2="44" y1="28.53" y2="28.53" gradientUnits="userSpaceOnUse"><stop offset="0" stopColor="#1d59b3"></stop><stop offset="1" stopColor="#195bbc"></stop></linearGradient><path fill="url(#Q7XamDf1hnh~bz~vAO7C6d_pGHcje298xSl_gr4)" d="M12,24.005h32v9.05H12V24.005z"></path><path d="M22.319,13H12v24h10.319C24.352,37,26,35.352,26,33.319V16.681C26,14.648,24.352,13,22.319,13z" opacity=".05"></path><path d="M22.213,36H12V13.333h10.213c1.724,0,3.121,1.397,3.121,3.121v16.425	C25.333,34.603,23.936,36,22.213,36z" opacity=".07"></path><path d="M22.106,35H12V13.667h10.106c1.414,0,2.56,1.146,2.56,2.56V32.44C24.667,33.854,23.52,35,22.106,35z" opacity=".09"></path><linearGradient id="Q7XamDf1hnh~bz~vAO7C6e_pGHcje298xSl_gr5" x1="4.744" x2="23.494" y1="14.744" y2="33.493" gradientUnits="userSpaceOnUse"><stop offset="0" stopColor="#256ac2"></stop><stop offset="1" stopColor="#1247ad"></stop></linearGradient><path fill="url(#Q7XamDf1hnh~bz~vAO7C6e_pGHcje298xSl_gr5)" d="M22,34H6c-1.105,0-2-0.895-2-2V16c0-1.105,0.895-2,2-2h16c1.105,0,2,0.895,2,2v16	C24,33.105,23.105,34,22,34z"></path><path fill="#fff" d="M18.403,19l-1.546,7.264L15.144,19h-2.187l-1.767,7.489L9.597,19H7.641l2.344,10h2.352l1.713-7.689	L15.764,29h2.251l2.344-10H18.403z"></path>
+        </svg>
+    )
+}
+
+export function FileIcon() {
+    return (
+        <svg width="1.8rem" height="1.8rem" viewBox="0 0 31 31" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M0.5 22.625C0.5 23.9179 1.01361 25.1579 1.92785 26.0721C2.84209 26.9864 4.08207 27.5 5.375 27.5H12.7475L13.2815 25.3655C13.5245 24.3935 14.027 23.5055 14.7365 22.7975L23.5895 13.943C24.0976 13.4341 24.711 13.0428 25.3866 12.7966C26.0623 12.5504 26.7837 12.4553 27.5 12.518V5.375C27.5 4.08207 26.9864 2.84209 26.0721 1.92785C25.1579 1.01361 23.9179 0.5 22.625 0.5H12.5V7.625C12.5 8.26519 12.3739 8.89912 12.1289 9.49058C11.8839 10.082 11.5248 10.6195 11.0721 11.0721C10.6195 11.5248 10.082 11.8839 9.49058 12.1289C8.89912 12.3739 8.26519 12.5 7.625 12.5H0.5V22.625ZM10.25 1.16L1.16 10.25H7.625C8.32119 10.25 8.98887 9.97344 9.48116 9.48116C9.97344 8.98887 10.25 8.32119 10.25 7.625V1.16ZM24.65 15.005L15.7955 23.858C15.2805 24.3747 14.9146 25.021 14.7365 25.7285L14.0495 28.475C13.9812 28.7483 13.9848 29.0346 14.06 29.306C14.1353 29.5774 14.2796 29.8248 14.4788 30.0239C14.6781 30.223 14.9255 30.3671 15.197 30.4421C15.4685 30.5171 15.7548 30.5205 16.028 30.452L18.773 29.7665C19.4812 29.5882 20.128 29.2218 20.645 28.706L29.498 19.853C30.1161 19.2051 30.4563 18.3411 30.4458 17.4457C30.4353 16.5503 30.0749 15.6945 29.4417 15.0613C28.8085 14.4281 27.9527 14.0677 27.0573 14.0572C26.1619 14.0467 25.2979 14.3869 24.65 15.005Z" fill="#33312B"/>
+        </svg>
+
+    )
+}

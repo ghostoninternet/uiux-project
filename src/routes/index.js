@@ -9,7 +9,17 @@ import Calendar from "../pages/Calendar"
 import Setting from "../pages/Setting"
 import Edit from "../pages/Profile/components/Edit"
 import Chart from "../pages/Chart"
-import MobileHome from "../pages/Mobile/Home"
+
+import MobileHome from "../mobilePages/Home"
+import MobileKpi from '../mobilePages/Kpi'
+import KpiDetail from "../pages/KPIdetail"
+import NoHeaderMobileLayout from "../components/MobileLayout/noHeaderMobileLayout"
+import MobileCreateKpi from "../mobilePages/CreateKpi"
+import MobileKpiDetail from "../mobilePages/KpiDetail"
+import CreateTask from "../mobilePages/CreateTask"
+import MobileTaskDetail from "../mobilePages/TaskDetail"
+import User from "../mobilePages/User"
+import NoPaddingMobileLayout from "../components/MobileLayout/NopaddingMobileLayout"
 
 const publicRoutes = [
   { path: '/', component: Home },
@@ -22,7 +32,14 @@ const publicRoutes = [
   { path: '/chart', component: Chart },
   { path: '/sign-in', component: SignIn, layout: null },
   { path: '/sign-up', component: SignUp, layout: null },
-  { path: '/mobile', component: MobileHome }
+
+  { path: '/mobile', component: MobileHome },
+  { path: '/mobile/kpi', component: MobileKpi },
+  { path: '/mobile/kpi/create', component: MobileCreateKpi, layout: NoHeaderMobileLayout },
+  { path: '/mobile/kpi/view-detail', component: MobileKpiDetail, layout: NoHeaderMobileLayout },
+  { path: '/mobile/kpi/task/create', component: CreateTask, layout: NoHeaderMobileLayout },
+  { path: '/mobile/kpi/task/detail', component: MobileTaskDetail, layout: NoHeaderMobileLayout },
+  { path: '/mobile/user', component: User, layout: NoPaddingMobileLayout },
 ]
 
 export { publicRoutes }

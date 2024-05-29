@@ -2,7 +2,7 @@ import { PlaySvg } from "../components/PlaySvg";
 import CheckSvg from "./CheckSvg";
 import WarningSvg from "./WarningSvg";
 
-function StatusButton({ title }) {
+function StatusButton({ title, mobile }) {
     let color = '#4196D1'
     let Comp = PlaySvg
     let css = 'bg-white rounded-[50%]'
@@ -20,12 +20,20 @@ function StatusButton({ title }) {
         default:
             break;
     }
+    let buttonCss = 'h-10 w-[8rem] items-center flex rounded-lg'
+    let textCss = 'ml-2 font-semibold text-white mr-2'
+    let iconCss = 'ml-2'
+    if (mobile) {
+        buttonCss = 'h-10 w-[9rem] items-center flex rounded-lg'
+        textCss = 'ml-4 font-semibold text-white mr-2'
+        iconCss = 'ml-3'
+    }
     return ( 
-        <div className={`h-10 w-[8rem] items-center flex rounded-lg`} style={{backgroundColor: `${color}`}}>
-            <div className={"ml-2 w-5 h-5 flex justify-center items-center " + css}>
+        <div className={buttonCss} style={{backgroundColor: `${color}`}}>
+            <div className={"w-5 h-5 flex justify-center items-center " + css + " " + iconCss}>
                 <Comp />
             </div>
-            <span className="ml-2 font-semibold text-white mr-2">{title}</span>
+            <span className={textCss}>{title}</span>
         </div>
     )
 }
