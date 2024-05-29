@@ -33,9 +33,9 @@ function MobileCreateKpi() {
                 </div>
 
                 <div className="flex justify-between mt-8 items-center">
-                    <div className="flex-auto h-[0.15rem] bg-[#D2D2D2]"></div>
+                    <div className="flex-auto h-[0.15rem] bg-[#D2D2D2] rounded-lg"></div>
                     <div className="w-24 text-center">Or upload</div>
-                    <div className="flex-auto h-[0.15rem] bg-[#D2D2D2]"></div>
+                    <div className="flex-auto h-[0.15rem] bg-[#D2D2D2] rounded-lg"></div>
                 </div>
 
                 <div className="flex w-[100%] justify-center mt-8">

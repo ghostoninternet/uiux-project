@@ -20,6 +20,8 @@ import CreateTask from "../mobilePages/CreateTask"
 import MobileTaskDetail from "../mobilePages/TaskDetail"
 import User from "../mobilePages/User"
 import NoPaddingMobileLayout from "../components/MobileLayout/NopaddingMobileLayout"
+import MobileSignUp from "../mobilePages/SignUp"
+import MobileSignIn from "../mobilePages/SignIn"
 
 const publicRoutes = [
   { path: '/', component: Home },
@@ -40,6 +42,8 @@ const publicRoutes = [
   { path: '/mobile/kpi/task/create', component: CreateTask, layout: NoHeaderMobileLayout },
   { path: '/mobile/kpi/task/detail', component: MobileTaskDetail, layout: NoHeaderMobileLayout },
   { path: '/mobile/user', component: User, layout: NoPaddingMobileLayout },
+  { path: '/mobile/sign-up', component: MobileSignUp, layout: null },
+  { path: '/mobile/sign-in', component: MobileSignIn, layout: null },
 ]
 
 export { publicRoutes }
