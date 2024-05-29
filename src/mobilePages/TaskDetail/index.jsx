@@ -7,10 +7,10 @@ import { FaSave } from "react-icons/fa";
 
 function MobileTaskDetail() {
     return ( 
-        <div>
-            <MobileTitle title={'Task Details'}/>
-            <div className="px-6 mt-10">
-                <div className="mx-4 text-xl border-b border-[#D2D2D2] pb-4"><i>Teaching quality / Quality of project 1</i></div>
+        <div className="h-[calc(100vh-5rem)] relative">
+            <div className="w-[100%] fixed top-0"><MobileTitle title={'Task Details'}/></div>
+            <div className="px-6 absolute top-[5rem] h-[calc(100vh-10rem)] overflow-y-scroll scrollbars-hidden">
+                <div className="mx-4 mt-10 text-xl border-b border-[#D2D2D2] pb-4"><i>Teaching quality / Quality of project 1</i></div>
                 <div className="mt-8 flex justify-between items-center">
                     <div className="font-bold text-2xl">Quality of project 1</div>
                     <div className="flex items-center">
@@ -59,7 +59,7 @@ function MobileTaskDetail() {
                     <div className="ml-4 font-[450]"><DatePicker /></div>
                 </div>
 
-                <div className="flex items-center justify-end mt-10">
+                <div className="flex items-center justify-end mt-10 mb-8">
                     <div className="bg-[#FABB18] flex items-center rounded-xl">
                         <div className="text-[#ffffff] font-bold text-2xl px-3 py-1">Save</div>
                         <div className="pr-3"><FaSave fontSize={'2rem'} color="#ffffff"/></div>

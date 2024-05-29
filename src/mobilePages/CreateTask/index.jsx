@@ -8,13 +8,13 @@ import { PiDotsThreeOutlineVerticalFill } from "react-icons/pi";
 
 function CreateTask() {
     return ( 
-        <div>
-            <MobileTitle title={'Create New Task'}/>
-            <div className="px-6 mt-10">
-                <OneLineInput title={'Task Title or type ‘/’ for command'} />
-                <div className="font-bold text-xl mt-10 mb-4">How to evaluate</div>
+        <div className="h-[calc(100vh-5rem)] relative">
+            <div className="w-[100%] fixed top-0"><MobileTitle title={'Create new Task'}/></div>
+            <div className="px-6 absolute top-[5rem] h-[calc(100vh-10rem)] overflow-y-scroll scrollbars-hidden w-[100%]">
+                <div className="mt-8"><OneLineInput title={'Task Title or type ‘/’ for command'} /></div>
+                <div className="font-bold text-xl mt-8 mb-4">How to evaluate</div>
                 <OneLineInput title={'How to evaluate'} />
-                <div className="font-bold text-xl mt-10 mb-4">Targets</div>
+                <div className="font-bold text-xl mt-8 mb-4">Targets</div>
                 <div className="mb-6">
                     <OneLineInput title={'Targets'} />
                 </div>
@@ -33,7 +33,7 @@ function CreateTask() {
                     </div>
                 </div>
 
-                <div className="flex justify-center mt-8">
+                <div className="flex justify-center mt-8 mb-8">
                     <div className="bg-[#FABB18] text-xl py-2 px-4 rounded-xl font-semibold">Create Task</div>
                 </div>
             </div>

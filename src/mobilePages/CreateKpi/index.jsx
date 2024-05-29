@@ -8,10 +8,10 @@ import { ExcelLogo, WordLogo } from "../../mobileComponents/Svg";
 
 function MobileCreateKpi() {
     return ( 
-        <div>
-            <MobileTitle title={'Create new KPI'}/>
-            <div className="px-6">
-                <div className="px-4">
+        <div className="h-[calc(100vh-5rem)] relative">
+            <div className="w-[100%] fixed top-0"><MobileTitle title={'Create new KPI'}/></div>
+            <div className="w-[100%] px-6 absolute top-[5rem] h-[calc(100vh-10rem)] overflow-y-scroll scrollbars-hidden">
+                <div className="">
                     <div className="w-[100%] h-[0.15rem] bg-[#D2D2D2] mt-12"></div>
                     <div className="mt-8">
                         <OneLineInput title={"KPI Title or type ‘/’ for command"}/>
@@ -32,7 +32,7 @@ function MobileCreateKpi() {
                     </div>
                 </div>
 
-                <div className="flex justify-between mt-8 items-center px-4">
+                <div className="flex justify-between mt-8 items-center">
                     <div className="flex-auto h-[0.15rem] bg-[#D2D2D2]"></div>
                     <div className="w-24 text-center">Or upload</div>
                     <div className="flex-auto h-[0.15rem] bg-[#D2D2D2]"></div>
@@ -43,7 +43,7 @@ function MobileCreateKpi() {
                     <div className="ml-4"><ExcelLogo /></div>
                 </div>
 
-                <div className="flex w-[100%] justify-center mt-8">
+                <div className="flex w-[100%] justify-center mt-8 mb-8">
                     <div className="inline-flex justify-center font-semibold text-xl bg-[#FABB18] px-4 py-2 rounded-xl">Create new KPI</div>
                 </div>
             </div>
