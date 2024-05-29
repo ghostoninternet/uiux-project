@@ -5,6 +5,7 @@ import StatusButton from "../../components/Task/components/StatusButton";
 import MobileTitle from "../../mobileComponents/MobileTitle";
 import { FileIcon, MobileYellowFolder } from "../../mobileComponents/Svg";
 import StatusTask from "../../mobileComponents/Task/StatusTask";
+import { FaTrash } from "react-icons/fa";
 
 function MobileKpiDetail() {
     return ( 
@@ -13,7 +14,10 @@ function MobileKpiDetail() {
             <div className="px-6 mt-10">
                 <div className="flex items-center justify-between mb-8">
                     <div className="font-bold text-2xl">Teaching Quality</div>
-                    <div className="translate-y-1"><FileIcon /></div>
+                    <div className="flex items-center">
+                        <div className="mr-3"><FileIcon /></div>
+                        <div><FaTrash fontSize={'1.65rem'} color="#C93400"/></div>
+                    </div>
                 </div>
 
                 <div className="mt-6">
