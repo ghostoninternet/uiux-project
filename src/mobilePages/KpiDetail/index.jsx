@@ -9,10 +9,10 @@ import { FaTrash } from "react-icons/fa";
 
 function MobileKpiDetail() {
     return ( 
-        <div>
-            <MobileTitle title={'KPI Details'}/>
-            <div className="px-6 mt-10">
-                <div className="flex items-center justify-between mb-8">
+        <div className="h-[calc(100vh-5rem)] relative">
+            <div className="w-[100%] fixed"><MobileTitle title={'KPI Details'}/></div>
+            <div className="px-6 w-[100%] absolute top-[5rem] h-[calc(100vh-10rem)] overflow-y-scroll scrollbars-hidden">
+                <div className="flex items-center justify-between mb-8 mt-6">
                     <div className="font-bold text-2xl">Teaching Quality</div>
                     <div className="flex items-center">
                         <div className="mr-3"><FileIcon /></div>
@@ -34,7 +34,7 @@ function MobileKpiDetail() {
                     </div>
                 </div>
 
-                <div className="mt-8">
+                <div className="mt-8 mb-8">
                     <div className="flex justify-center select-none">
                         <Link to={'/mobile/kpi/task/create'} className="inline-flex bg-[#FABB18] rounded-xl px-4 py-1">
                             <div className="flex items-center pr-2 py-2">
