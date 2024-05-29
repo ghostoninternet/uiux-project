@@ -8,12 +8,12 @@ import { useEffect, useState } from "react"
 function MobileLayout({children}) {
   const [loading, setLoading] = useState(false)
 
-  useEffect(() => {
-    setLoading(true)
-    setTimeout(() => {
-      setLoading(false)
-    }, 200)
-  },[])
+  // useEffect(() => {
+  //   setLoading(true)
+  //   setTimeout(() => {
+  //     setLoading(false)
+  //   }, 200)
+  // },[])
 
   return (
     <div className="h-screen relative">

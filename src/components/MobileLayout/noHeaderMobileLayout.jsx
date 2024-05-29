@@ -3,19 +3,20 @@ import { DarkDashboard, KPI } from "../Svg/MenuBarIcon"
 import { CirclePlus } from "../Svg/Plus"
 import ClipLoader from "react-spinners/ClipLoader";
 import { useEffect, useState } from "react"
+import MobileTitle from "../../mobileComponents/MobileTitle";
 function NoHeaderMobileLayout({children}) {
   const [loading, setLoading] = useState(false)
 
-  useEffect(() => {
-    setLoading(true)
-    setTimeout(() => {
-      setLoading(false)
-    }, 200)
-  },[])
+  // useEffect(() => {
+  //   setLoading(true)
+  //   setTimeout(() => {
+  //     setLoading(false)
+  //   }, 200)
+  // },[])
 
   return (
     <div className="h-screen relative">
-      <div className="bg-white px-6 relative h-[calc(100vh-5rem)]">
+      <div className="bg-white relative h-[calc(100vh-5rem)]">
         {loading ?
           <div className="flex items-center justify-center h-full"> 
             <ClipLoader

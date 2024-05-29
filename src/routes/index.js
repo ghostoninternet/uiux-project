@@ -14,6 +14,10 @@ import MobileHome from "../mobilePages/Home"
 import MobileKpi from '../mobilePages/Kpi'
 import KpiDetail from "../pages/KPIdetail"
 import NoHeaderMobileLayout from "../components/MobileLayout/noHeaderMobileLayout"
+import MobileCreateKpi from "../mobilePages/CreateKpi"
+import MobileKpiDetail from "../mobilePages/KpiDetail"
+import CreateTask from "../mobilePages/CreateTask"
+import MobileTaskDetail from "../mobilePages/TaskDetail"
 
 const publicRoutes = [
   { path: '/', component: Home },
@@ -29,7 +33,10 @@ const publicRoutes = [
 
   { path: '/mobile', component: MobileHome },
   { path: '/mobile/kpi', component: MobileKpi },
-  { path: '/mobile/kpi/view-detail', component: KpiDetail, layout: NoHeaderMobileLayout }
+  { path: '/mobile/kpi/create', component: MobileCreateKpi, layout: NoHeaderMobileLayout },
+  { path: '/mobile/kpi/view-detail', component: MobileKpiDetail, layout: NoHeaderMobileLayout },
+  { path: '/mobile/kpi/task/create', component: CreateTask, layout: NoHeaderMobileLayout },
+  { path: '/mobile/kpi/task/detail', component: MobileTaskDetail, layout: NoHeaderMobileLayout },
 ]
 
 export { publicRoutes }

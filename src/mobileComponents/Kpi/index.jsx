@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import DownArrow from "../../components/Svg/DownArrow";
 import { MobileRightArrow } from "../Svg";
 import MobileTask from "../Task";
@@ -10,17 +11,17 @@ function Kpi({ title }) {
                     <div className="flex items-center translate-y-[-5%] ml-4"><DownArrow /></div>
                     <div className="ml-4 font-bold text-xl">{title}</div>
                 </div>
-                <div><MobileRightArrow /></div>
+                <Link to={'view-detail'}><MobileRightArrow /></Link>
             </div>
 
             <div className="">
-                <MobileTask title={'Quality of project'} completedPercent={60} time={'00:40:00'}/>
+                <MobileTask title={'Quality of project'} completedPercent={60} time={'1.3'}/>
             </div>
             <div className="mt-1">
-                <MobileTask title={'Student review'} completedPercent={40} time={'00:30:00'}/>
+                <MobileTask title={'Student review'} completedPercent={40} time={'1'}/>
             </div>
             <div className="mt-1">
-                <MobileTask title={'Assignment 1'} completedPercent={80} time={'00:30:00'}/>
+                <MobileTask title={'Assignment 1'} completedPercent={80} time={'1.8'}/>
             </div>
         </div>
     )
