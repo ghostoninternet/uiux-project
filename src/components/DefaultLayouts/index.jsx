@@ -168,9 +168,19 @@ function DefaultLayouts({ children }) {
               )
             }
           </div>
+          
+          {/* <div className="rounded-2xl bg-black w-10/12 mx-auto p-3 flex flex-col gap-3 mb-10">
+              <h1 className="flex text-white font-2xl font-bold leading-loose gap-3 text-center">
+              <svg width="30" height="30" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12 22C6.477 22 2 17.523 2 12S6.477 2 12 2s10 4.477 10 10-4.477 10-10 10zM7.92 9.234v.102a.5.5 0 0 0 .5.5h.997a.499.499 0 0 0 .499-.499c0-1.29.998-1.979 2.34-1.979 1.308 0 2.168.689 2.168 1.67 0 .928-.482 1.359-1.686 1.91l-.344.154C11.379 11.54 11 12.21 11 13.381v.119a.5.5 0 0 0 .5.5h.997a.499.499 0 0 0 .499-.499c0-.516.138-.723.55-.912l.345-.155c1.445-.654 2.529-1.514 2.529-3.39v-.103c0-1.978-1.72-3.441-4.164-3.441-2.478 0-4.336 1.428-4.336 3.734zm2.58 7.757c0 .867.659 1.509 1.491 1.509.85 0 1.509-.642 1.509-1.509 0-.867-.659-1.491-1.509-1.491-.832 0-1.491.624-1.491 1.491z" fill="#ffffff"/></svg>
+              {!smallSidebar  && 'Need Help ?' }
+              </h1>
+              {!smallSidebar && <p className="text-white">Go through our document to figure out more</p>}
+              {!smallSidebar && <button className="bg-white px-3 py-1 font-bold rounded-lg">Read more</button>}
+          </div> */}
+
           <div className="flex flex-col">
             <div className="h-[4px] w-full bg-black"></div>
-            <div className="cursor-pointer flex gap-3 px-9 mt-3 mb-5">
+            <Link className="cursor-pointer flex gap-3 px-9 mt-3 mb-5" to="/help">
               <div className="">
                 <HelpIcon />
               </div>
@@ -182,7 +192,7 @@ function DefaultLayouts({ children }) {
                   </div>
                 )
               }
-            </div>
+            </Link>
           </div>
         </div>
 
