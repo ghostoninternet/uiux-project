@@ -85,8 +85,8 @@ function MobileAcitivity( { hiew } ) {
   ]
   return (
     <div className=" mx-auto bg-white rounded-2xl">
-      <div className="w-[90%] mx-auto mb-3">
-        <div className={"font-bold text-2xl mt-5 " }>
+      <div className="w-full pr-5 mb-3">
+        <div className={"font-bold text-2xl mt-5 "}>
           Activities
         </div>
         <div className={css}>

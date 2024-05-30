@@ -3,25 +3,26 @@ import MobileTitle from "../../mobileComponents/MobileTitle";
 import { animated, useSpring } from 'react-spring';
 import Switch from "../../pages/Setting/components/Switch";
 import { Google, Facebook, Apple } from "../../components/Svg/SignLogo";
+import DownArrow from "../../components/Svg/DownArrow";
 function Settings() {
   const [activeSetting, setActiveSetting] = useState(null); // State for active setting
 
   const contentAnimations = {
     linkAccount: useSpring({
-      height: activeSetting === "linkAccount" ? 200 : 0,
-      config: { duration: 300 },
+      height: activeSetting === "linkAccount" ? 220 : 0,
+      config: { duration: 200 },
     }),
     notification: useSpring({
-      height: activeSetting === "notification" ? 180 : 0,
-      config: { duration: 300 },
+      height: activeSetting === "notification" ? 200 : 0,
+      config: { duration: 200 },
     }),
     appearance: useSpring({
       height: activeSetting === "appearance" ? 200 : 0,
-      config: { duration: 300 },
+      config: { duration: 200 },
     }),
     language: useSpring({
       height: activeSetting === "language" ? 200 : 0,
-      config: { duration: 300 },
+      config: { duration: 200 },
     }),
   };
 
@@ -38,11 +39,12 @@ function Settings() {
       <div className="w-full fixed top-0"><MobileTitle title={'Settings'} /></div>
       <div className="px-3 absolute top-[5rem] h-[calc(100vh-10rem)] overflow-y-scroll scrollbars-hidden w-full flex flex-col justify-between">
         <div className="flex flex-col justify-center mt-5">
-          <div className="text-xl py-2 px-2 font-medium" onClick={() => handleClick("linkAccount")}>
-            Link Account
+          <div className="text-xl py-2 px-2 font-medium border-b-2 border-gray-200 flex justify-between" onClick={() => handleClick("linkAccount")}>
+            <p>Link Account</p>
+            <div className="items-center py-2"><DownArrow /></div>
           </div>
           <animated.div style={contentAnimations.linkAccount} className="overflow-hidden px-5">
-          <div className="flex gap-5 flex-col">
+          <div className="flex gap-5 flex-col my-3">
             <button className="mt-2 border-2 border-[#FABB18] rounded-lg p-2  text-center font-semibold text-[#FABB18] hover:bg-[#FABB18] hover:text-white flex gap-3 w-2/3">
                 <Google />Google account
             </button>
@@ -56,21 +58,25 @@ function Settings() {
             abcd
           </animated.div>
 
-          <div className="text-xl py-2 px-2 font-medium" onClick={() => handleClick("notification")}>
-            Notification
+          <div className="text-xl py-2 px-2 font-medium border-b-2 border-gray-200 flex justify-between" onClick={() => handleClick("notification")}>
+            <p>Notification</p>
+            <div className="items-center py-2"><DownArrow /></div>
           </div>
-          <animated.div style={contentAnimations.notification} className="overflow-hidden flex flex-col gap-5">
-            <Switch label={"All notifications"}/>
-            <Switch label={"Remind notifications"}/>
-            <Switch label={"Upcoming task"}/>
-            <Switch label={"New update version"}/>
+          <animated.div style={contentAnimations.notification} className="overflow-hidden">
+            <div className="my-5 flex flex-col gap-5">
+                <Switch label={"All notifications"}/>
+                <Switch label={"Remind notifications"}/>
+                <Switch label={"Upcoming task"}/>
+                <Switch label={"New update version"}/>
+            </div>
           </animated.div>
 
-          <div className="text-xl py-2 px-2 font-medium" onClick={() => handleClick("appearance")}>
-            Appearance
+          <div className="text-xl py-2 px-2 font-medium border-b-2 border-gray-200 flex justify-between" onClick={() => handleClick("appearance")}>
+            <p>Appearance</p>
+            <div className="items-center py-2"><DownArrow /></div>
           </div>
           <animated.div style={contentAnimations.appearance} className="overflow-hidden flex flex-col px-5">
-            <div className="font-[625] mb-3">
+            <div className="font-[625] mb-3 mt-3">
                 Select Theme
                 </div>
                 <div className="flex mb-8 gap-5">
@@ -88,8 +94,9 @@ function Settings() {
             </div>
           </animated.div>
 
-          <div className="text-xl py-2 px-2 font-medium" onClick={() => handleClick("language")}>
-            Language
+          <div className="text-xl py-2 px-2 font-medium border-b-2 border-gray-200 flex justify-between" onClick={() => handleClick("language")}>
+            <p>Language</p>
+            <div className="items-center py-2"><DownArrow /></div>
           </div>
           <animated.div style={contentAnimations.language} className="overflow-hidden px-6">
             <button className="mb-[9.1rem] px-3 border-2 border-[#FABB18] rounded-xl py-1 text-center font-semibold text-[#FABB18] uppercase flex bg-[#FFF8E8] mt-3">
