@@ -13,7 +13,7 @@ function User() {
     }
     return (
         <Tabs className={'h-[calc(100vh-10rem)] relative'}>
-            <TabList className={'fixed h-[3.4rem] z-10 p-1 m-1 border-2 border-[#FABB18] rounded-lg bg-blur bg-[#FFF8E8]/[0.15]'}>
+            <TabList className={'absolute h-[3.4rem] z-10 p-1 m-1 border-2 border-[#FABB18] rounded-lg bg-blur bg-[#FFF8E8]/[0.15]'}>
             <Tab onClick={() => handleIconClick(0)}>
                 {
                     activeId === 0 ?

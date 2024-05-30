@@ -2,6 +2,7 @@ import Calendar from "react-calendar"
 import { tasksList1 } from "../../api/TaskApi";
 import YellowFolder from "../../components/Svg/YellowFolder"
 import { MobileRightArrow } from "../../mobileComponents/Svg";
+import { Link } from "react-router-dom";
 function CalendarPage() {
     return (
       <div className="py-5 px-2 flex flex-col gap-10 pb-30 h-[calc(100vh-10rem)] relative overflow-y-scroll scrollbars-hidden">
@@ -14,7 +15,7 @@ function CalendarPage() {
        <div>
             <h1 className='font-bold text-2xl mb-3'>Today task</h1>
             {tasksList1.slice(0,3).map((e,i) => 
-                          <div className="py-3 cursor-pointer hover:bg-slate-100 w-full border-[1px] border-gray-300 rounded-xl mb-2 overflow-hidden flex justify-between shadow-md"  key={i}>
+                          <Link to={'/mobile/kpi/task/detail'} className="py-3 cursor-pointer hover:bg-slate-100 w-full border-[1px] border-gray-300 rounded-xl mb-2 overflow-hidden flex justify-between shadow-md"  key={i}>
                               <div className="inline-flex justify-between w-1/5">
                                 <div className="inline-flex p-2 bg-[#F8F8F7] rounded-[50%] ml-5 w-full my-auto">
                                     <YellowFolder size={32}/>
@@ -41,7 +42,7 @@ function CalendarPage() {
                               </div>
 
                             </div>
-                      </div>
+                      </Link>
                   )}
        </div>
       </div>
