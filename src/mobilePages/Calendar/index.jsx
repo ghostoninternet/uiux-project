@@ -4,7 +4,7 @@ import YellowFolder from "../../components/Svg/YellowFolder"
 import { MobileRightArrow } from "../../mobileComponents/Svg";
 function CalendarPage() {
     return (
-      <div className="py-5 px-2 flex flex-col gap-7 pb-30">
+      <div className="py-5 px-2 flex flex-col gap-10 pb-30 h-[calc(100vh-10rem)] relative overflow-y-scroll scrollbars-hidden">
        <div>
         <h1 className='font-bold text-2xl'>Calendar</h1>
         <div className="px-3 py-5 bg-white drop-shadow-lg rounded-lg">

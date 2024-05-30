@@ -4,7 +4,7 @@ import { tasksList1 } from "../../api/TaskApi";
 import { MobileRightArrow } from "../../mobileComponents/Svg";
 function Home() {
     return (
-      <div className="py-5 px-2 flex flex-col gap-5">
+      <div className="py-5 px-2 flex flex-col gap-5 h-[calc(100vh-10rem)] relative overflow-y-scroll scrollbars-hidden">
         <div>
           <div className="flex justify-between mb-5">
               <h1 className="text-2xl font-bold">KPI Summary</h1>
@@ -17,7 +17,7 @@ function Home() {
                   <h1 className="font-bold text-xl leading-loose">Recent task</h1>
                   <button className="bg-black px-4 py-2 rounded-lg text-white hover:bg-slate-50 hover:text-black font-medium">View all</button>
           </div>
-                <div className="h-full">
+                <div className="">
                   {tasksList1.map((e,i) => 
                           <div className="py-3 cursor-pointer hover:bg-slate-100 w-full border-2 border-gray-300 rounded-xl mb-2 overflow-hidden flex justify-between"  key={i}>
                               <div className="inline-flex justify-between w-1/5">
