@@ -35,9 +35,9 @@ function Settings() {
   };
 
   return (
-    <div className="h-[calc(100vh-5rem)] relative w-full">
+    <div className="h-screen relative w-full">
       <div className="w-full fixed top-0"><MobileTitle title={'Settings'} /></div>
-      <div className="px-3 absolute top-[5rem] h-[calc(100vh-10rem)] overflow-y-scroll scrollbars-hidden w-full flex flex-col justify-between">
+      <div className="px-3 absolute top-[5rem] h-[calc(100vh-7rem)] overflow-y-scroll scrollbars-hidden w-full flex flex-col justify-between">
         <div className="flex flex-col justify-center mt-5">
           <div className="text-xl py-2 px-2 font-medium border-b-2 border-gray-200 flex justify-between" onClick={() => handleClick("linkAccount")}>
             <p>Link Account</p>
@@ -108,7 +108,7 @@ function Settings() {
           </animated.div>
 
         </div>
-          <div className="mt-auto border-2 border-yellow-500 text-center rounded-2xl py-1 font-bold text-lg text-yellow-500 mb-10">
+          <div className="mt-auto border-2 border-yellow-500 text-center rounded-2xl py-1 font-bold text-lg text-yellow-500">
             Log out
           </div>
       </div>

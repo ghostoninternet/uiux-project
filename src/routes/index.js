@@ -47,7 +47,7 @@ const publicRoutes = [
   { path: '/mobile/user', component: User, layout: UserLayout },
   { path: '/mobile/sign-up', component: MobileSignUp, layout: null },
   { path: '/mobile/sign-in', component: MobileSignIn, layout: null },
-  { path: '/mobile/settings', component: MobileSettings, layout: NoHeaderMobileLayout },
+  { path: '/mobile/settings', component: MobileSettings, layout: null },
 ]
 
 export { publicRoutes }
