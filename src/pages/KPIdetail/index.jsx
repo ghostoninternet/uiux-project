@@ -98,7 +98,7 @@ export default function KpiDetail() {
           <div className="w-2/3 ml-20 bg-white min-w-[600px] rounded-lg shadow-lg">
             <div className="pt-4 px-8">
               <div className="flex">
-                <p className="font-bold text-2xl">Infomation</p>
+                <p className="font-bold text-2xl">Information</p>
                 <div className="flex items-center ml-3 hover:bg-slate-200 p-1 rounded-md cursor-pointer" onClick={() => setEditToggle(true)}>
                   <svg width="20" height="19" viewBox="0 0 27 25" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M0.477661 19.7924V25H5.81481L21.5559 9.64102L16.2187 4.43341L0.477661 19.7924ZM25.6833 5.6138C26.2383 5.07221 26.2383 4.19733 25.6833 3.65574L22.3529 0.406194C21.7978 -0.135398 20.9012 -0.135398 20.3461 0.406194L17.7416 2.94751L23.0787 8.15512L25.6833 5.6138Z" fill="black" />
