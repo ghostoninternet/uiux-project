@@ -2,6 +2,7 @@ import BarChart from '../../components/Chart/BarChart'
 import YellowFolder from "../../components/Svg/YellowFolder"
 import { tasksList1 } from "../../api/TaskApi";
 import { MobileRightArrow } from "../../mobileComponents/Svg";
+import { Link } from 'react-router-dom';
 function Home() {
     return (
       <div className="py-5 px-2 flex flex-col gap-5 h-[calc(100vh-10rem)] relative overflow-y-scroll scrollbars-hidden">
@@ -19,7 +20,7 @@ function Home() {
           </div>
                 <div className="">
                   {tasksList1.map((e,i) => 
-                          <div className="py-3 cursor-pointer hover:bg-slate-100 w-full border-2 border-gray-300 rounded-xl mb-2 overflow-hidden flex justify-between"  key={i}>
+                          <Link to={'/mobile/kpi/task/detail'} className="py-3 cursor-pointer hover:bg-slate-100 w-full border-2 border-gray-300 rounded-xl mb-2 overflow-hidden flex justify-between"  key={i}>
                               <div className="inline-flex justify-between w-1/5">
                                 <div className="inline-flex p-2 bg-[#F8F8F7] rounded-[50%] ml-5 w-full my-auto">
                                     <YellowFolder size={32}/>
@@ -46,7 +47,7 @@ function Home() {
                               </div>
 
                             </div>
-                      </div>
+                      </Link>
                   )}
                 </div>  
         </div>      

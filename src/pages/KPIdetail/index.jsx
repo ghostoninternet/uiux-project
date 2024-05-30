@@ -119,7 +119,7 @@ export default function KpiDetail() {
 
               <div className="mb-4">
                 <span className="font-semibold">Description: “</span>
-                <span><i>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non risus. Suspendisse lectus tortor, dignissim sit amet, adipiscing nec, ultricies sed, dolor.</i></span>
+                <span><i>This is the KPI for UI/UX teaching quality, created to enhance the quality of UI/UX education at the School of Information Technology and Communication, Hanoi University of Science and Technology.</i></span>
                 <span className="font-semibold">”</span>
               </div>
             </div>

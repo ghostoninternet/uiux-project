@@ -32,7 +32,7 @@ function NewTaskPopUp(props) {
           <DatePicker />
           <div className="bg-[#FFF8E8] py-1 px-4 text-sm rounded-lg flex items-center">
               <Target /> <p className="mx-2">Weight</p>
-              <input type="number"  defaultValue={1} className="w-10 p-1"/>
+              <input type="number"  defaultValue={1} className="w-10 p-1 bg-[#FFF8E8]"/>
           </div>
           </div>
 
