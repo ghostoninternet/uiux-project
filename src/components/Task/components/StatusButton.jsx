@@ -3,19 +3,19 @@ import CheckSvg from "./CheckSvg";
 import WarningSvg from "./WarningSvg";
 
 function StatusButton({ title, mobile }) {
-    let color = '#4196D1'
+    let color = '#5299C0'
     let Comp = PlaySvg
     let css = 'bg-white rounded-[50%]'
     switch (title) {
         case 'Late':
             Comp = WarningSvg
-            css = 'bg-[#FE3507]'
-            color = '#FE3507'
+            css = 'bg-[#FC720F]'
+            color = '#FC720F'
             break
         case 'Done':
             Comp = CheckSvg
-            css = 'bg-[#5ABE09]'
-            color = '#5ABE09'
+            css = 'bg-[#77BD0C]'
+            color = '#77BD0C'
             break
         default:
             break;

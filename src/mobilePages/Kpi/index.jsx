@@ -20,13 +20,13 @@ function Kpi() {
               <MobileKpi title={'Teaching quality'}/>
             </div>
             <div className="mt-4">
-              <MobileKpi title={'Teaching quality'}/>
+              <MobileKpi title={'Research'}/>
             </div>
             <div className="mt-4">
-              <MobileKpi title={'Teaching quality'}/>
+              <MobileKpi title={'Teaching quality 2'}/>
             </div>
             <div className="mt-4">
-              <MobileKpi title={'Teaching quality'}/>
+              <MobileKpi title={'Research 2'}/>
             </div>
           </div>
         </div>
