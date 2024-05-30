@@ -9,14 +9,14 @@ function Home() {
         <div>
           <div className="flex justify-between mb-5">
               <h1 className="text-2xl font-bold">KPI Summary</h1>
-              <button className="text-yellow-400">Details</button>
+              <button className="bg-yellow-400 px-4 py-2 rounded-lg font-semibold">Details</button>
           </div>
           <BarChart />
         </div>
         <div>
           <div className="flex justify-between mb-5">
                   <h1 className="font-bold text-xl leading-loose">Recent task</h1>
-                  <button className="bg-black px-4 py-2 rounded-lg text-white hover:bg-slate-50 hover:text-black font-medium">View all</button>
+                  <button className="bg-black px-4 py-2 rounded-lg text-white font-medium">View all</button>
           </div>
                 <div className="">
                   {tasksList1.map((e,i) => 

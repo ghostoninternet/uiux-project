@@ -4,6 +4,7 @@ import { animated, useSpring } from 'react-spring';
 import Switch from "../../pages/Setting/components/Switch";
 import { Google, Facebook, Apple } from "../../components/Svg/SignLogo";
 import DownArrow from "../../components/Svg/DownArrow";
+import { Link } from "react-router-dom";
 function Settings() {
   const [activeSetting, setActiveSetting] = useState(null); // State for active setting
 
@@ -108,9 +109,9 @@ function Settings() {
           </animated.div>
 
         </div>
-          <div className="mt-auto border-2 border-yellow-500 text-center rounded-2xl py-1 font-bold text-lg text-yellow-500">
+          <Link className="mt-auto border-2 border-yellow-500 text-center rounded-2xl py-1 font-bold text-lg text-yellow-500" to={'/mobile/sign-in'}>
             Log out
-          </div>
+          </Link>
       </div>
     </div>
   );
