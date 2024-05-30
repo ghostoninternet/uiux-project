@@ -31,7 +31,7 @@ function MobileLayout({children}) {
     <div className="h-screen relative">
       <div className="h-[5rem] py-6 px-4 bg-[#FFF8E8] fixed w-[100%] z-10">
         <div className="w-[100%] flex justify-between items-center">
-          <div className="flex justify-start items-center gap-2">            
+          <Link to={'/mobile'} className="flex justify-start items-center gap-2">            
             <div className="text-2xl text-black font-bold flex gap-3">
             <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" fill="none" viewBox="0 0 44 51">
               <path fill="#FABB18" d="M13.997 13.587C6.294 21.048 0 27.273 0 27.397c0 .123 5.348 5.385 11.873 11.734l11.874 11.513h5.02c4.787 0 5-.025 4.594-.445-.231-.222-5.598-5.435-11.912-11.537-6.313-6.127-11.468-11.191-11.448-11.29.038-.173.154-.296 15.58-15.242A7410.311 7410.311 0 0 0 37.744.32c.232-.247-.753-.296-4.73-.321h-5.02L13.997 13.587Z"/>
@@ -39,7 +39,7 @@ function MobileLayout({children}) {
             </svg>
               <h1 className="text-[#FABB18]">KPI Master</h1>
             </div>
-          </div>
+          </Link>
           <div className="flex gap-9">
             <BellBlack size={30}/>
             <Search size="25"/>
