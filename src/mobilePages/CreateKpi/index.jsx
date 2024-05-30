@@ -22,13 +22,13 @@ function MobileCreateKpi() {
                 </div>
 
                 <div className="flex justify-between mt-8">
-                    <div className="bg-[#000000] inline-flex items-center rounded-lg px-3 py-1">
-                        <FaRegCalendarAlt fontSize={'2rem'} color="white"/>
-                        <div className="text-[#ffffff] ml-3 font-semibold">Start date - Due date</div>
+                    <div className="bg-[#FFF8E8] inline-flex items-center rounded-lg px-3 py-1">
+                        <FaRegCalendarAlt fontSize={'2rem'} color="black"/>
+                        <div className="text-[#000] ml-3 font-semibold">Start date - Due date</div>
                     </div>
-                    <div className="bg-[#000000] inline-flex items-center rounded-lg px-3 py-1">
-                        <MdOutlineFlag color="white" fontSize={'2rem'}/>
-                        <div className="text-[#ffffff] ml-3 font-semibold">Type</div>
+                    <div className="bg-[#FFF8E8] inline-flex items-center rounded-lg px-3 py-1">
+                        <MdOutlineFlag color="black" fontSize={'2rem'}/>
+                        <div className="text-[#000] ml-3 font-semibold">Type</div>
                     </div>
                 </div>
 

@@ -10,9 +10,9 @@ function MobileTaskDetail() {
         <div className="h-[calc(100vh-5rem)] relative">
             <div className="w-[100%] fixed top-0"><MobileTitle title={'Task Details'}/></div>
             <div className="px-6 absolute top-[5rem] h-[calc(100vh-10rem)] overflow-y-scroll scrollbars-hidden">
-                <div className="mx-4 mt-10 text-xl border-b border-[#D2D2D2] pb-4"><i>Teaching quality / Quality of project 1</i></div>
+                <div className="mx-4 mt-10 text-xl border-b border-[#D2D2D2] pb-4"><i>Teaching quality / Quality of project</i></div>
                 <div className="mt-8 flex justify-between items-center">
-                    <div className="font-bold text-2xl">Quality of project 1</div>
+                    <div className="font-bold text-2xl">Quality of project</div>
                     <div className="flex items-center">
                         <div className="mr-3"><FileIcon /></div>
                         <div><FaTrash fontSize={'1.65rem'} color="#C93400"/></div>

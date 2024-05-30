@@ -16,7 +16,7 @@ function MobileTask({ title, completedPercent, time }) {
                     <div className={`absolute h-1 bg-[#FABB18] rounded-xl`} style={{width: `${widthCss}rem`}}></div>
                 </div>
             </div>
-            <div className="bg-[#FFF8E8] p-2 py-1 rounded-xl w-16 text-center">{time}</div>
+            <div className="bg-[#FFF8E8] ml-2 p-2 py-1 rounded-xl w-16 text-center">{time}</div>
         </div>
     )
 }
