@@ -69,7 +69,7 @@ function Settings() {
           <div className="text-xl py-2 px-2 font-medium" onClick={() => handleClick("appearance")}>
             Appearance
           </div>
-          <animated.div style={contentAnimations.appearance} className="overflow-hidden flex flex-col px-5 pt-3">
+          <animated.div style={contentAnimations.appearance} className="overflow-hidden flex flex-col px-5">
             <div className="font-[625] mb-3">
                 Select Theme
                 </div>

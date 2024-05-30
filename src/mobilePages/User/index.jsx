@@ -1,7 +1,20 @@
 import Input from "../../components/Input";
-
+import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
+import 'react-tabs/style/react-tabs.css';
+import { FaUser, FaHistory, FaTrophy } from "react-icons/fa";
+import "./index.css"
+import MobileAcitivity from "./MobileAcitivity";
+import MobileAchivement from "./MobileAchivement";
 function User() {
-    return ( 
+    return (
+        <Tabs>
+        <TabList>
+          <Tab><FaUser fontSize={25}/></Tab>
+          <Tab><FaHistory fontSize={25}/></Tab>
+          <Tab><FaTrophy fontSize={25}/></Tab>
+        </TabList>
+    
+        <TabPanel>
         <div className="h-[100%] overflow-y-scroll scrollbars-hidden">
             <div className="bg-[url('/src/assets/beautiful-mountains-landscape.jpg')] w-[100%] h-40 bg-cover relative">
                 <div className="w-[8.3rem] h-[8.3rem] rounded-[50%] absolute top-[48.5%] left-[50%] translate-x-[-50%] bg-white shadow-lg"></div>
@@ -41,6 +54,14 @@ function User() {
                 </div>
             </div>
         </div>
+        </TabPanel>
+        <TabPanel>
+          <MobileAcitivity />
+        </TabPanel>
+        <TabPanel>
+          <MobileAchivement />
+        </TabPanel>
+      </Tabs>
     )
 }
 
