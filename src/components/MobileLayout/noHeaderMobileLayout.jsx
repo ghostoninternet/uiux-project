@@ -69,7 +69,7 @@ function NoHeaderMobileLayout({children}) {
           </Link>
 
           <Link to={'/mobile/user'} className="flex justify-center items-center flex-col gap-2">
-            {currentActive === 'user'?
+            {currentActive === 'user' || currentActive === 'settings'?
               <Fragment>
                 <div className="flex rounded-[50%] shadow-[0_0_0.8rem_#FABB18]"><ProfileAvatar /></div>
                 <h1 className="text-xs font-semibold relative top-[-0.2rem]">You</h1>

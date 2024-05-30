@@ -1,16 +1,14 @@
 import {    ProfileAvatar} from "./components/Svg"
-import { DarkDashboard, DarkKPI, Dashboard, KPI } from "../Svg/MenuBarIcon"
 import { CirclePlus } from "../Svg/Plus"
 import Search from "../Svg/Search"
 import BellBlack from "../Svg/BellBlack"
 import ClipLoader from "react-spinners/ClipLoader";
+import { FaCalendarAlt, FaCog } from "react-icons/fa";
 import { Fragment, useEffect, useState } from "react"
 import { Link, useLocation } from "react-router-dom"
-import { MdDashboard } from "react-icons/md";
-import { FaCalendarAlt } from "react-icons/fa";
-import { BsFillBarChartFill } from "react-icons/bs";
-
-function MobileLayout({children}) {
+import { MdDashboard } from "react-icons/md"
+import { BsFillBarChartFill } from "react-icons/bs"
+function UserLayout({children}) {
   const [loading, setLoading] = useState(false)
   const location = useLocation()
   const [currentActive, setCurrentActive] = useState('')
@@ -22,10 +20,8 @@ function MobileLayout({children}) {
   //   setLoading(true)
   //   setTimeout(() => {
   //     setLoading(false)
-  //   }, 2000)
+  //   }, 200)
   // },[])
-  
-  
 
   return (
     <div className="h-screen relative">
@@ -42,11 +38,13 @@ function MobileLayout({children}) {
           </div>
           <div className="flex gap-9">
             <BellBlack size={30}/>
-            <Search size="25"/>
+            <Link to="/mobile/settings">
+            <FaCog fontSize={25}/>
+            </Link>
           </div>
         </div>
       </div>
-      <div className="bg-white px-6 relative top-[5rem] h-[calc(100vh-10rem)]">
+      <div className="bg-white relative top-[4.5rem] h-[calc(100vh-10rem)]">
         {loading ?
           <div className="flex items-center justify-center h-full"> 
             <ClipLoader
@@ -55,7 +53,6 @@ function MobileLayout({children}) {
             size={50}
             aria-label="Loading Spinner"
             data-testid="loader"
-            speedMultiplier={0.5}
           />
          </div>
         : children}
@@ -107,4 +104,4 @@ function MobileLayout({children}) {
   )
 }
 
-export default MobileLayout
+export default UserLayout

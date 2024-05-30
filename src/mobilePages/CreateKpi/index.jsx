@@ -8,9 +8,9 @@ import { ExcelLogo, WordLogo } from "../../mobileComponents/Svg";
 
 function MobileCreateKpi() {
     return ( 
-        <div className="h-[calc(100vh-5rem)] relative">
+        <div className="h-[100vh] relative">
             <div className="w-[100%] fixed top-0"><MobileTitle title={'Create new KPI'}/></div>
-            <div className="w-[100%] px-6 absolute top-[5rem] h-[calc(100vh-10rem)] overflow-y-scroll scrollbars-hidden">
+            <div className="w-[100%] px-6 absolute top-[5rem] h-[calc(100vh-5rem)] overflow-y-scroll scrollbars-hidden">
                 <div className="">
                     <div className="w-[100%] h-[0.15rem] bg-[#D2D2D2] mt-12"></div>
                     <div className="mt-8">

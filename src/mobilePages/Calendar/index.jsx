@@ -1,24 +1,19 @@
-import BarChart from '../../components/Chart/BarChart'
-import YellowFolder from "../../components/Svg/YellowFolder"
+import Calendar from "react-calendar"
 import { tasksList1 } from "../../api/TaskApi";
+import YellowFolder from "../../components/Svg/YellowFolder"
 import { MobileRightArrow } from "../../mobileComponents/Svg";
-function Home() {
+function CalendarPage() {
     return (
-      <div className="py-5 px-2 flex flex-col gap-5 h-[calc(100vh-10rem)] relative overflow-y-scroll scrollbars-hidden">
-        <div>
-          <div className="flex justify-between mb-5">
-              <h1 className="text-2xl font-bold">KPI Summary</h1>
-              <button className="text-yellow-400">Details</button>
-          </div>
-          <BarChart />
+      <div className="py-5 px-2 flex flex-col gap-10 pb-30 h-[calc(100vh-10rem)] relative overflow-y-scroll scrollbars-hidden">
+       <div>
+        <h1 className='font-bold text-2xl'>Calendar</h1>
+        <div className="px-3 py-5 shadow-xl rounded-lg">
+            <Calendar className={'mobile-calendar'}/>
         </div>
-        <div>
-          <div className="flex justify-between mb-5">
-                  <h1 className="font-bold text-xl leading-loose">Recent task</h1>
-                  <button className="bg-black px-4 py-2 rounded-lg text-white hover:bg-slate-50 hover:text-black font-medium">View all</button>
-          </div>
-                <div className="">
-                  {tasksList1.map((e,i) => 
+       </div>
+       <div>
+            <h1 className='font-bold text-2xl mb-3'>Today task</h1>
+            {tasksList1.slice(0,3).map((e,i) => 
                           <div className="py-3 cursor-pointer hover:bg-slate-100 w-full border-2 border-gray-300 rounded-xl mb-2 overflow-hidden flex justify-between"  key={i}>
                               <div className="inline-flex justify-between w-1/5">
                                 <div className="inline-flex p-2 bg-[#F8F8F7] rounded-[50%] ml-5 w-full my-auto">
@@ -48,10 +43,9 @@ function Home() {
                             </div>
                       </div>
                   )}
-                </div>  
-        </div>      
+       </div>
       </div>
     )
   }
   
-  export default Home
+  export default CalendarPage
