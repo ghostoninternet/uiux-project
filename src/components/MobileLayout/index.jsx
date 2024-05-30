@@ -5,6 +5,7 @@ import Search from "../Svg/Search"
 import BellBlack from "../Svg/BellBlack"
 import ClipLoader from "react-spinners/ClipLoader";
 import { useEffect, useState } from "react"
+import {Link } from 'react-router-dom'
 function MobileLayout({children}) {
   const [loading, setLoading] = useState(false)
 
@@ -12,12 +13,12 @@ function MobileLayout({children}) {
   //   setLoading(true)
   //   setTimeout(() => {
   //     setLoading(false)
-  //   }, 200)
+  //   }, 2000)
   // },[])
 
   return (
     <div className="h-screen relative">
-      <div className="h-[5rem] py-6 px-3 bg-[#FFF8E8] fixed w-[100%] z-10">
+      <div className="h-[5rem] py-6 px-4 bg-[#FFF8E8] fixed w-[100%] z-10">
         <div className="w-[100%] flex justify-between items-center">
           <div className="flex justify-start items-center gap-2">            
             <div className="text-2xl text-black font-bold flex gap-3">
@@ -50,29 +51,29 @@ function MobileLayout({children}) {
       </div>
       <div className="h-[5rem] w-[100%] fixed bg-[#FFF8E8] bottom-0 rounded-t-[20px] py-3">
         <div className="w-[100%] flex justify-between px-5 items-center">
-          <div className="flex justify-center items-center flex-col gap-2">
+          <Link className="flex justify-center items-center flex-col gap-2" to="/mobile">
             <DarkDashboard />
             <h1 className="text-xs font-semibold">Dashboard</h1>
-          </div>
+          </Link>
 
-          <div className="flex justify-center items-center flex-col gap-2">
+          <Link className="flex justify-center items-center flex-col gap-2" to="/mobile/kpi">
             <KPI />
             <h1 className="text-xs font-semibold">KPI</h1>
-          </div>
+          </Link>
 
-          <div className="flex justify-center items-center flex-col gap-2">
+          <Link className="flex justify-center items-center flex-col gap-2" to="/mobile/kpi/create">
             <CirclePlus />
-          </div>
+          </Link>
 
-          <div className="flex justify-center items-center flex-col gap-2">
+          <Link className="flex justify-center items-center flex-col gap-2" to={'/mobile/calendar'}>
             <img width="35" height="35" src="https://img.icons8.com/material/24/calendar--v1.png" alt="calendar--v1"/>
             <h1 className="text-xs font-semibold">Calendar</h1>
-          </div>
+          </Link>
 
-          <div className="flex justify-center items-center flex-col gap-2">
-            <ProfileAvatar />
+          <Link className="flex justify-center items-center flex-col gap-2" to={'/mobile/user'}>
+              <ProfileAvatar />
             <h1 className="text-xs font-semibold">You</h1>
-          </div>
+          </Link>
         </div>
       </div>
     </div>

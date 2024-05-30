@@ -29,33 +29,7 @@ function NoHeaderMobileLayout({children}) {
          </div>
         : children}
       </div>
-      <div className="h-[5rem] w-[100%] fixed bg-[#FFF8E8] bottom-0 rounded-t-[20px] py-3">
-        <div className="w-[100%] flex justify-between px-5 items-center">
-          <div className="flex justify-center items-center flex-col gap-2">
-            <DarkDashboard />
-            <h1 className="text-xs font-semibold">Dashboard</h1>
-          </div>
-
-          <div className="flex justify-center items-center flex-col gap-2">
-            <KPI />
-            <h1 className="text-xs font-semibold">KPI</h1>
-          </div>
-
-          <div className="flex justify-center items-center flex-col gap-2">
-            <CirclePlus />
-          </div>
-
-          <div className="flex justify-center items-center flex-col gap-2">
-            <img width="35" height="35" src="https://img.icons8.com/material/24/calendar--v1.png" alt="calendar--v1"/>
-            <h1 className="text-xs font-semibold">Calendar</h1>
-          </div>
-
-          <div className="flex justify-center items-center flex-col gap-2">
-            <ProfileAvatar />
-            <h1 className="text-xs font-semibold">You</h1>
-          </div>
-        </div>
-      </div>
+      
     </div>
   )
 }
