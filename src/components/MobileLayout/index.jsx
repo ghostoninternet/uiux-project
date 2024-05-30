@@ -1,5 +1,4 @@
 import {    ProfileAvatar} from "./components/Svg"
-import { DarkDashboard, DarkKPI, Dashboard, KPI } from "../Svg/MenuBarIcon"
 import { CirclePlus } from "../Svg/Plus"
 import Search from "../Svg/Search"
 import BellBlack from "../Svg/BellBlack"
@@ -18,12 +17,12 @@ function MobileLayout({children}) {
     setCurrentActive(location.pathname.split('/')[2])
   }, [location.pathname])
 
-  // useEffect(() => {
-  //   setLoading(true)
-  //   setTimeout(() => {
-  //     setLoading(false)
-  //   }, 2000)
-  // },[])
+  useEffect(() => {
+    setLoading(true)
+    setTimeout(() => {
+      setLoading(false)
+    }, 2000)
+  },[])
   
   
 
