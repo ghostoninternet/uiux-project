@@ -44,7 +44,7 @@ function UserLayout({children}) {
           </div>
         </div>
       </div>
-      <div className="bg-white relative top-[4.5rem] h-[calc(100vh-10rem)]">
+      <div className="bg-white relative top-[5rem] h-[calc(100vh-10rem)]">
         {loading ?
           <div className="flex items-center justify-center h-full"> 
             <ClipLoader

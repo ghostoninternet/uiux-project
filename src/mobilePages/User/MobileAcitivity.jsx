@@ -15,7 +15,12 @@ function Activity({ activityTime, activityType, activityTitle, activityDescripti
 }
 
 
-function MobileAcitivity() {
+function MobileAcitivity( { hiew } ) {
+  let css = 'mt-5 ml-4 mb-7 scrollbars-hidden overflow-auto max-h-[40rem]'
+  let css1 = 'fixed'
+  if (hiew) {
+    css = 'mt-5 ml-4 mb-7 max-h-[40rem]'
+  }
   const activities = [
     {
       activityTime: "5 minutes ago",
@@ -80,11 +85,11 @@ function MobileAcitivity() {
   ]
   return (
     <div className=" mx-auto bg-white rounded-2xl">
-      <div className="w-[90%] mx-auto">
-        <div className="font-bold text-2xl mt-5">
+      <div className="w-[90%] mx-auto mb-3">
+        <div className={"font-bold text-2xl mt-5 " }>
           Activities
         </div>
-        <div className="mt-5 ml-4 mb-7 scrollbars-hidden overflow-auto max-h-[40rem]">
+        <div className={css}>
           <ol className="relative border-s-4 ml-4 border-[#FABB18]">
             { activities.map((activity, index) => <Activity key={index} activityTime={activity.activityTime} activityType={activity.activityType} activityTitle={activity.activityTitle} activityDescription={activity.activityDescription} />)}
           </ol>

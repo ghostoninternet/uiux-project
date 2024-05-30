@@ -8,3 +8,16 @@
 .react-tabs__tab--selected {
     border: 0;
 }
+
+.react-tabs__tab--selected {
+    background: none;
+}
+
+.react-tabs__tab:focus::after {
+    content: none;
+}
+
+.bg-blur {
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+}
