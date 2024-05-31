@@ -16,6 +16,7 @@ import DownArrow from "../Svg/DownArrow"
 import Cancel from "../Svg/Cancel"
 import { NotiData } from "../../api/NotiData"
 import Search from "../Svg/Search"
+
 function DefaultLayouts({ children }) {
   const location = useLocation()
   const navigate = useNavigate()
@@ -29,6 +30,10 @@ function DefaultLayouts({ children }) {
       }
   
     };
+
+    if(window.innerWidth < 640) {
+      navigate('/mobile')
+    }
 
     window.addEventListener('resize', handleResize);
 
