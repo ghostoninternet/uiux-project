@@ -26,61 +26,61 @@ function MobileAcitivity( { hiew } ) {
       activityTime: "5 minutes ago",
       activityType: "Create new task",
       activityTitle: "Đi tập gym",
-      activityDescription: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam laoreet tellus ut tincidunt euismod."
+      activityDescription: "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
     },
     {
       activityTime: "30 minutes ago",
       activityType: "Finish task",
-      activityTitle: "Đấm chết cm thằng Hà",
-      activityDescription: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam laoreet tellus ut tincidunt euismod."
+      activityTitle: "Đấm chết thằng Hà",
+      activityDescription: "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
     },
     {
       activityTime: "59 minutes ago",
       activityType: "Create new KPI",
       activityTitle: "Chăm sóc sức khỏe",
-      activityDescription: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam laoreet tellus ut tincidunt euismod."
+      activityDescription: "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
     },
     {
       activityTime: "Yesterday",
       activityType: "Create new task",
       activityTitle: "Đi tập gym",
-      activityDescription: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam laoreet tellus ut tincidunt euismod."
+      activityDescription: "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
     },
     {
       activityTime: "Yesterday",
       activityType: "Create new task",
       activityTitle: "Đi tập gym",
-      activityDescription: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam laoreet tellus ut tincidunt euismod."
+      activityDescription: "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
     },
     {
       activityTime: "Yesterday",
       activityType: "Create new task",
       activityTitle: "Đi tập gym",
-      activityDescription: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam laoreet tellus ut tincidunt euismod."
+      activityDescription: "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
     },
     {
       activityTime: "Yesterday",
       activityType: "Create new task",
       activityTitle: "Đi tập gym",
-      activityDescription: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam laoreet tellus ut tincidunt euismod."
+      activityDescription: "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
     },
     {
       activityTime: "Yesterday",
       activityType: "Create new task",
       activityTitle: "Đi tập gym",
-      activityDescription: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam laoreet tellus ut tincidunt euismod."
+      activityDescription: "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
     },
     {
       activityTime: "Yesterday",
       activityType: "Create new task",
       activityTitle: "Đi tập gym",
-      activityDescription: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam laoreet tellus ut tincidunt euismod."
+      activityDescription: "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
     },
     {
       activityTime: "Yesterday",
       activityType: "Create new task",
       activityTitle: "Đi tập gym",
-      activityDescription: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam laoreet tellus ut tincidunt euismod."
+      activityDescription: "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
     }
   ]
   return (
