@@ -4,7 +4,7 @@ import Search from "../Svg/Search"
 import BellBlack from "../Svg/BellBlack"
 import ClipLoader from "react-spinners/ClipLoader";
 import { Fragment, useEffect, useState } from "react"
-import { Link, useLocation } from "react-router-dom"
+import { Link, useLocation, useNavigate } from "react-router-dom"
 import { MdDashboard } from "react-icons/md";
 import { FaCalendarAlt } from "react-icons/fa";
 import { BsFillBarChartFill } from "react-icons/bs";
@@ -24,6 +24,31 @@ function MobileLayout({children}) {
     }, 2000)
   },[])
   
+  const navigate = useNavigate()
+  useEffect(() => {
+    const myroot = document.getElementById('root')
+    const handleResize = () => {
+      
+      if(myroot.offsetWidth < 768) {
+        navigate('/mobile')
+      } else {
+        navigate('/')
+      }
+  
+    };
+    if(myroot.offsetWidth < 768) {
+      navigate('/mobile')
+      console.log('Navigating to /mobile on initial load');
+    }  else {
+      console.log('Navigating to / on initial load');
+      navigate('/');
+    }
+    
+
+    window.addEventListener('resize', handleResize);
+
+    return () => window.removeEventListener('resize', handleResize);
+  }, [navigate]);
   
 
   return (
