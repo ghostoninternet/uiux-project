@@ -36,7 +36,7 @@ function Home() {
                                 <span className="w-40 task-title leading-loose font-medium">{e.title}</span>  
                                 <MobileRightArrow />
                               </div>
-                              <div className='flex gap-3 text-sm'>
+                              <div className='flex gap-5 text-sm'>
                               <p>Weight</p>
                               <div className="w-10 text-center bg-[#FABB18] rounded-lg text-md font-semibold ">{e.weight}</div>
                               </div>
