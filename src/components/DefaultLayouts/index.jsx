@@ -28,17 +28,12 @@ function DefaultLayouts({ children }) {
       
       if(myroot.offsetWidth < 768) {
         navigate('/mobile')
-      } else {
-        navigate('/')
       }
   
     };
     if(myroot.offsetWidth < 768) {
       navigate('/mobile')
       console.log('Navigating to /mobile on initial load');
-    }  else {
-      console.log('Navigating to / on initial load');
-      navigate('/');
     }
     
 

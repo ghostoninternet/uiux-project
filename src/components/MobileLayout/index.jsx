@@ -29,19 +29,14 @@ function MobileLayout({children}) {
     const myroot = document.getElementById('root')
     const handleResize = () => {
       
-      if(myroot.offsetWidth < 768) {
-        navigate('/mobile')
-      } else {
+      if(myroot.offsetWidth > 768) {
         navigate('/')
       }
   
     };
-    if(myroot.offsetWidth < 768) {
-      navigate('/mobile')
+    if(myroot.offsetWidth > 768) {
+      navigate('/')
       console.log('Navigating to /mobile on initial load');
-    }  else {
-      console.log('Navigating to / on initial load');
-      navigate('/');
     }
     
 
