@@ -20,25 +20,32 @@ import Search from "../Svg/Search"
 function DefaultLayouts({ children }) {
   const location = useLocation()
   const navigate = useNavigate()
+  
 
   useEffect(() => {
+    const myroot = document.getElementById('root')
     const handleResize = () => {
-      if(window.innerWidth < 640) {
+      
+      if(myroot.offsetWidth < 768) {
         navigate('/mobile')
       } else {
         navigate('/')
       }
   
     };
-
-    if(window.innerWidth < 640) {
+    if(myroot.offsetWidth < 768) {
       navigate('/mobile')
+      console.log('Navigating to /mobile on initial load');
+    }  else {
+      console.log('Navigating to / on initial load');
+      navigate('/');
     }
+    
 
     window.addEventListener('resize', handleResize);
 
     return () => window.removeEventListener('resize', handleResize);
-  }, []);
+  }, [navigate]);
 
   const [menuToggleDown, setToggleDown] = useState(false);
   const [notificationToggle, setNotificationToggle] = useState(false)
