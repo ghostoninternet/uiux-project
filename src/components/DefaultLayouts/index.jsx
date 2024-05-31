@@ -19,6 +19,22 @@ import Search from "../Svg/Search"
 function DefaultLayouts({ children }) {
   const location = useLocation()
   const navigate = useNavigate()
+
+  useEffect(() => {
+    const handleResize = () => {
+      if(window.innerWidth < 640) {
+        navigate('/mobile')
+      } else {
+        navigate('/')
+      }
+  
+    };
+
+    window.addEventListener('resize', handleResize);
+
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
+
   const [menuToggleDown, setToggleDown] = useState(false);
   const [notificationToggle, setNotificationToggle] = useState(false)
 

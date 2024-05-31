@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import './index.css'
 import PercentCard from "../../components/HomePage/PercentCard"
 import ShowMore from '../../components/Svg/ShowMore'
@@ -10,6 +10,8 @@ import TaskDetailPopUp from "../../components/Popup/TaskDetailPopUp";
 import BarChart from "../../components/Chart/BarChart";
 
 function Home() {
+  const navigate = useNavigate()
+
   const [date, onChange] = useState(new Date())
   const [detailTaskToggle, setDetailTaskToggle] = useState(false)
   const taskExample = {
@@ -24,7 +26,7 @@ function Home() {
   }
   const data = tasksList1.slice(0,6);
 const [taskDetail, setTaskDetail] = useState(taskExample)
-  const navigate = useNavigate();
+  
 
   const handleOnClick = (event) => {
     setTaskDetail(event)
