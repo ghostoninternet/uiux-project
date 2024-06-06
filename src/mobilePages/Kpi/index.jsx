@@ -13,7 +13,7 @@ function Kpi() {
               <Time moblie={true}/>
             </div>
               <Link to={'/mobile/kpi/create'} className="text-lg bg-[#FABB18] px-4 py-2 font-semibold rounded-lg hover:cursor-pointer flex gap-2">
-                <FaPlusCircle className="my-auto" fontSize={2}/>New KPI
+                <FaPlusCircle className="my-auto" fontSize={20}/>New KPI
               </Link>
           </div>
         </div>
