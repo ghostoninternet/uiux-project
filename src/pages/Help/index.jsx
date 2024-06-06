@@ -14,15 +14,15 @@ function Help() {
                 <div className="bg-white rounded-2xl shadow-xl overflow-hidden">
                     <h1 className="py-7 px-10 text-yellow-400 font-bold text-xl border-b-2 border-gray-300">Using KPImaster</h1>
                     <HelpDropDown title={'How to create KPI?'}>
-                            <p className="text-lg w-11/12">Duolingo continuously updates courses to make them better and more effective. As we make improvements, you might notice adjustments to existing content or the introduction of brand new material. When this happens, we may also reposition you within your learning path to better align with the fresh content and structure. Rest assured, this helps ensure that you receive the most up-to-date and impactful learning experience possible!</p>
+                            <p className="text-lg w-11/12">To create a KPI, log in to your account. Select the ViewKPI page. Select Create KPI. Enter the KPI name and accompanying parameters or upload a file. Press Create. KPI created successfully.</p>
                             <button className="font-bold text-yellow-400 text-lg uppercase mt-5">Read me</button>
                     </HelpDropDown>
                     <HelpDropDown title={'How to create Task?'}>
-                        <p className="text-lg w-11/12">Duolingo continuously updates courses to make them better and more effective. As we make improvements, you might notice adjustments to existing content or the introduction of brand new material. When this happens, we may also reposition you within your learning path to better align with the fresh content and structure. Rest assured, this helps ensure that you receive the most up-to-date and impactful learning experience possible!</p>
+                        <p className="text-lg w-11/12"> To create a task, log in to your account. Navigate to the Tasks section. Click on Create Task. Fill in the task details, including name, description, and deadline. Press Create. Task created successfully.</p>
                         <button className="font-bold text-yellow-400 text-lg uppercase mt-5">Read me</button>
                     </HelpDropDown>
                     <HelpDropDown title={'How to caculate KPI process?'}>
-                        <p className="text-lg w-11/12">Duolingo continuously updates courses to make them better and more effective. As we make improvements, you might notice adjustments to existing content or the introduction of brand new material. When this happens, we may also reposition you within your learning path to better align with the fresh content and structure. Rest assured, this helps ensure that you receive the most up-to-date and impactful learning experience possible!</p>
+                        <p className="text-lg w-11/12">To calculate a KPI process, log in to your account. Go to the ViewKPI page. Select the KPI you want to calculate. Review the data and metrics associated with the KPI. Follow the calculation formula provided in the KPI details. Input necessary values and perform the calculation. Review the calculated KPI results.</p>
                         <button className="font-bold text-yellow-400 text-lg uppercase mt-5">Read me</button>
                     </HelpDropDown>
                 </div>
@@ -30,15 +30,15 @@ function Help() {
                 <div className="bg-white rounded-2xl shadow-xl overflow-hidden">
                     <h1 className="py-7 px-10 text-yellow-400 font-bold text-xl border-b-2 border-gray-300">Account Management</h1>
                     <HelpDropDown title={'How to change username and password?'}>
-                            <p className="text-lg w-11/12">Duolingo continuously updates courses to make them better and more effective. As we make improvements, you might notice adjustments to existing content or the introduction of brand new material. When this happens, we may also reposition you within your learning path to better align with the fresh content and structure. Rest assured, this helps ensure that you receive the most up-to-date and impactful learning experience possible!</p>
+                            <p className="text-lg w-11/12">To change your username and password, log in to your account. Go to the Account Settings or Profile section. Select Change Username or Change Password. Follow the instructions to enter your new username or password. Confirm the changes. Username or password updated successfully.</p>
                             <button className="font-bold text-yellow-400 text-lg uppercase mt-5">Read me</button>
                     </HelpDropDown>
                     <HelpDropDown title={'How to config notification?'}>
-                        <p className="text-lg w-11/12">Duolingo continuously updates courses to make them better and more effective. As we make improvements, you might notice adjustments to existing content or the introduction of brand new material. When this happens, we may also reposition you within your learning path to better align with the fresh content and structure. Rest assured, this helps ensure that you receive the most up-to-date and impactful learning experience possible!</p>
+                        <p className="text-lg w-11/12">To configure notifications, log in to your account. Go to the Account Settings or Notifications section. Select Notification Preferences. Choose the types of notifications you want to receive (e.g., email, SMS, in-app). Save your preferences. Notification settings updated successfully.</p>
                         <button className="font-bold text-yellow-400 text-lg uppercase mt-5">Read me</button>
                     </HelpDropDown>
                     <HelpDropDown title={'How do I delete my account and access my data?'}>
-                        <p className="text-lg w-11/12">Duolingo continuously updates courses to make them better and more effective. As we make improvements, you might notice adjustments to existing content or the introduction of brand new material. When this happens, we may also reposition you within your learning path to better align with the fresh content and structure. Rest assured, this helps ensure that you receive the most up-to-date and impactful learning experience possible!</p>
+                        <p className="text-lg w-11/12">To delete your account and access your data, log in to your account. Go to the Account Settings section. Select Delete Account. Follow the prompts to confirm account deletion. To access your data before deletion, navigate to the Data Management or Export Data section. Download or export your data as needed. Confirm the deletion of your account. Account deleted and data accessed successfully.</p>
                         <button className="font-bold text-yellow-400 text-lg uppercase mt-5">Read me</button>
                     </HelpDropDown>
                 </div>
