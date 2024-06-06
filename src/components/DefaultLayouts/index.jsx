@@ -129,8 +129,10 @@ function DefaultLayouts({ children }) {
 
         <div className="flex flex-row justify-start gap-20 align-middle w-3/5 my-auto">
           <div className="w-11/12 relative">
-            <label ref={labelRef} htmlFor="search-bar" className="absolute left-1/2 -translate-x-1/2 top-[12px] opacity-50 flex">
-           <Search />
+            <label ref={labelRef} htmlFor="search-bar" className="absolute left-1/2 -translate-x-1/2 top-[12px] opacity-50 flex gap-2">
+            <div className="my-auto">
+              <Search />
+            </div>
               Search
             </label>
             <input onFocus={handleOnFocusInput} value={search} onChange={(e) => setSearch(e.target.value)} id="search-bar" type="text"

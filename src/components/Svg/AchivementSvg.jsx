@@ -1,7 +1,7 @@
 
 function AchivementSvg() {
   return (
-    <svg width="65" height="65" viewBox="0 0 65 65" fill="none" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink">
+    <svg width="60" height="60" viewBox="0 0 65 65" fill="none" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink">
       <mask id="mask0_559_1613" style={{ maskType: "alpha"}} maskUnits="userSpaceOnUse" x="0" y="0" width="65" height="65">
         <rect width="65" height="65" fill="url(#pattern0_559_1613)" />
       </mask>
