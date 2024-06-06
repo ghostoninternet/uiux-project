@@ -10,7 +10,7 @@ function ProfileAchivementComponent( {hiew} ) {
   return (
     <div className={css1}>
       <div className="w-[90%] mx-auto">
-        <div className="text-2xl font-bold my-5 ">
+        <div className="text-2xl font-bold my-5">
           {"Achivements"}
         </div>
         <div className={css}>

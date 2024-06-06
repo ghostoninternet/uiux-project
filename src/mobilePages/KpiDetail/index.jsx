@@ -1,9 +1,7 @@
 
 import { Link } from "react-router-dom";
-import { SimplePlus } from "../../components/Svg/Plus";
-import StatusButton from "../../components/Task/components/StatusButton";
 import MobileTitle from "../../mobileComponents/MobileTitle";
-import { FileIcon, MobileYellowFolder } from "../../mobileComponents/Svg";
+import { FileIcon} from "../../mobileComponents/Svg";
 import StatusTask from "../../mobileComponents/Task/StatusTask";
 import { FaTrash , FaPlus } from "react-icons/fa";
 function MobileKpiDetail() {
