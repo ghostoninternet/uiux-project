@@ -18,15 +18,15 @@ function Home() {
         </div>
         <div>
           <div className="flex justify-between mb-5">
-                  <h1 className="font-bold text-xl leading-loose">Recent task</h1>
+                  <h1 className="font-bold text-xl leading-loose">Criteria list</h1>
                   <button className="bg-black px-4 py-2 rounded-lg text-white font-medium">View all</button>
           </div>
                 <div className="">
                   {tasksList1.map((e,i) => 
-                          <Link to={'/mobile/kpi/task/detail'} className="py-3 cursor-pointer hover:bg-slate-100 w-full border-2 border-gray-300 rounded-xl mb-2 overflow-hidden flex justify-between"  key={i}>
+                          <Link to={'/mobile/kpi/task/detail'} className="py-3 cursor-pointer w-full border-2 border-gray-300 rounded-xl mb-3 overflow-hidden flex justify-between shadow-sm"  key={i}>
                               <div className="inline-flex justify-between w-1/5">
-                                <div className="inline-flex p-2 bg-[#F8F8F7] rounded-[50%] ml-5 w-full my-auto">
-                                    <YellowFolder size={32}/>
+                                <div className="inline-flex p-3 bg-[#F8F8F7] rounded-[50%] ml-4 w-full my-auto">
+                                    <YellowFolder size={40}/>
                                 </div>
                               </div>
 
@@ -37,8 +37,8 @@ function Home() {
                                 <MobileRightArrow />
                               </div>
                               <div className='flex gap-5 text-sm'>
-                              <p>Weight</p>
-                              <div className="w-10 text-center bg-[#FABB18] rounded-lg text-md font-semibold ">{e.weight}</div>
+                              <p className='leading-loose'>Weight</p>
+                              <div className="w-10 text-center bg-[#FABB18] rounded-lg text-md font-semibold p-1">{e.weight}</div>
                               </div>
 
                               <div className='flex justify-between'>

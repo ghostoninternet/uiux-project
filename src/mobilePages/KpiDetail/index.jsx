@@ -5,8 +5,7 @@ import StatusButton from "../../components/Task/components/StatusButton";
 import MobileTitle from "../../mobileComponents/MobileTitle";
 import { FileIcon, MobileYellowFolder } from "../../mobileComponents/Svg";
 import StatusTask from "../../mobileComponents/Task/StatusTask";
-import { FaTrash } from "react-icons/fa";
-
+import { FaTrash , FaPlus } from "react-icons/fa";
 function MobileKpiDetail() {
     return ( 
         <div className="h-[calc(100vh-5rem)] relative">
@@ -34,13 +33,14 @@ function MobileKpiDetail() {
                     </div>
                 </div>
 
-                <div className="mt-8 mb-8">
+                <div className="mt-10 mb-8">
                     <div className="flex justify-center select-none">
-                        <Link to={'/mobile/kpi/task/create'} className="inline-flex bg-[#FABB18] rounded-xl px-4 py-1">
+                        <Link to={'/mobile/kpi/task/create'} className="inline-flex bg-[#FABB18] rounded-xl px-5 py-2">
                             <div className="flex items-center pr-2 py-2">
-                                <SimplePlus />
+                                {/* <SimplePlus /> */}
+                                <FaPlus  fontSize={20}/>
                             </div>
-                            <p className="font-semibold leading-[32px]">Add Task</p>
+                            <p className="font-semibold my-auto text-lg font-semibold">Add Task</p>
                         </Link>
                     </div>
                 </div>

@@ -11,7 +11,7 @@ function MobileTaskDetail() {
             <div className="w-[100%] fixed top-0"><MobileTitle title={'Task Details'}/></div>
             <div className="px-6 absolute top-[4rem] h-[calc(100vh-10rem)] overflow-y-scroll scrollbars-hidden">
                 <div className="mt-10 text-xl border-b border-[#D2D2D2] pb-2">Teaching quality / Quality of project</div>
-                <div className="mt-8 flex justify-between items-center mx-2">
+                <div className="mt-4 flex justify-between items-center mx-2">
                     <div className="font-bold text-2xl">Quality of project</div>
                     <div className="flex items-center">
                         <div className="mr-3"><FileIcon /></div>
