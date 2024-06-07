@@ -52,7 +52,7 @@ function MobileTaskDetail() {
                 <div className="mt-10 w-auto h-[0.12rem] bg-[#D2D2D2]/[0.6]"></div>
                 <div className="mx-2">
                     <div className="mt-10 font-bold text-2xl">Description</div>
-                    <div className="mt-4 font-[450]">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam</div>
+                    <div className="mt-4 font-[450]">Evaluate project quality based on the subjects that students have taken</div>
                     
                     <div className="flex mt-6">
                         <div className="font-[450]"><DatePicker /></div>

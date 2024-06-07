@@ -1,4 +1,4 @@
-import bgImage from '../../assets/SignUp/SignUpWallpaper.png'
+import bgImage from '../../assets/SignUp/SignIn.jpg'
 import Input from '../../components/Input'
 import {Facebook, Apple, Google} from '../../components/Svg/SignLogo'
 import SubmitButton from '../../components/SubmitButton/SubmitButton'

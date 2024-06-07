@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom'
-import bgImage from '../../assets/Wallpaper-2.png'
+import bgImage from '../../assets/SignUp/SignIn.jpg'
 import Input from '../../components/Input'
 import SubmitButton from '../../components/SubmitButton/SubmitButton'
 import Logo from '../../components/Svg/Logo'
