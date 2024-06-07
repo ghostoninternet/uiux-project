@@ -4,12 +4,25 @@ import MobileTitle from "../../mobileComponents/MobileTitle";
 import { FaRegCalendarAlt } from "react-icons/fa";
 import { PiTargetBold } from "react-icons/pi";
 import { PiDotsThreeOutlineVerticalFill } from "react-icons/pi";
+import { MobileToast } from "../../mobileComponents/Noti/MobileToast";
+import { useNavigate } from "react-router-dom";
+
+
 
 
 function CreateTask() {
+
+    const navigate = useNavigate()
+
+    const handleSubmit = () => {
+        MobileToast();
+        navigate("/mobile/kpi/view-detail");
+    }
+
+
     return ( 
         <div className="h-[calc(100vh-5rem)] relative">
-            <div className="w-[100%] fixed top-0"><MobileTitle title={'Create new Task'}/></div>
+            <div className="w-[100%] fixed top-0"><MobileTitle title={'Create new Criteria'}/></div>
             <div className="px-6 absolute top-[5rem] h-[calc(100vh-10rem)] overflow-y-scroll scrollbars-hidden w-[100%]">
                 <div className="mt-8"><OneLineInput title={'Task Title or type ‘/’ for command'} /></div>
                 <div className="font-bold text-xl mt-8 mb-4">How to evaluate</div>
@@ -34,7 +47,7 @@ function CreateTask() {
                 </div>
 
                 <div className="flex justify-center mt-8 mb-8">
-                    <div className="bg-[#FABB18] text-xl py-2 px-4 rounded-xl font-semibold">Create Task</div>
+                    <div className="bg-[#FABB18] text-xl py-2 px-4 rounded-xl font-semibold" onClick={() => handleSubmit()}>Create Criteria</div>
                 </div>
             </div>
         </div>

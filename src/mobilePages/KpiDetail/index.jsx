@@ -47,7 +47,7 @@ function MobileKpiDetail() {
                 <FaPlus fontSize={20} />
               </div>
               <p className="font-semibold my-auto text-lg font-semibold">
-                Add Task
+                Add Criteria
               </p>
             </Link>
           </div>
