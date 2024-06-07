@@ -25,62 +25,56 @@ function MobileAcitivity( { hiew } ) {
     {
       activityTime: "5 minutes ago",
       activityType: "Create new task",
-      activityTitle: "Đi tập gym",
-      activityDescription: "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+      activityTitle: "Student Review 1",
+      activityDescription: "Students evaluate the quality for the first time"
+    },
+    {
+      activityTime: "5 minutes ago",
+      activityType: "Finish task",
+      activityTitle: "Student Review 1",
+      activityDescription: "Summary of comments from students for the first time"
+    },
+    {
+      activityTime: "5 minutes ago",
+      activityType: "Create new task",
+      activityTitle: "Assignment 1",
+      activityDescription: "Fill in assignment 1 score number"
     },
     {
       activityTime: "30 minutes ago",
       activityType: "Finish task",
-      activityTitle: "Đấm chết thằng Hà",
-      activityDescription: "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+      activityTitle: "Assignment 1",
+      activityDescription: "Evaluate the quality of assignment 1"
     },
     {
       activityTime: "59 minutes ago",
       activityType: "Create new KPI",
-      activityTitle: "Chăm sóc sức khỏe",
-      activityDescription: "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+      activityTitle: "Assignment 2",
+      activityDescription: "Evaluate the quality of assignment 2"
     },
     {
       activityTime: "Yesterday",
       activityType: "Create new task",
-      activityTitle: "Đi tập gym",
-      activityDescription: "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+      activityTitle: "Student Review 2",
+      activityDescription: "Summary of comments from students for the second time"
     },
     {
       activityTime: "Yesterday",
       activityType: "Create new task",
-      activityTitle: "Đi tập gym",
-      activityDescription: "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+      activityTitle: "Project 1",
+      activityDescription: "Evaluation of project quality number 1"
     },
     {
       activityTime: "Yesterday",
       activityType: "Create new task",
-      activityTitle: "Đi tập gym",
-      activityDescription: "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+      activityTitle: "Assignment 3",
+      activityDescription: "Evaluate the quality of assignment 2"
     },
     {
       activityTime: "Yesterday",
       activityType: "Create new task",
-      activityTitle: "Đi tập gym",
-      activityDescription: "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
-    },
-    {
-      activityTime: "Yesterday",
-      activityType: "Create new task",
-      activityTitle: "Đi tập gym",
-      activityDescription: "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
-    },
-    {
-      activityTime: "Yesterday",
-      activityType: "Create new task",
-      activityTitle: "Đi tập gym",
-      activityDescription: "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
-    },
-    {
-      activityTime: "Yesterday",
-      activityType: "Create new task",
-      activityTitle: "Đi tập gym",
-      activityDescription: "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+      activityTitle: "Project 2",
+      activityDescription: "Evaluation of project quality number 2"
     }
   ]
   return (
